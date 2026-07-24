@@ -1,0 +1,53 @@
+# EPICS build and installation output
+O.*
+/bin/
+/lib/
+/dbd/
+/include/
+/html/
+/cfg/
+/jar/
+
+# EPICS-generated startup files
+/iocBoot/*/envPaths
+/iocBoot/*/cdCommands
+/dbl
+
+# Machine-local EPICS configuration
+/configure/RELEASE.local
+/configure/CONFIG_SITE.local
+
+# Compiler products outside O.* directories
+*.o
+*.d
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+
+# IOC runtime output
+*.log
+*.pid
+*.sav
+*.savB
+*.sav.bu
+core
+core.*
+nohup.out
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors and operating systems
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+.DS_Store
+

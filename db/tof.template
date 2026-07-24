@@ -1,0 +1,47 @@
+# TOF PMT template
+# Required macros: P, CHAMBER, PMT
+# PMT should be zero-padded from 01 through 08.
+
+record(ao, "$(P):$(CHAMBER):TOF:PMT$(PMT):THR")
+{
+    field(DESC, "$(CHAMBER) TOF PMT$(PMT) threshold")
+    field(DTYP, "Soft Channel")
+    field(EGU,  "$(THR_EGU=raw)")
+    field(PREC, "$(THR_PREC=0)")
+    field(LOPR, "$(THR_MIN=0)")
+    field(HOPR, "$(THR_MAX=65535)")
+    field(DRVL, "$(THR_MIN=0)")
+    field(DRVH, "$(THR_MAX=65535)")
+}
+
+record(ao, "$(P):$(CHAMBER):TOF:PMT$(PMT):HV_SET")
+{
+    field(DESC, "$(CHAMBER) TOF PMT$(PMT) HV setpoint")
+    field(DTYP, "Soft Channel")
+    field(EGU,  "V")
+    field(PREC, "3")
+    field(LOPR, "0")
+    field(HOPR, "1")
+    field(DRVL, "0")
+    field(DRVH, "1")
+}
+
+record(ao, "$(P):$(CHAMBER):TOF:PMT$(PMT):HV_RBV")
+{
+    field(DESC, "$(CHAMBER) TOF PMT$(PMT) HV readback")
+    field(DTYP, "Soft Channel")
+    field(EGU,  "V")
+    field(PREC, "3")
+    field(LOPR, "0")
+    field(HOPR, "1")
+    field(DRVL, "0")
+    field(DRVH, "1")
+}
+
+record(bo, "$(P):$(CHAMBER):TOF:PMT$(PMT):STAT")
+{
+    field(DESC, "$(CHAMBER) TOF PMT$(PMT) status")
+    field(DTYP, "Soft Channel")
+    field(ZNAM, "OFF")
+    field(ONAM, "ON")
+}

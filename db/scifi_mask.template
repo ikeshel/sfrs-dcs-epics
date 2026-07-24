@@ -1,0 +1,15 @@
+
+record(waveform, "$(P):$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):CH_MASK")
+{
+    field(DESC, "$(CHAMBER) SciFi$(ID) SFP$(SFP) DEV$(DEV) channel mask")
+    field(DTYP, "Soft Channel")
+
+    field(NELM, "128")
+    field(FTVL, "UCHAR")
+
+    field(LOPR, "0")
+    field(HOPR, "1")
+
+    field(APST, "On Change")
+    field(MPST, "On Change")
+}

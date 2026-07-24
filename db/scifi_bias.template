@@ -1,0 +1,82 @@
+# Requested SiPM bias voltage
+record(ao, "$(P):$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_SET")
+{
+    field(DESC, "$(CHAMBER) SciFi $(ID) SiPM bias setpoint")
+    field(EGU,  "V")
+    field(PREC, "2")
+
+    field(DRVL, "0.0")
+    field(DRVH, "54.0")
+
+    field(LOPR, "0.0")
+    field(HOPR, "54.0")
+
+    field(VAL, "$(INITIAL_BIAS=0.0)")
+
+    # Temporary software record.
+    # Replace DTYP and add OUT when hardware communication is implemented.
+    field(DTYP, "Soft Channel")
+}
+
+
+# ADC-measured SiPM bias voltage
+record(ai, "$(P):$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_RBV")
+{
+    field(DESC, "$(CHAMBER) SciFi $(ID) SiPM bias readback")
+    field(EGU,  "V")
+    field(PREC, "2")
+
+    field(LOPR, "0.0")
+    field(HOPR, "54.0")
+
+    # Temporary software record.
+    # Replace DTYP and add INP when hardware communication is implemented.
+    field(DTYP, "Soft Channel")
+
+    field(SCAN, "1 second")
+}
+
+
+# Calculated SiPM bias state
+#
+# 0 = OFF
+# 1 = STABLE
+# 2 = OUT_OF_TOLERANCE
+record(calc, "$(P):$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_STATE")
+{
+    field(DESC, "$(CHAMBER) SciFi $(ID) SiPM bias state")
+
+    field(INPA,
+        "$(P):$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_SET CP")
+
+    field(INPB,
+        "$(P):$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_RBV CP")
+
+    field(INPC, "$(OFF_THRESHOLD=0.2)")
+    field(INPD, "$(BIAS_TOLERANCE=0.2)")
+
+    # OFF:
+    #   abs(BIAS_SET) <= OFF_THRESHOLD
+    #   and abs(BIAS_RBV) <= OFF_THRESHOLD
+    #
+    # STABLE:
+    #   channel is not OFF
+    #   and abs(BIAS_SET - BIAS_RBV) <= BIAS_TOLERANCE
+    #
+    # OUT_OF_TOLERANCE:
+    #   channel is not OFF
+    #   and abs(BIAS_SET - BIAS_RBV) > BIAS_TOLERANCE
+    field(CALC,
+        "(ABS(A)<=C&&ABS(B)<=C)?0:(ABS(A-B)<=D?1:2)")
+
+    # Process once during IOC initialization.
+    field(PINI, "YES")
+
+    # State 2 generates a MAJOR alarm.
+    field(HIHI, "1.5")
+    field(HHSV, "MAJOR")
+
+    # Post every state change.
+    field(MDEL, "0")
+    field(ADEL, "0")
+}

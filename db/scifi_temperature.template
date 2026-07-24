@@ -1,0 +1,61 @@
+###############################################################################
+#
+# Generic SciFi temperature record
+#
+# Automatically instantiated from:
+#     scifi_temperature.substitutions
+#
+###############################################################################
+
+record(ao, "$(P):$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):$(SENSOR):TEMP")
+{
+    field(DESC, "$(CHAMBER) SciFi $(ID) SFP$(SFP) DEV$(DEV) $(SENSOR) Temperature")
+
+    #
+    # Initial value
+    #
+    field(VAL,  "$(INITIAL)")
+
+    #
+    # Engineering units
+    #
+    field(EGU,  "degC")
+    field(PREC, "1")
+
+    #
+    # Display limits
+    #
+    field(DRVL, "-20")
+    field(DRVH, "100")
+
+    #
+    # Operating limits
+    #
+    field(LOPR, "-20")
+    field(HOPR, "90")
+
+    #
+    # Alarm limits
+    #
+    field(LOW,  "5")
+    field(LOLO, "0")
+
+    field(HIGH, "45")
+    field(HIHI, "55")
+
+    field(LSV,  "MINOR")
+    field(LLSV, "MAJOR")
+    field(HSV,  "MINOR")
+    field(HHSV, "MAJOR")
+
+    #
+    # Archive every change
+    #
+    field(MDEL, "-1")
+    field(ADEL, "-1")
+
+    #
+    # Allow operator writes
+    #
+    field(PINI, "YES")
+}

@@ -1,0 +1,25 @@
+# Threshold registers for 128 channels
+#
+# Array mapping:
+#   element 0   -> channel 0
+#   element 1   -> channel 1
+#   ...
+#   element 127 -> channel 127
+record(waveform, "$(P):$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):THR")
+{
+    field(DESC, "$(CHAMBER) SciFi $(ID) 128-channel thresholds")
+
+    # Unsigned 16-bit threshold register values
+    field(FTVL, "USHORT")
+    field(NELM, "128")
+
+    # Temporary software waveform.
+    # Replace DTYP and add the hardware link later.
+    field(DTYP, "Soft Channel")
+
+    # Thresholds are updated only when explicitly written or processed.
+    field(SCAN, "Passive")
+
+    # Optional: process once during IOC initialization.
+    field(PINI, "YES")
+}
