@@ -1,1 +1,1 @@
-EPICS_BASE=/home/epics/EPICS/base-7.0.10
+EPICS_BASE=$(HOME)/EPICS/base-7.0.10

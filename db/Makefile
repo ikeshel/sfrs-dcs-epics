@@ -7,6 +7,6 @@ DB += scifi_bias.template
 DB += scifi_threshold.template
 DB += scifi_mask.template
 
-# DB += tof.template
+DB += plsci.template
 
 include $(TOP)/configure/RULES
