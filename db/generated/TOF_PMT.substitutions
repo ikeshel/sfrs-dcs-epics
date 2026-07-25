@@ -1,6 +1,6 @@
 
 # P is supplied by dbLoadTemplate() in st.cmd.
-file "db/tof.template"
+file "db/plsci.template"
 {
     pattern
     {
