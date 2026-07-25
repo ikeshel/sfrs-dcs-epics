@@ -1,8 +1,8 @@
 # Plastic scintillator PMT template
-# Required macros: P, CHAMBER, PMT
+# Required macros: CHAMBER, PMT
 # PMT should be zero-padded from 01 through 08.
 
-record(ao, "$(P):$(CHAMBER):PLSCI:PMT$(PMT):THR")
+record(ao, "SFRS:$(CHAMBER):PLSCI:PMT$(PMT):THR")
 {
     field(DESC, "$(CHAMBER) PLSCI PMT$(PMT) threshold")
     field(DTYP, "Soft Channel")
@@ -14,7 +14,7 @@ record(ao, "$(P):$(CHAMBER):PLSCI:PMT$(PMT):THR")
     field(DRVH, "$(THR_MAX=65535)")
 }
 
-record(ao, "$(P):$(CHAMBER):PLSCI:PMT$(PMT):HV_SET")
+record(ao, "SFRS:$(CHAMBER):PLSCI:PMT$(PMT):HV_SET")
 {
     field(DESC, "$(CHAMBER) PLSCI PMT$(PMT) HV setpoint")
     field(DTYP, "Soft Channel")
@@ -26,7 +26,7 @@ record(ao, "$(P):$(CHAMBER):PLSCI:PMT$(PMT):HV_SET")
     field(DRVH, "1")
 }
 
-record(ao, "$(P):$(CHAMBER):PLSCI:PMT$(PMT):HV_RBV")
+record(ao, "SFRS:$(CHAMBER):PLSCI:PMT$(PMT):HV_RBV")
 {
     field(DESC, "$(CHAMBER) PLSCI PMT$(PMT) HV readback")
     field(DTYP, "Soft Channel")
@@ -38,7 +38,7 @@ record(ao, "$(P):$(CHAMBER):PLSCI:PMT$(PMT):HV_RBV")
     field(DRVH, "1")
 }
 
-record(bo, "$(P):$(CHAMBER):PLSCI:PMT$(PMT):STAT")
+record(bo, "SFRS:$(CHAMBER):PLSCI:PMT$(PMT):STAT")
 {
     field(DESC, "$(CHAMBER) PLSCI PMT$(PMT) status")
     field(DTYP, "Soft Channel")

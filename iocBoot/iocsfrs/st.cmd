@@ -14,9 +14,9 @@ dbLoadTemplate("db/generated/scifi_bias.substitutions","P=SFRS,OFF_THRESHOLD=0.2
 
 dbLoadTemplate("db/generated/scifi_threshold.substitutions","P=SFRS")
 
-dbLoadTemplate("db/generated/scifi_mask.substitutions","P=SFRS")
+dbLoadTemplate("db/generated/scifi_mask.substitutions")
 
-dbLoadTemplate("db/generated/TOF_PMT.substitutions","P=SFRS")
+dbLoadTemplate("db/plsci.substitutions")
 
 iocInit
 
