@@ -1,6 +1,14 @@
+###############################################################################
+#
+# Generic Plastic Scintillator PMT record
+#
 # Plastic scintillator PMT template
-# Required macros: CHAMBER, PMT
+#     plsci.substitutions
 # PMT should be zero-padded from 01 through 08.
+#
+# Authors: i.keshelashvili@gsi.de
+#
+###############################################################################
 
 record(ao, "SFRS:$(CHAMBER):PLSCI:PMT$(PMT):THR")
 {

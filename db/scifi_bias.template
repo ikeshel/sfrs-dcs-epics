@@ -1,3 +1,13 @@
+###############################################################################
+#
+# Generic SciFi bias record
+#
+# Automatically instantiated from:
+#     scifi_bias.substitutions
+# Authors: i.keshelashvili@gsi.de
+#
+###############################################################################
+
 # Requested SiPM bias voltage
 record(ao, "$(P):$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_SET")
 {

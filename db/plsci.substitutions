@@ -1,3 +1,12 @@
+###############################################################################
+#
+# Generic SciFi temperature record
+#
+# Automatically instantiated from:
+#     scifi_temperature.substitutions
+# Authors: i.keshelashvili@gsi.de
+#
+###############################################################################
 
 # P is supplied by dbLoadTemplate() in st.cmd.
 file "db/tof.template"
@@ -7,14 +16,31 @@ file "db/tof.template"
         CHAMBER,PMT
     }
 
-# FPF2		1	6	 x86l-208
-# FPF4		2	6	 x86l-209
-# FMF1		3	6	 x86l-209
-# FMF2		4	8	x86l-132/212
-# FMF3		5	6	x86l-132/212
-# FHF1		6	8	x86l-132/212
+# 6-PMT FPF2		1	6	 x86l-208
+    { FPF2,1 }
+    { FPF2,2 }
+    { FPF2,3 }
+    { FPF2,4 }
+    { FPF2,5 }
+    { FPF2,6 }
+
+# 6-PMT FPF4		2	6	 x86l-209
+    { FPF4,1 }
+    { FPF4,2 }
+    { FPF4,3 }
+    { FPF4,4 }
+    { FPF4,5 }
+    { FPF4,6 }
+
+# 6-PMT FMF1		3	6	 x86l-209
+    { FMF1,1 }
+    { FMF1,2 }
+    { FMF1,3 }
+    { FMF1,4 }
+    { FMF1,5 }
+    { FMF1,6 }
 				
-				
+# 8-PMT FMF2		4	8	x86l-132/212
     { FMF2,1 }
     { FMF2,2 }
     { FMF2,3 }
@@ -24,6 +50,15 @@ file "db/tof.template"
     { FMF2,7 }
     { FMF2,8 }
 
+# 6-PMT FMF3		5	6	x86l-132/212
+    { FMF3,1 }
+    { FMF3,2 }
+    { FMF3,3 }
+    { FMF3,4 }
+    { FMF3,5 }
+    { FMF3,6 }				
+
+# 8-PMT FHF1		6	8	x86l-132/212
     { FHF1,1 }
     { FHF1,2 }
     { FHF1,3 }
