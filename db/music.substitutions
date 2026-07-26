@@ -1,0 +1,12 @@
+###############################################################################
+#
+# Generic MUSIC record
+#
+# Automatically instantiated from:
+#     music.substitutions
+# Authors: i.keshelashvili@gsi.de
+#
+###############################################################################
+
+# dbLoadTemplate() in st.cmd.
+file "db/music_adc_ch.substitutions"

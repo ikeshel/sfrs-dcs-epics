@@ -1,0 +1,28 @@
+###############################################################################
+#
+# MUSIC field-cage high-voltage substitutions
+#
+# Loaded using:
+#     dbLoadTemplate("db/music_hv.substitutions")
+#
+# Authors:
+#     i.keshelashvili@gsi.de
+#
+###############################################################################
+
+file "db/music_hv.template"
+{
+    pattern
+    {
+        CHAMBER, FILD_CAGE
+    }
+
+    # FMF1 MUSIC detector
+    { FMF1, 1 }
+    { FMF1, 2 }
+
+    # FHF1 MUSIC detector
+    { FHF1, 1 }
+    { FHF1, 2 }
+    { FHF1, 3 }
+}

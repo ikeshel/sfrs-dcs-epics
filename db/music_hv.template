@@ -1,0 +1,88 @@
+###############################################################################
+#
+# MUSIC field-cage high-voltage records
+#
+# Macros:
+#     CHAMBER    Beamline chamber, for example FMF1 or FHF1
+#     MUSIC      MUSIC field-cage number
+#
+# Authors:
+#     i.keshelashvili@gsi.de
+#
+###############################################################################
+
+#
+# Requested high voltage
+#
+record(ao, "SFRS:$(CHAMBER):MUSIC:FC$(FILD_CAGE):HV_SET")
+{
+    field(DESC, "$(CHAMBER) MUSIC:FC$(FILD_CAGE) HV setpoint")
+    field(DTYP, "Soft Channel")
+    field(SCAN, "Passive")
+
+    field(EGU,  "V")
+    field(PREC, "1")
+
+    # Adjust these limits to the actual HV supply.
+    field(DRVL, "0")
+    field(DRVH, "3000")
+    field(LOPR, "0")
+    field(HOPR, "3000")
+
+    field(PINI, "NO")
+}
+
+#
+# Measured high voltage
+#
+record(ai, "SFRS:$(CHAMBER):MUSIC:FC$(FILD_CAGE):HV_RBV")
+{
+    field(DESC, "$(CHAMBER) MUSIC:FC$(FILD_CAGE) HV readback")
+    field(DTYP, "Soft Channel")
+    field(SCAN, "Passive")
+
+    field(EGU,  "V")
+    field(PREC, "1")
+
+    field(LOPR, "0")
+    field(HOPR, "3000")
+
+    field(MDEL, "0.1")
+    field(ADEL, "0.1")
+}
+
+#
+# High-voltage operating state
+#
+record(mbbi, "SFRS:$(CHAMBER):MUSIC:FC$(FILD_CAGE):HV_STAT")
+{
+    field(DESC, "$(CHAMBER) MUSIC:FC$(FILD_CAGE) HV status")
+    field(DTYP, "Soft Channel")
+    field(SCAN, "Passive")
+
+    field(ZRVL, "0")
+    field(ZRST, "OFF")
+
+    field(ONVL, "1")
+    field(ONST, "RAMP_UP")
+
+    field(TWVL, "2")
+    field(TWST, "ON")
+
+    field(THVL, "3")
+    field(THST, "RAMP_DOWN")
+
+    field(FRVL, "4")
+    field(FRST, "TRIP")
+
+    field(FVVL, "5")
+    field(FVST, "ERROR")
+
+    field(SXVL, "6")
+    field(SXST, "UNKNOWN")
+
+    # Alarm on dangerous or invalid states.
+    field(FRSV, "MAJOR")
+    field(FVSV, "MAJOR")
+    field(SXSV, "MINOR")
+}

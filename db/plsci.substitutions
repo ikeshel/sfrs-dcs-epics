@@ -1,15 +1,15 @@
 ###############################################################################
 #
-# Generic SciFi temperature record
+# Generic Plastic Scintillator PMT record
 #
 # Automatically instantiated from:
-#     scifi_temperature.substitutions
+#     plsci.substitutions
 # Authors: i.keshelashvili@gsi.de
 #
 ###############################################################################
 
 # P is supplied by dbLoadTemplate() in st.cmd.
-file "db/tof.template"
+file "db/plsci.template"
 {
     pattern
     {

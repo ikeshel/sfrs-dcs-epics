@@ -1,11 +1,15 @@
-# Threshold registers for 128 channels
+###############################################################################
 #
-# Array mapping:
-#   element 0   -> channel 0
-#   element 1   -> channel 1
-#   ...
-#   element 127 -> channel 127
-record(waveform, "$(P):$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):THR")
+# Generic SciFi threshold record
+#
+# SciFi threshold template
+#     scifi_threshold.substitutions
+#
+# Authors: i.keshelashvili@gsi.de
+#
+###############################################################################
+
+record(waveform, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):THR")
 {
     field(DESC, "$(CHAMBER) SciFi $(ID) 128-channel thresholds")
 

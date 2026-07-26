@@ -1,0 +1,36 @@
+###############################################################################
+#
+# Generic MUSIC ADC channel readout
+#
+# Hardware:
+#     mesytec MDPP-32-PADC
+#
+# Authors:
+#     i.keshelashvili@gsi.de
+#
+###############################################################################
+
+record(longin, "$(P=SFRS):$(CHAMBER):MUSIC:FC$(FILD_CAGE):ADC:CH$(CHANNEL)")
+{
+    field(DESC, "$(CHAMBER) MUSIC Field Cage $(FILD_CAGE) ADC channel $(CHANNEL)")
+
+    # Raw PADC amplitude
+    field(EGU,  "counts")
+
+    # MDPP-32 PADC amplitude range: approximately 14 bit / 16k
+    field(LOPR, "0")
+    field(HOPR, "16383")
+
+    # Temporary software channel.
+    #
+    # The VME readout program or EPICS device-support driver should update VAL.
+    # Replace DTYP and add INP when the hardware driver is implemented.
+    field(DTYP, "Soft Channel")
+
+    # Event data must be pushed by the readout process.
+    field(SCAN, "Passive")
+
+    # Post monitor events whenever the ADC value changes.
+    field(MDEL, "0")
+    field(ADEL, "0")
+}

@@ -4,20 +4,24 @@
 
 cd "${TOP}"
 
+## Load the SFRS database definitions
 dbLoadDatabase("dbd/sfrs.dbd")
 sfrs_registerRecordDeviceDriver(pdbbase)
 
-# SciFi temperature and bias substitutions
+## SciFi substitutions
+dbLoadTemplate("db/scifi_bias.substitutions","OFF_THRESHOLD=0.2,BIAS_TOLERANCE=0.5,INITIAL_BIAS=0.0")
+dbLoadTemplate("db/scifi_mask.substitutions")
 dbLoadTemplate("db/generated/scifi_temperature.substitutions")
+dbLoadTemplate("db/scifi_threshold.substitutions")
 
-dbLoadTemplate("db/generated/scifi_bias.substitutions","P=SFRS,OFF_THRESHOLD=0.2,BIAS_TOLERANCE=0.5,INITIAL_BIAS=0.0")
-
-dbLoadTemplate("db/generated/scifi_threshold.substitutions","P=SFRS")
-
-dbLoadTemplate("db/generated/scifi_mask.substitutions")
-
+## Plastic scintillator substitutions
 dbLoadTemplate("db/plsci.substitutions")
 
+## MUSIC substitutions
+dbLoadTemplate("db/music_adc_ch.substitutions")
+dbLoadTemplate("db/music_hv.substitutions")
+
+## Load the IOC database
 iocInit
 
 cd "${TOP}/iocBoot/${IOC}"

@@ -1,3 +1,13 @@
+###############################################################################
+#
+# Generic SciFi channel mask record
+#
+# SciFi channel mask template
+#     scifi_mask.substitutions
+#
+# Authors: i.keshelashvili@gsi.de
+#
+###############################################################################
 
 record(waveform, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):CH_MASK")
 {
