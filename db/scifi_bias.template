@@ -16,10 +16,10 @@ record(ao, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_SET")
     field(PREC, "2")
 
     field(DRVL, "0.0")
-    field(DRVH, "54.0")
+    field(DRVH, "60.0")
 
     field(LOPR, "0.0")
-    field(HOPR, "54.0")
+    field(HOPR, "60.0")
 
     field(VAL, "$(INITIAL_BIAS=0.0)")
 
@@ -37,7 +37,7 @@ record(ai, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_RBV")
     field(PREC, "2")
 
     field(LOPR, "0.0")
-    field(HOPR, "54.0")
+    field(HOPR, "58.0")
 
     # Temporary software record.
     # Replace DTYP and add INP when hardware communication is implemented.
