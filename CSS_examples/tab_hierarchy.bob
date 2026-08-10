@@ -17,8 +17,8 @@
                   <widget type="embedded" version="2.0.0">
                     <name>Embedded Display</name>
                     <file>FiberGD.bob</file>
-                    <x>19</x>
-                    <y>22</y>
+                    <x>18</x>
+                    <y>8</y>
                     <width>1480</width>
                     <height>910</height>
                   </widget>
@@ -94,7 +94,6 @@
             <y>19</y>
             <width>1510</width>
             <height>970</height>
-            <active_tab>-1</active_tab>
           </widget>
         </children>
       </tab>
@@ -139,7 +138,6 @@
             <y>59</y>
             <width>1510</width>
             <height>910</height>
-            <active_tab>-1</active_tab>
           </widget>
         </children>
       </tab>
@@ -164,7 +162,6 @@
             <y>59</y>
             <width>1510</width>
             <height>910</height>
-            <active_tab>-1</active_tab>
           </widget>
         </children>
       </tab>

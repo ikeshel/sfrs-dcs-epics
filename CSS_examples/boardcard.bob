@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <width>200</width>
-  <height>290</height>
+  <height>250</height>
   <grid_visible>false</grid_visible>
   <widget type="group" version="3.0.0">
     <name>Board</name>
     <width>200</width>
-    <height>290</height>
+    <height>250</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="rectangle" version="2.0.0">
       <name>Board</name>
       <width>200</width>
-      <height>290</height>
+      <height>250</height>
       <line_width>1</line_width>
       <line_color>
         <color name="Button_Background" red="210" green="210" blue="210">
@@ -24,9 +24,8 @@
       </background_color>
     </widget>
     <widget type="label" version="2.0.0">
-      <name>Chamber Name - Board Number</name>
-      <text>$(CHAMBER_NAME) - $(DETECTOR) - $(BOARD)</text>
-      <y>15</y>
+      <name>Board Number</name>
+      <text>$(BOARD)</text>
       <width>200</width>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
@@ -35,7 +34,7 @@
       <name>Board Description</name>
       <text>SFP $(SFP), DEV $(DEV)</text>
       <x>20</x>
-      <y>50</y>
+      <y>25</y>
       <width>180</width>
       <font>
         <font family="Liberation Sans" style="REGULAR" size="12.0">
@@ -46,7 +45,7 @@
       <name>FPGA</name>
       <text>FPGA</text>
       <x>25</x>
-      <y>85</y>
+      <y>45</y>
       <width>50</width>
       <font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -59,7 +58,7 @@
       <name>FPGA Thermometer</name>
       <pv_name>SFRS:$(CHAMBER_NAME):$(DETECTOR):SFP$(SFP):DEV$(DEV):FPGA:TEMP</pv_name>
       <x>35</x>
-      <y>110</y>
+      <y>70</y>
       <width>30</width>
       <height>75</height>
     </widget>
@@ -67,7 +66,7 @@
       <name>FPGA Value</name>
       <pv_name>SFRS:$(CHAMBER_NAME):$(DETECTOR):SFP$(SFP):DEV$(DEV):FPGA:TEMP</pv_name>
       <x>10</x>
-      <y>190</y>
+      <y>150</y>
       <width>80</width>
       <font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -86,7 +85,7 @@
       <name>SiPM</name>
       <text>SiPM</text>
       <x>125</x>
-      <y>85</y>
+      <y>45</y>
       <width>50</width>
       <font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -99,7 +98,7 @@
       <name>SiPM Thermometer</name>
       <pv_name>SFRS:$(CHAMBER_NAME):$(DETECTOR):SFP$(SFP):DEV$(DEV):SIPM:TEMP</pv_name>
       <x>135</x>
-      <y>110</y>
+      <y>70</y>
       <width>30</width>
       <height>75</height>
     </widget>
@@ -107,7 +106,7 @@
       <name>SIPM Value</name>
       <pv_name>SFRS:$(CHAMBER_NAME):$(DETECTOR):SFP$(SFP):DEV$(DEV):SIPM:TEMP</pv_name>
       <x>110</x>
-      <y>190</y>
+      <y>150</y>
       <width>80</width>
       <font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -124,9 +123,9 @@
     </widget>
     <widget type="label" version="2.0.0">
       <name>Bias Title</name>
-      <text>Bias Set | RBV | STATE</text>
-      <y>225</y>
-      <width>200</width>
+      <text>Bias Set | RBV</text>
+      <x>10</x>
+      <y>185</y>
       <font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
         </font>
@@ -137,8 +136,8 @@
     <widget type="textupdate" version="2.0.0">
       <name>Bias Set</name>
       <pv_name>SFRS:$(CHAMBER_NAME):$(DETECTOR):SFP$(SFP):DEV$(DEV):SIPM:BIAS_SET</pv_name>
-      <x>29</x>
-      <y>255</y>
+      <x>10</x>
+      <y>215</y>
       <width>50</width>
       <background_color>
         <color name="Background" red="255" green="255" blue="255">
@@ -170,8 +169,8 @@
     <widget type="label" version="2.0.0">
       <name>Bias Set and Bias RBV</name>
       <text>|</text>
-      <x>79</x>
-      <y>255</y>
+      <x>68</x>
+      <y>215</y>
       <width>10</width>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
@@ -197,8 +196,8 @@
     <widget type="textupdate" version="2.0.0">
       <name>Bias RBV</name>
       <pv_name>SFRS:$(CHAMBER_NAME):$(DETECTOR):SFP$(SFP):DEV$(DEV):SIPM:BIAS_RBV</pv_name>
-      <x>90</x>
-      <y>255</y>
+      <x>80</x>
+      <y>215</y>
       <width>50</width>
       <background_color>
         <color name="Background" red="255" green="255" blue="255">
