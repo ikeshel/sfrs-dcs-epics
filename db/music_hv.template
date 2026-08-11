@@ -14,9 +14,9 @@
 #
 # Requested high voltage
 #
-record(ao, "SFRS:$(CHAMBER):MUSIC:FC$(FILD_CAGE):HV_SET")
+record(ao, "SFRS:$(CHAMBER):MUSIC1:FC$(FILD_CAGE):HV_SET")
 {
-    field(DESC, "$(CHAMBER) MUSIC:FC$(FILD_CAGE) HV setpoint")
+    field(DESC, "$(CHAMBER) MUSIC1 FC$(FILD_CAGE) HV setpoint")
     field(DTYP, "Soft Channel")
     field(SCAN, "Passive")
 
@@ -35,9 +35,9 @@ record(ao, "SFRS:$(CHAMBER):MUSIC:FC$(FILD_CAGE):HV_SET")
 #
 # Measured high voltage
 #
-record(ai, "SFRS:$(CHAMBER):MUSIC:FC$(FILD_CAGE):HV_RBV")
+record(ai, "SFRS:$(CHAMBER):MUSIC1:FC$(FILD_CAGE):HV_RBV")
 {
-    field(DESC, "$(CHAMBER) MUSIC:FC$(FILD_CAGE) HV readback")
+    field(DESC, "$(CHAMBER) MUSIC1 FC$(FILD_CAGE) HV readback")
     field(DTYP, "Soft Channel")
     field(SCAN, "Passive")
 
@@ -54,9 +54,9 @@ record(ai, "SFRS:$(CHAMBER):MUSIC:FC$(FILD_CAGE):HV_RBV")
 #
 # High-voltage operating state
 #
-record(mbbi, "SFRS:$(CHAMBER):MUSIC:FC$(FILD_CAGE):HV_STAT")
+record(mbbi, "SFRS:$(CHAMBER):MUSIC1:FC$(FILD_CAGE):HV_STAT")
 {
-    field(DESC, "$(CHAMBER) MUSIC:FC$(FILD_CAGE) HV status")
+    field(DESC, "$(CHAMBER) MUSIC1 FC$(FILD_CAGE) HV status")
     field(DTYP, "Soft Channel")
     field(SCAN, "Passive")
 
