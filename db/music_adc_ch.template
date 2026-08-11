@@ -10,9 +10,9 @@
 #
 ###############################################################################
 
-record(longin, "$(P=SFRS):$(CHAMBER):MUSIC:FC$(FILD_CAGE):ADC:CH$(CHANNEL)")
+record(longin, "$(P=SFRS):$(CHAMBER):MUSIC1:FC$(FILD_CAGE):ADC:CH$(CHANNEL)")
 {
-    field(DESC, "$(CHAMBER) MUSIC Field Cage $(FILD_CAGE) ADC channel $(CHANNEL)")
+    field(DESC, "$(CHAMBER) MUSIC1 Field Cage $(FILD_CAGE) ADC channel $(CHANNEL)")
 
     # Raw PADC amplitude
     field(EGU,  "counts")

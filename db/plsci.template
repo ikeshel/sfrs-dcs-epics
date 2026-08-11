@@ -10,9 +10,9 @@
 #
 ###############################################################################
 
-record(ao, "SFRS:$(CHAMBER):PLSCI:PMT$(PMT):THR")
+record(ao, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):THR")
 {
-    field(DESC, "$(CHAMBER) PLSCI PMT$(PMT) threshold")
+    field(DESC, "$(CHAMBER) PLSCI1 PMT$(PMT) threshold")
     field(DTYP, "Soft Channel")
     field(EGU,  "$(THR_EGU=raw)")
     field(PREC, "$(THR_PREC=0)")
@@ -22,9 +22,9 @@ record(ao, "SFRS:$(CHAMBER):PLSCI:PMT$(PMT):THR")
     field(DRVH, "$(THR_MAX=65535)")
 }
 
-record(ao, "SFRS:$(CHAMBER):PLSCI:PMT$(PMT):HV_SET")
+record(ao, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_SET")
 {
-    field(DESC, "$(CHAMBER) PLSCI PMT$(PMT) HV setpoint")
+    field(DESC, "$(CHAMBER) PLSCI1 PMT$(PMT) HV setpoint")
     field(DTYP, "Soft Channel")
     field(EGU,  "V")
     field(PREC, "3")
@@ -34,9 +34,9 @@ record(ao, "SFRS:$(CHAMBER):PLSCI:PMT$(PMT):HV_SET")
     field(DRVH, "1")
 }
 
-record(ao, "SFRS:$(CHAMBER):PLSCI:PMT$(PMT):HV_RBV")
+record(ao, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_RBV")
 {
-    field(DESC, "$(CHAMBER) PLSCI PMT$(PMT) HV readback")
+    field(DESC, "$(CHAMBER) PLSCI1 PMT$(PMT) HV readback")
     field(DTYP, "Soft Channel")
     field(EGU,  "V")
     field(PREC, "3")
@@ -46,9 +46,9 @@ record(ao, "SFRS:$(CHAMBER):PLSCI:PMT$(PMT):HV_RBV")
     field(DRVH, "1")
 }
 
-record(bo, "SFRS:$(CHAMBER):PLSCI:PMT$(PMT):STAT")
+record(bo, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):STAT")
 {
-    field(DESC, "$(CHAMBER) PLSCI PMT$(PMT) status")
+    field(DESC, "$(CHAMBER) PLSCI1 PMT$(PMT) status")
     field(DTYP, "Soft Channel")
     field(ZNAM, "OFF")
     field(ONAM, "ON")
