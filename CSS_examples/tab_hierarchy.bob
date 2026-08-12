@@ -1,100 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
-  <width>2000</width>
+  <width>1600</width>
   <height>1100</height>
   <widget type="tabs" version="2.0.0">
-    <name>main</name>
+    <name>Tabs_5</name>
     <tabs>
       <tab>
         <name>SCIFI</name>
         <children>
           <widget type="tabs" version="2.0.0">
-            <name>SCIFI</name>
+            <name>Tabs_6</name>
             <tabs>
               <tab>
                 <name>FPF2:SCIFI1</name>
                 <children>
-                </children>
-              </tab>
-              <tab>
-                <name>FPF2:SCIFI2</name>
-                <children>
-                </children>
-              </tab>
-              <tab>
-                <name>FPF3:SCIFI1</name>
-                <children>
-                </children>
-              </tab>
-              <tab>
-                <name>FPF4:SCIFI1</name>
-                <children>
-                </children>
-              </tab>
-              <tab>
-                <name>FPF4:SCIFI2</name>
-                <children>
-                </children>
-              </tab>
-              <tab>
-                <name>FPF2:SCIFI1</name>
-                <children>
-                </children>
-              </tab>
-              <tab>
-                <name>FPF2:SCIFI1</name>
-                <children>
-                </children>
-              </tab>
-              <tab>
-                <name>FPF2:SCIFI1</name>
-                <children>
-                </children>
-              </tab>
-              <tab>
-                <name>FPF2:SCIFI1</name>
-                <children>
-                </children>
-              </tab>
-              <tab>
-                <name>FPF2:SCIFI1</name>
-                <children>
-                </children>
-              </tab>
-              <tab>
-                <name>FPF2:SCIFI1</name>
-                <children>
-                </children>
-              </tab>
-              <tab>
-                <name>FHF1:SCIFI1</name>
-                <children>
-                </children>
-              </tab>
-              <tab>
-                <name>FHF1:SCIFI2</name>
-                <children>
                   <widget type="embedded" version="2.0.0">
-                    <name>Embedded Display_7</name>
+                    <name>Embedded Display</name>
                     <file>FiberGD.bob</file>
-                    <x>16</x>
-                    <y>25</y>
-                    <width>1710</width>
-                    <height>1270</height>
+                    <x>18</x>
+                    <y>8</y>
+                    <width>1480</width>
+                    <height>910</height>
                   </widget>
                 </children>
               </tab>
               <tab>
-                <name>FHF1:SCIFI3</name>
+                <name>FPF2:SCIFI1</name>
+                <children>
+                </children>
+              </tab>
+              <tab>
+                <name>FPF2:SCIFI1</name>
+                <children>
+                </children>
+              </tab>
+              <tab>
+                <name>FPF2:SCIFI1</name>
+                <children>
+                </children>
+              </tab>
+              <tab>
+                <name>FPF2:SCIFI1</name>
+                <children>
+                </children>
+              </tab>
+              <tab>
+                <name>FPF2:SCIFI1</name>
+                <children>
+                </children>
+              </tab>
+              <tab>
+                <name>FPF2:SCIFI1</name>
+                <children>
+                </children>
+              </tab>
+              <tab>
+                <name>FPF2:SCIFI1</name>
+                <children>
+                </children>
+              </tab>
+              <tab>
+                <name>FPF2:SCIFI1</name>
+                <children>
+                </children>
+              </tab>
+              <tab>
+                <name>FPF2:SCIFI1</name>
+                <children>
+                </children>
+              </tab>
+              <tab>
+                <name>FPF2:SCIFI1</name>
+                <children>
+                </children>
+              </tab>
+              <tab>
+                <name>FPF2:SCIFI1</name>
+                <children>
+                </children>
+              </tab>
+              <tab>
+                <name>FPF2:SCIFI1</name>
+                <children>
+                </children>
+              </tab>
+              <tab>
+                <name>FPF2:SCIFI1</name>
                 <children>
                 </children>
               </tab>
             </tabs>
-            <x>5</x>
-            <y>5</y>
-            <width>1937</width>
-            <height>1373</height>
-            <active_tab>12</active_tab>
+            <x>22</x>
+            <y>19</y>
+            <width>1510</width>
+            <height>970</height>
           </widget>
         </children>
       </tab>
@@ -102,43 +101,43 @@
         <name>PLSCI</name>
         <children>
           <widget type="tabs" version="2.0.0">
-            <name>PLSCI</name>
+            <name>Tabs_7</name>
             <tabs>
               <tab>
-                <name>FPF2:PLSCI</name>
+                <name>FPF2:SCIFI1</name>
                 <children>
                 </children>
               </tab>
               <tab>
-                <name>FPF2:PLSCI</name>
+                <name>FPF2:SCIFI1</name>
                 <children>
                 </children>
               </tab>
               <tab>
-                <name>FPF2:PLSCI</name>
+                <name>FPF2:SCIFI1</name>
                 <children>
                 </children>
               </tab>
               <tab>
-                <name>FPF2:PLSCI</name>
+                <name>FPF2:SCIFI1</name>
                 <children>
                 </children>
               </tab>
               <tab>
-                <name>FPF2:PLSCI</name>
+                <name>FPF2:SCIFI1</name>
                 <children>
                 </children>
               </tab>
               <tab>
-                <name>FPF2:PLSCI</name>
+                <name>FPF2:SCIFI1</name>
                 <children>
                 </children>
               </tab>
             </tabs>
-            <x>22</x>
-            <y>18</y>
-            <width>1920</width>
-            <height>1360</height>
+            <x>32</x>
+            <y>59</y>
+            <width>1510</width>
+            <height>910</height>
           </widget>
         </children>
       </tab>
@@ -146,29 +145,30 @@
         <name>MUSIC</name>
         <children>
           <widget type="tabs" version="2.0.0">
-            <name>MUSIC</name>
+            <name>Tabs_8</name>
             <tabs>
               <tab>
-                <name>FMF1:MUSIC</name>
+                <name>FPF2:SCIFI1</name>
                 <children>
                 </children>
               </tab>
               <tab>
-                <name>FHF1:MUSIC</name>
+                <name>FPF2:SCIFI1</name>
                 <children>
                 </children>
               </tab>
             </tabs>
             <x>22</x>
-            <y>18</y>
-            <width>1920</width>
-            <height>1360</height>
+            <y>59</y>
+            <width>1510</width>
+            <height>910</height>
           </widget>
         </children>
       </tab>
     </tabs>
-    <width>2000</width>
-    <height>1400</height>
+    <y>10</y>
+    <width>1580</width>
+    <height>1080</height>
     <direction>1</direction>
   </widget>
 </display>
