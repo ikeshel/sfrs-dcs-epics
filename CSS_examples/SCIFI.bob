@@ -12,8 +12,8 @@
           <widget type="embedded" version="2.0.0">
             <name>FPF2:SCIFI1</name>
             <macros>
-              <CHAMBER_NAME>FPF2</CHAMBER_NAME>
-              <DETECTOR>SCIFI1</DETECTOR>
+              <CHAMBER>FPF2</CHAMBER>
+              <ID>1</ID>
             </macros>
             <file>BoardTemplate.bob</file>
             <y>2</y>
@@ -28,8 +28,8 @@
           <widget type="embedded" version="2.0.0">
             <name>FPF2:SCIFI2</name>
             <macros>
-              <CHAMBER_NAME>FPF2</CHAMBER_NAME>
-              <DETECTOR>SCIFI2</DETECTOR>
+              <CHAMBER>FPF2</CHAMBER>
+              <ID>2</ID>
             </macros>
             <file>BoardTemplate.bob</file>
             <y>2</y>
@@ -44,8 +44,8 @@
           <widget type="embedded" version="2.0.0">
             <name>FPF3:SCIFI1</name>
             <macros>
-              <CHAMBER_NAME>FPF3</CHAMBER_NAME>
-              <DETECTOR>SCIFI1</DETECTOR>
+              <CHAMBER>FPF3</CHAMBER>
+              <ID>1</ID>
             </macros>
             <file>BoardTemplate.bob</file>
             <y>2</y>
@@ -60,8 +60,8 @@
           <widget type="embedded" version="2.0.0">
             <name>FPF4:SCIFI1</name>
             <macros>
-              <CHAMBER_NAME>FPF4</CHAMBER_NAME>
-              <DETECTOR>SCIFI1</DETECTOR>
+              <CHAMBER>FPF4</CHAMBER>
+              <ID>1</ID>
             </macros>
             <file>BoardTemplate.bob</file>
             <y>2</y>
@@ -76,8 +76,8 @@
           <widget type="embedded" version="2.0.0">
             <name>FPF4:SCIFI2</name>
             <macros>
-              <CHAMBER_NAME>FPF4</CHAMBER_NAME>
-              <DETECTOR>SCIFI2</DETECTOR>
+              <CHAMBER>FPF4</CHAMBER>
+              <ID>2</ID>
             </macros>
             <file>BoardTemplate.bob</file>
             <y>2</y>
@@ -92,8 +92,8 @@
           <widget type="embedded" version="2.0.0">
             <name>FMF1:SCIFI1</name>
             <macros>
-              <CHAMBER_NAME>FMF1</CHAMBER_NAME>
-              <DETECTOR>SCIFI1</DETECTOR>
+              <CHAMBER>FMF1</CHAMBER>
+              <ID>1</ID>
             </macros>
             <file>BoardTemplate.bob</file>
             <y>2</y>
@@ -108,8 +108,8 @@
           <widget type="embedded" version="2.0.0">
             <name>FMF1:SCIFI2</name>
             <macros>
-              <CHAMBER_NAME>FMF1</CHAMBER_NAME>
-              <DETECTOR>SCIFI2</DETECTOR>
+              <CHAMBER>FMF1</CHAMBER>
+              <ID>2</ID>
             </macros>
             <file>BoardTemplate.bob</file>
             <y>2</y>
@@ -124,8 +124,8 @@
           <widget type="embedded" version="2.0.0">
             <name>FMF2:SCIFI1</name>
             <macros>
-              <CHAMBER_NAME>FMF2</CHAMBER_NAME>
-              <DETECTOR>SCIFI1</DETECTOR>
+              <CHAMBER>FMF2</CHAMBER>
+              <ID>1</ID>
             </macros>
             <file>BoardTemplate.bob</file>
             <y>2</y>
@@ -140,8 +140,8 @@
           <widget type="embedded" version="2.0.0">
             <name>FMF2:SCIFI2</name>
             <macros>
-              <CHAMBER_NAME>FMF2</CHAMBER_NAME>
-              <DETECTOR>SCIFI2</DETECTOR>
+              <CHAMBER>FMF2</CHAMBER>
+              <ID>2</ID>
             </macros>
             <file>BoardTemplate.bob</file>
             <y>2</y>
@@ -156,8 +156,8 @@
           <widget type="embedded" version="2.0.0">
             <name>FMF3:SCIFI1</name>
             <macros>
-              <CHAMBER_NAME>FMF3</CHAMBER_NAME>
-              <DETECTOR>SCIFI1</DETECTOR>
+              <CHAMBER>FMF3</CHAMBER>
+              <ID>1</ID>
             </macros>
             <file>BoardTemplate.bob</file>
             <y>2</y>
@@ -172,8 +172,8 @@
           <widget type="embedded" version="2.0.0">
             <name>FMF3:SCIFI2</name>
             <macros>
-              <CHAMBER_NAME>FMF3</CHAMBER_NAME>
-              <DETECTOR>SCIFI2</DETECTOR>
+              <CHAMBER>FMF3</CHAMBER>
+              <ID>2</ID>
             </macros>
             <file>BoardTemplate.bob</file>
             <y>2</y>
@@ -188,8 +188,8 @@
           <widget type="embedded" version="2.0.0">
             <name>FHF1:SCIFI1</name>
             <macros>
-              <CHAMBER_NAME>FHF1</CHAMBER_NAME>
-              <DETECTOR>SCIFI1</DETECTOR>
+              <CHAMBER>FHF1</CHAMBER>
+              <ID>1</ID>
             </macros>
             <file>BoardTemplate.bob</file>
             <y>2</y>
@@ -204,8 +204,8 @@
           <widget type="embedded" version="2.0.0">
             <name>FHF1:SCIFI2</name>
             <macros>
-              <DETECTOR>SCIFI2</DETECTOR>
-              <CHAMBER_NAME>FHF1</CHAMBER_NAME>
+              <ID>2</ID>
+              <CHAMBER>FHF1</CHAMBER>
             </macros>
             <file>BoardTemplate.bob</file>
             <y>2</y>
@@ -220,8 +220,8 @@
           <widget type="embedded" version="2.0.0">
             <name>FHF1:SCIFI3</name>
             <macros>
-              <DETECTOR>SCIFI3</DETECTOR>
-              <CHAMBER_NAME>FHF1</CHAMBER_NAME>
+              <ID>3</ID>
+              <CHAMBER>FHF1</CHAMBER>
             </macros>
             <file>BoardTemplate.bob</file>
             <y>2</y>
@@ -233,6 +233,5 @@
     </tabs>
     <width>1825</width>
     <height>1055</height>
-    <active_tab>13</active_tab>
   </widget>
 </display>

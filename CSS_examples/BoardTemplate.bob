@@ -4,7 +4,7 @@
   <height>1013</height>
   <grid_visible>false</grid_visible>
   <widget type="group" version="3.0.0">
-    <name>$(CHAMBER_NAME) - $(DETECTOR)</name>
+    <name>$(CHAMBER) - SCIFI$(ID)</name>
     <width>1820</width>
     <height>1013</height>
     <style>3</style>
