@@ -61,6 +61,37 @@
       <y>70</y>
       <width>30</width>
       <height>75</height>
+      <rules>
+        <rule name="Thermometer_Alarm" prop_id="fill_color" out_exp="false">
+          <exp bool_exp="55 &gt; pv0 &gt;= 45">
+            <value>
+              <color name="MINOR" red="255" green="128" blue="0">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0 &gt;= 55">
+            <value>
+              <color name="MAJOR" red="255" green="0" blue="0">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="5 &gt;= pv0 &gt; 0">
+            <value>
+              <color name="MINOR" red="255" green="128" blue="0">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0 = 0">
+            <value>
+              <color name="Grid" red="128" green="128" blue="128">
+              </color>
+            </value>
+          </exp>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):FPGA:TEMP</pv_name>
+        </rule>
+      </rules>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <limits_from_pv>false</limits_from_pv>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>FPGA Value</name>
@@ -80,6 +111,7 @@
       <precision>1</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>SiPM</name>
@@ -101,6 +133,37 @@
       <y>70</y>
       <width>30</width>
       <height>75</height>
+      <rules>
+        <rule name="Thermometer_Alarm" prop_id="fill_color" out_exp="false">
+          <exp bool_exp="55 &gt; pv0 &gt;= 45">
+            <value>
+              <color name="MINOR" red="255" green="128" blue="0">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0 &gt;= 55">
+            <value>
+              <color name="MAJOR" red="255" green="0" blue="0">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="5 &gt;= pv0 &gt; 0">
+            <value>
+              <color name="MINOR" red="255" green="128" blue="0">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0 = 0">
+            <value>
+              <color name="Grid" red="128" green="128" blue="128">
+              </color>
+            </value>
+          </exp>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:TEMP</pv_name>
+        </rule>
+      </rules>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <limits_from_pv>false</limits_from_pv>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>SIPM Value</name>
@@ -120,6 +183,7 @@
       <precision>1</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Bias Title</name>
