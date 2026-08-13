@@ -3,8 +3,9 @@
 # MUSIC field-cage high-voltage records
 #
 # Macros:
-#     CHAMBER    Beamline chamber, for example FMF1 or FHF1
-#     MUSIC      MUSIC field-cage number
+#     CHAMBER       Beamline chamber, for example FMF1 or FHF1
+#     MUSIC         MUSIC detector number, for example 1
+#     FIELD_CAGE    Field-cage number, for example 1, 2 or 3
 #
 # Authors:
 #     i.keshelashvili@gsi.de
@@ -13,17 +14,18 @@
 
 #
 # Requested high voltage
+# CAEN parameter: VSET
 #
-record(ao, "SFRS:$(CHAMBER):MUSIC1:FC$(FILD_CAGE):HV_SET")
+record(ao, "SFRS:$(CHAMBER):MUSIC$(DETECTOR):FC$(FIELD_CAGE):HV_V_SET")
 {
-    field(DESC, "$(CHAMBER) MUSIC1 FC$(FILD_CAGE) HV setpoint")
+    field(DESC, "$(CHAMBER) MUSIC$(DETECTOR) FC$(FIELD_CAGE) voltage setpoint")
     field(DTYP, "Soft Channel")
     field(SCAN, "Passive")
 
     field(EGU,  "V")
     field(PREC, "1")
 
-    # Adjust these limits to the actual HV supply.
+    # Use detector-safe limits, not merely the power-supply limits.
     field(DRVL, "0")
     field(DRVH, "3000")
     field(LOPR, "0")
@@ -34,10 +36,11 @@ record(ao, "SFRS:$(CHAMBER):MUSIC1:FC$(FILD_CAGE):HV_SET")
 
 #
 # Measured high voltage
+# CAEN parameter: VMON
 #
-record(ai, "SFRS:$(CHAMBER):MUSIC1:FC$(FILD_CAGE):HV_RBV")
+record(ai, "SFRS:$(CHAMBER):MUSIC$(DETECTOR):FC$(FIELD_CAGE):HV_V_RBV")
 {
-    field(DESC, "$(CHAMBER) MUSIC1 FC$(FILD_CAGE) HV readback")
+    field(DESC, "$(CHAMBER) MUSIC$(DETECTOR) FC$(FIELD_CAGE) voltage readback")
     field(DTYP, "Soft Channel")
     field(SCAN, "Passive")
 
@@ -47,42 +50,59 @@ record(ai, "SFRS:$(CHAMBER):MUSIC1:FC$(FILD_CAGE):HV_RBV")
     field(LOPR, "0")
     field(HOPR, "3000")
 
-    field(MDEL, "0.1")
-    field(ADEL, "0.1")
+    field(MDEL, "0.2")
+    field(ADEL, "0.2")
 }
 
 #
-# High-voltage operating state
+# Requested current limit
+# CAEN parameter: ISET
 #
-record(mbbi, "SFRS:$(CHAMBER):MUSIC1:FC$(FILD_CAGE):HV_STAT")
+record(ao, "SFRS:$(CHAMBER):MUSIC$(DETECTOR):FC$(FIELD_CAGE):HV_I_SET")
 {
-    field(DESC, "$(CHAMBER) MUSIC1 FC$(FILD_CAGE) HV status")
+    field(DESC, "$(CHAMBER) MUSIC$(DETECTOR) FC$(FIELD_CAGE) current limit")
     field(DTYP, "Soft Channel")
     field(SCAN, "Passive")
 
-    field(ZRVL, "0")
-    field(ZRST, "OFF")
+    field(EGU,  "uA")
+    field(PREC, "3")
 
-    field(ONVL, "1")
-    field(ONST, "RAMP_UP")
+    # Replace with the detector-safe current limit.
+    field(DRVL, "0")
+    field(DRVH, "3000")
+    field(LOPR, "0")
+    field(HOPR, "3000")
 
-    field(TWVL, "2")
-    field(TWST, "ON")
+    field(PINI, "NO")
+}
 
-    field(THVL, "3")
-    field(THST, "RAMP_DOWN")
+#
+# Measured high-voltage current
+# CAEN parameter: IMON
+#
+record(ai, "SFRS:$(CHAMBER):MUSIC$(DETECTOR):FC$(FIELD_CAGE):HV_I_RBV")
+{
+    field(DESC, "$(CHAMBER) MUSIC$(DETECTOR) FC$(FIELD_CAGE) current readback")
+    field(DTYP, "Soft Channel")
+    field(SCAN, "Passive")
 
-    field(FRVL, "4")
-    field(FRST, "TRIP")
+    field(EGU,  "uA")
+    field(PREC, "3")
 
-    field(FVVL, "5")
-    field(FVST, "ERROR")
+    field(LOPR, "0")
+    field(HOPR, "3000")
 
-    field(SXVL, "6")
-    field(SXST, "UNKNOWN")
+    field(MDEL, "0.005")
+    field(ADEL, "0.005")
+}
 
-    # Alarm on dangerous or invalid states.
-    field(FRSV, "MAJOR")
-    field(FVSV, "MAJOR")
-    field(SXSV, "MINOR")
+#
+# Raw CAEN channel-status bitmask
+# CAEN parameter: STAT
+#
+record(longin, "SFRS:$(CHAMBER):MUSIC$(DETECTOR):FC$(FIELD_CAGE):HV_STAT")
+{
+    field(DESC, "$(CHAMBER) MUSIC$(DETECTOR) FC$(FIELD_CAGE) raw HV status")
+    field(DTYP, "Soft Channel")
+    field(SCAN, "Passive")
 }
