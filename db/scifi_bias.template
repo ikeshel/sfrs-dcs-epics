@@ -43,7 +43,7 @@ record(ai, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_V_RBV")
     # Replace DTYP and add INP when hardware communication is implemented.
     field(DTYP, "Soft Channel")
 
-    field(SCAN, "1 second")
+    field(SCAN, "3 second")
 }
 
 
@@ -82,7 +82,7 @@ record(ai, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_I_RBV")
     # Replace DTYP and add INP when hardware communication is implemented.
     field(DTYP, "Soft Channel")
 
-    field(SCAN, "1 second")
+    field(SCAN, "3 second")
 }
 
 
@@ -102,7 +102,7 @@ record(calc, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_STATE")
         "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_V_RBV CP")
 
     field(INPC, "$(OFF_THRESHOLD=0.2)")
-    field(INPD, "$(BIAS_TOLERANCE=0.2)")
+    field(INPD, "$(BIAS_TOLERANCE=0.4)")
 
     # OFF:
     #   abs(BIAS_SET) <= OFF_THRESHOLD
