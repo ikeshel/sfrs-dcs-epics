@@ -9,9 +9,9 @@
 ###############################################################################
 
 # Requested SiPM bias voltage
-record(ao, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_SET")
+record(ao, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_V_SET")
 {
-    field(DESC, "$(CHAMBER) SciFi $(ID) SiPM bias setpoint")
+    field(DESC, "$(CHAMBER) SciFi $(ID) SiPM bias voltage setpoint")
     field(EGU,  "V")
     field(PREC, "2")
 
@@ -30,14 +30,53 @@ record(ao, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_SET")
 
 
 # ADC-measured SiPM bias voltage
-record(ai, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_RBV")
+record(ai, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_V_RBV")
 {
-    field(DESC, "$(CHAMBER) SciFi $(ID) SiPM bias readback")
+    field(DESC, "$(CHAMBER) SciFi $(ID) SiPM bias voltage readback")
     field(EGU,  "V")
     field(PREC, "2")
 
     field(LOPR, "0.0")
     field(HOPR, "58.0")
+
+    # Temporary software record.
+    # Replace DTYP and add INP when hardware communication is implemented.
+    field(DTYP, "Soft Channel")
+
+    field(SCAN, "1 second")
+}
+
+
+# Requested SiPM bias current
+record(ao, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_I_SET")
+{
+    field(DESC, "$(CHAMBER) SciFi $(ID) SiPM bias current setpoint")
+    field(EGU,  "mA")
+    field(PREC, "3")
+
+    field(DRVL, "0.0")
+    field(DRVH, "0.1")
+
+    field(LOPR, "0.0")
+    field(HOPR, "0.1")
+
+    field(VAL, "$(INITIAL_BIAS_I=0.0)")
+
+    # Temporary software record.
+    # Replace DTYP and add OUT when hardware communication is implemented.
+    field(DTYP, "Soft Channel")
+}
+
+
+# ADC-measured SiPM bias current
+record(ai, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_I_RBV")
+{
+    field(DESC, "$(CHAMBER) SciFi $(ID) SiPM bias current readback")
+    field(EGU,  "mA")
+    field(PREC, "3")
+
+    field(LOPR, "0.0")
+    field(HOPR, "0.1")
 
     # Temporary software record.
     # Replace DTYP and add INP when hardware communication is implemented.
@@ -57,10 +96,10 @@ record(calc, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_STATE")
     field(DESC, "$(CHAMBER) SciFi $(ID) SiPM bias state")
 
     field(INPA,
-        "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_SET CP")
+        "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_V_SET CP")
 
     field(INPB,
-        "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_RBV CP")
+        "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_V_RBV CP")
 
     field(INPC, "$(OFF_THRESHOLD=0.2)")
     field(INPD, "$(BIAS_TOLERANCE=0.2)")
@@ -90,3 +129,4 @@ record(calc, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_STATE")
     field(MDEL, "0")
     field(ADEL, "0")
 }
+

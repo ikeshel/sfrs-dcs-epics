@@ -10,7 +10,7 @@
 #
 ###############################################################################
 
-record(ao, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):THR")
+record(ao, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):THRESHOLD")
 {
     field(DESC, "$(CHAMBER) PLSCI1 PMT$(PMT) threshold")
     field(DTYP, "Soft Channel")
@@ -21,8 +21,33 @@ record(ao, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):THR")
     field(DRVL, "$(THR_MIN=0)")
     field(DRVH, "$(THR_MAX=65535)")
 }
+alias("SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):THRESHOLD", "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):THR")
 
-record(ao, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_SET")
+record(ao, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):COUNTRATE")
+{
+    field(DESC, "$(CHAMBER) PLSCI1 PMT$(PMT) countrate")
+    field(DTYP, "Soft Channel")
+    field(EGU,  "Hz")
+    field(PREC, "0")
+    field(LOPR, "0")
+    field(HOPR, "10000000")
+    field(DRVL, "0")
+    field(DRVH, "10000000")
+}
+alias("SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):COUNTRATE", "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):RATE")
+
+
+record(bo, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):ON_OFF")
+{
+    field(DESC, "$(CHAMBER) PLSCI1 PMT$(PMT) binary channel")
+    field(DTYP, "Soft Channel")
+    field(ZNAM, "OFF")
+    field(ONAM, "ON")
+}
+
+# SETS
+#
+record(ao, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_V_SET")
 {
     field(DESC, "$(CHAMBER) PLSCI1 PMT$(PMT) HV setpoint")
     field(DTYP, "Soft Channel")
@@ -34,7 +59,21 @@ record(ao, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_SET")
     field(DRVH, "1")
 }
 
-record(ao, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_RBV")
+record(ao, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_I_SET")
+{
+    field(DESC, "$(CHAMBER) PLSCI1 PMT$(PMT) HV current setpoint")
+    field(DTYP, "Soft Channel")
+    field(EGU,  "A")
+    field(PREC, "3")
+    field(LOPR, "0")
+    field(HOPR, "0.005")
+    field(DRVL, "0")
+    field(DRVH, "0.01")
+}
+
+# READBACKS
+# 
+record(ao, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_V_RBV")
 {
     field(DESC, "$(CHAMBER) PLSCI1 PMT$(PMT) HV readback")
     field(DTYP, "Soft Channel")
@@ -46,7 +85,21 @@ record(ao, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_RBV")
     field(DRVH, "1")
 }
 
-record(bo, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):STAT")
+record(ao, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_I_RBV")
+{
+    field(DESC, "$(CHAMBER) PLSCI1 PMT$(PMT) HV current readback")
+    field(DTYP, "Soft Channel")
+    field(EGU,  "A")
+    field(PREC, "3")
+    field(LOPR, "0")
+    field(HOPR, "0.005")
+    field(DRVL, "0")
+    field(DRVH, "0.01")
+}
+
+# STATUS
+#
+record(bo, "SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_STATE")
 {
     field(DESC, "$(CHAMBER) PLSCI1 PMT$(PMT) status")
     field(DTYP, "Soft Channel")

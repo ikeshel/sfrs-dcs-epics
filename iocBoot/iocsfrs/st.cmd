@@ -18,8 +18,8 @@ dbLoadTemplate("db/scifi_threshold.substitutions")
 dbLoadTemplate("db/plsci.substitutions")
 
 ## MUSIC substitutions
-dbLoadTemplate("db/music_adc_ch.substitutions")
-dbLoadTemplate("db/music_hv.substitutions")
+# dbLoadTemplate("db/music_adc_ch.substitutions")
+# dbLoadTemplate("db/music_hv.substitutions")
 
 ## Load the IOC database
 iocInit
