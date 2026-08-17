@@ -9,7 +9,7 @@
 #
 ###############################################################################
 
-record(waveform, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):THR")
+record(waveform, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):THRESHOLD")
 {
     field(DESC, "$(CHAMBER) SciFi $(ID) 128-channel thresholds")
 
@@ -27,3 +27,4 @@ record(waveform, "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):THR")
     # Optional: process once during IOC initialization.
     field(PINI, "YES")
 }
+alias("SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):THRESHOLD", "SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):THR")

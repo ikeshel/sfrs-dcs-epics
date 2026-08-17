@@ -14,15 +14,15 @@ file "db/music_hv.template"
 {
     pattern
     {
-        CHAMBER, FILD_CAGE
+        CHAMBER, DETECTOR, FIELD_CAGE
     }
 
     # FMF1 MUSIC detector
-    { FMF1, 1 }
-    { FMF1, 2 }
+    { FMF1, 1, 1 }
+    { FMF1, 1, 2 }
 
     # FHF1 MUSIC detector
-    { FHF1, 1 }
-    { FHF1, 2 }
-    { FHF1, 3 }
+    { FHF1, 1, 1 }
+    { FHF1, 1, 2 }
+    { FHF1, 1, 3 }
 }
