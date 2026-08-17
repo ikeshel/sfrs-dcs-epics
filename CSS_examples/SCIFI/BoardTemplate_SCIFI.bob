@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>1820</width>
+  <height>1013</height>
+  <grid_visible>false</grid_visible>
+  <widget type="group" version="3.0.0">
+    <name>$(CHAMBER) - SCIFI$(ID)</name>
+    <width>1820</width>
+    <height>1013</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 1</name>
+      <macros>
+        <BOARD>BOARD 1</BOARD>
+        <SFP>0</SFP>
+        <DEV>0</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>275</x>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 2</name>
+      <macros>
+        <BOARD>BOARD 2</BOARD>
+        <SFP>0</SFP>
+        <DEV>1</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>490</x>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 3</name>
+      <macros>
+        <BOARD>BOARD 3</BOARD>
+        <SFP>0</SFP>
+        <DEV>2</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>705</x>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 4</name>
+      <macros>
+        <BOARD>BOARD 4</BOARD>
+        <SFP>0</SFP>
+        <DEV>3</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>920</x>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 5</name>
+      <macros>
+        <BOARD>BOARD 5</BOARD>
+        <SFP>0</SFP>
+        <DEV>4</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>1135</x>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 6</name>
+      <macros>
+        <BOARD>BOARD 6</BOARD>
+        <SFP>0</SFP>
+        <DEV>5</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>1350</x>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 7</name>
+      <macros>
+        <BOARD>BOARD 7</BOARD>
+        <SFP>1</SFP>
+        <DEV>0</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>140</x>
+      <y>509</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 8</name>
+      <macros>
+        <BOARD>BOARD 8</BOARD>
+        <SFP>1</SFP>
+        <DEV>1</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>140</x>
+      <y>255</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="picture" version="2.0.0">
+      <name>Scifi</name>
+      <file>det_scifi.svg</file>
+      <x>360</x>
+      <y>255</y>
+      <width>1105</width>
+      <height>504</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 9</name>
+      <macros>
+        <BOARD>BOARD 9</BOARD>
+        <SFP>2</SFP>
+        <DEV>0</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>1350</x>
+      <y>763</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 10</name>
+      <macros>
+        <BOARD>BOARD 10</BOARD>
+        <SFP>2</SFP>
+        <DEV>1</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>1135</x>
+      <y>763</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 11</name>
+      <macros>
+        <BOARD>BOARD 11</BOARD>
+        <SFP>2</SFP>
+        <DEV>2</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>920</x>
+      <y>763</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 12</name>
+      <macros>
+        <BOARD>BOARD 12</BOARD>
+        <SFP>2</SFP>
+        <DEV>3</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>705</x>
+      <y>763</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 13</name>
+      <macros>
+        <BOARD>BOARD 13</BOARD>
+        <SFP>2</SFP>
+        <DEV>4</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>490</x>
+      <y>763</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 14</name>
+      <macros>
+        <BOARD>BOARD 14</BOARD>
+        <SFP>2</SFP>
+        <DEV>5</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>275</x>
+      <y>763</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 15</name>
+      <macros>
+        <BOARD>BOARD 15</BOARD>
+        <SFP>3</SFP>
+        <DEV>0</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>1485</x>
+      <y>255</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 16</name>
+      <macros>
+        <BOARD>BOARD 16</BOARD>
+        <SFP>3</SFP>
+        <DEV>1</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>1485</x>
+      <y>509</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+  </widget>
+</display>

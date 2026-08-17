@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>1820</width>
+  <height>1210</height>
+  <grid_visible>false</grid_visible>
+  <widget type="group" version="3.0.0">
+    <name>$(CHAMBER) - PLSCI1</name>
+    <width>1820</width>
+    <height>1210</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 8</name>
+      <macros>
+        <BOARD>BOARD 8</BOARD>
+        <PMT>8</PMT>
+      </macros>
+      <file>boardcard_PLSCI.bob</file>
+      <x>460</x>
+      <width>300</width>
+      <height>331</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 1</name>
+      <macros>
+        <BOARD>BOARD 1</BOARD>
+        <PMT>1</PMT>
+      </macros>
+      <file>boardcard_PLSCI.bob</file>
+      <x>770</x>
+      <width>300</width>
+      <height>331</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 2</name>
+      <macros>
+        <BOARD>BOARD 2</BOARD>
+        <PMT>2</PMT>
+      </macros>
+      <file>boardcard_PLSCI.bob</file>
+      <x>1080</x>
+      <width>300</width>
+      <height>331</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 3</name>
+      <macros>
+        <BOARD>BOARD 3</BOARD>
+        <PMT>3</PMT>
+      </macros>
+      <file>boardcard_PLSCI.bob</file>
+      <x>1370</x>
+      <y>440</y>
+      <width>300</width>
+      <height>331</height>
+    </widget>
+    <widget type="picture" version="2.0.0">
+      <name>Plsci_8_</name>
+      <file>det_plsci8.svg</file>
+      <x>460</x>
+      <y>336</y>
+      <width>900</width>
+      <height>538</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 4</name>
+      <macros>
+        <BOARD>BOARD 4</BOARD>
+        <PMT>4</PMT>
+      </macros>
+      <file>boardcard_PLSCI.bob</file>
+      <x>1080</x>
+      <y>879</y>
+      <width>300</width>
+      <height>331</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 5</name>
+      <macros>
+        <BOARD>BOARD 5</BOARD>
+        <PMT>5</PMT>
+      </macros>
+      <file>boardcard_PLSCI.bob</file>
+      <x>770</x>
+      <y>879</y>
+      <width>300</width>
+      <height>331</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 6</name>
+      <macros>
+        <BOARD>BOARD 6</BOARD>
+        <PMT>6</PMT>
+      </macros>
+      <file>boardcard_PLSCI.bob</file>
+      <x>460</x>
+      <y>879</y>
+      <width>300</width>
+      <height>331</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>Board 7</name>
+      <macros>
+        <BOARD>BOARD 7</BOARD>
+        <PMT>7</PMT>
+      </macros>
+      <file>boardcard_PLSCI.bob</file>
+      <x>150</x>
+      <y>440</y>
+      <width>300</width>
+      <height>331</height>
+    </widget>
+  </widget>
+</display>
