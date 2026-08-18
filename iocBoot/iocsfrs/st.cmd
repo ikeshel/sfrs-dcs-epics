@@ -1,5 +1,8 @@
 #!../../bin/linux-x86_64/sfrs
 
+#
+# i.keshelashvili@gsi.de
+#
 < envPaths
 
 cd "${TOP}"
