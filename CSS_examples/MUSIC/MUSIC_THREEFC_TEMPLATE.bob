@@ -9,10 +9,10 @@
       <FIELD_CAGE>1</FIELD_CAGE>
     </macros>
     <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
-    <x>135</x>
-    <y>461</y>
-    <width>450</width>
-    <height>450</height>
+    <x>70</x>
+    <y>130</y>
+    <width>500</width>
+    <height>810</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>MUSIC_FC2</name>
@@ -20,10 +20,10 @@
       <FIELD_CAGE>2</FIELD_CAGE>
     </macros>
     <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
-    <x>685</x>
-    <y>461</y>
-    <width>450</width>
-    <height>450</height>
+    <x>580</x>
+    <y>130</y>
+    <width>500</width>
+    <height>810</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>MUSIC_FC3</name>
@@ -31,9 +31,9 @@
       <FIELD_CAGE>3</FIELD_CAGE>
     </macros>
     <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
-    <x>1235</x>
-    <y>461</y>
-    <width>450</width>
-    <height>450</height>
+    <x>1090</x>
+    <y>130</y>
+    <width>500</width>
+    <height>810</height>
   </widget>
 </display>

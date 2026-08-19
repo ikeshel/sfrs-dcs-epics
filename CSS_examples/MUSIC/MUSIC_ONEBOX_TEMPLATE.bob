@@ -5,8 +5,8 @@
   <grid_visible>false</grid_visible>
   <widget type="group" version="3.0.0">
     <name>MUSIC_ONEBOX</name>
-    <width>450</width>
-    <height>450</height>
+    <width>470</width>
+    <height>720</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="rectangle" version="2.0.0">
@@ -26,7 +26,7 @@
     <widget type="label" version="2.0.0">
       <name>HEADER FC</name>
       <text>FC$(FIELD_CAGE)</text>
-      <y>50</y>
+      <y>9</y>
       <width>450</width>
       <height>30</height>
       <font>
@@ -38,10 +38,10 @@
     </widget>
     <widget type="rectangle" version="2.0.0">
       <name>LED</name>
-      <x>5</x>
-      <y>100</y>
-      <width>70</width>
-      <height>100</height>
+      <x>25</x>
+      <y>39</y>
+      <width>295</width>
+      <height>50</height>
       <line_width>1</line_width>
       <line_color>
         <color name="Button_Background" red="210" green="210" blue="210">
@@ -55,8 +55,8 @@
     <widget type="led" version="2.0.0">
       <name>ON/OFF</name>
       <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_ON_OFF</pv_name>
-      <x>25</x>
-      <y>125</y>
+      <x>40</x>
+      <y>50</y>
       <width>25</width>
       <height>25</height>
       <off_color>
@@ -68,34 +68,21 @@
         </color>
       </on_color>
     </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>ON/OFF</name>
-      <x>8</x>
-      <y>155</y>
-      <width>60</width>
-      <height>25</height>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
     <widget type="linearmeter" version="3.0.0">
       <name>HV_V_RBV</name>
       <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</pv_name>
-      <x>85</x>
+      <x>110</x>
       <y>100</y>
-      <width>355</width>
+      <width>330</width>
       <height>75</height>
       <display_mode>1</display_mode>
     </widget>
     <widget type="linearmeter" version="3.0.0">
       <name>HV_I_RBV</name>
       <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</pv_name>
-      <x>85</x>
+      <x>110</x>
       <y>180</y>
-      <width>355</width>
+      <width>330</width>
       <height>75</height>
       <display_mode>1</display_mode>
     </widget>
@@ -127,7 +114,7 @@
     </widget>
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STAT</pv_name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STATE</pv_name>
       <x>25</x>
       <y>315</y>
       <width>400</width>
@@ -149,7 +136,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>STAT_NO</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STAT</pv_name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STATE</pv_name>
       <x>130</x>
       <y>375</y>
       <height>25</height>
@@ -215,9 +202,32 @@
           <exp bool_exp="pv0 == 0">
             <value>CHANNEL OFF</value>
           </exp>
-          <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STAT</pv_name>
+          <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STATE</pv_name>
         </rule>
       </rules>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_ENABLE</pv_name>
+      <x>85</x>
+      <y>50</y>
+      <width>215</width>
+    </widget>
+    <widget type="databrowser" version="2.0.0">
+      <name>Data Browser</name>
+      <file>FMF1_MUSIC1_FC1.plt</file>
+      <x>25</x>
+      <y>470</y>
+      <height>240</height>
+      <selection_value_pv>SFRS:FMF1:MUSIC1:FC1:HV_V_RBV</selection_value_pv>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>Spinner</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
+      <x>10</x>
+      <y>100</y>
+      <width>90</width>
+      <height>30</height>
     </widget>
   </widget>
 </display>
