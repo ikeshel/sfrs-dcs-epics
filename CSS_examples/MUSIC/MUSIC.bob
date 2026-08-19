@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>1825</width>
+  <height>1415</height>
+  <grid_visible>false</grid_visible>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabs</name>
+    <tabs>
+      <tab>
+        <name>FMF1:MUSIC1</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>FMF1:MUSIC1</name>
+            <macros>
+              <CHAMBER>FMF1</CHAMBER>
+            </macros>
+            <file>MUSIC_TWOFC_TEMPLATE.bob</file>
+            <y>2</y>
+            <width>1820</width>
+            <height>1373</height>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>FHF1:MUSIC1</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>FHF1:MUSIC1</name>
+            <macros>
+              <CHAMBER>FHF1</CHAMBER>
+            </macros>
+            <file>MUSIC_THREEFC_TEMPLATE.bob</file>
+            <y>2</y>
+            <width>1820</width>
+            <height>1373</height>
+          </widget>
+        </children>
+      </tab>
+    </tabs>
+    <width>1825</width>
+    <height>1415</height>
+    <active_tab>1</active_tab>
+  </widget>
+</display>

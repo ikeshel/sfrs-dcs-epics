@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <width>1920</width>
-  <height>1080</height>
+  <height>1440</height>
   <grid_visible>false</grid_visible>
   <widget type="rectangle" version="2.0.0">
-    <name>Rectangle</name>
+    <name>Title-limit</name>
     <width>1920</width>
     <height>14</height>
     <line_width>2</line_width>
@@ -18,14 +18,14 @@
     </background_color>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label</name>
+    <name>Title</name>
     <text>SFRS</text>
     <width>50</width>
     <height>13</height>
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="navtabs" version="2.0.0">
-    <name>Navigation Tabs</name>
+    <name>Screens</name>
     <tabs>
       <tab>
         <name>SCIFI</name>
@@ -59,7 +59,7 @@
       </tab>
       <tab>
         <name>MUSIC</name>
-        <file></file>
+        <file>../MUSIC/MUSIC.bob</file>
         <macros>
         </macros>
         <group_name></group_name>
@@ -75,7 +75,7 @@
     </tabs>
     <y>13</y>
     <width>1920</width>
-    <height>1067</height>
+    <height>1427</height>
     <tab_width>60</tab_width>
   </widget>
 </display>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <width>1820</width>
-  <height>1013</height>
+  <height>1373</height>
   <grid_visible>false</grid_visible>
   <widget type="group" version="3.0.0">
     <name>$(CHAMBER) - SCIFI$(ID)</name>
     <width>1820</width>
-    <height>1013</height>
+    <height>1373</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
@@ -18,6 +18,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>275</x>
+      <y>171</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -30,6 +31,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>490</x>
+      <y>171</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -42,6 +44,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>705</x>
+      <y>171</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -54,6 +57,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>920</x>
+      <y>171</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -66,6 +70,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>1135</x>
+      <y>171</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -78,6 +83,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>1350</x>
+      <y>171</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -90,7 +96,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>140</x>
-      <y>509</y>
+      <y>691</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -103,7 +109,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>140</x>
-      <y>255</y>
+      <y>431</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -111,9 +117,9 @@
       <name>Scifi</name>
       <file>det_scifi.svg</file>
       <x>360</x>
-      <y>255</y>
+      <y>431</y>
       <width>1105</width>
-      <height>504</height>
+      <height>510</height>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Board 9</name>
@@ -124,7 +130,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>1350</x>
-      <y>763</y>
+      <y>951</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -137,7 +143,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>1135</x>
-      <y>763</y>
+      <y>951</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -150,7 +156,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>920</x>
-      <y>763</y>
+      <y>951</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -163,7 +169,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>705</x>
-      <y>763</y>
+      <y>951</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -176,7 +182,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>490</x>
-      <y>763</y>
+      <y>951</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -189,7 +195,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>275</x>
-      <y>763</y>
+      <y>951</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -202,7 +208,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>1485</x>
-      <y>255</y>
+      <y>431</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -215,7 +221,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>1485</x>
-      <y>509</y>
+      <y>691</y>
       <width>200</width>
       <height>250</height>
     </widget>

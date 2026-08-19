@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>450</width>
+  <height>450</height>
+  <grid_visible>false</grid_visible>
+  <widget type="group" version="3.0.0">
+    <name>MUSIC_ONEBOX</name>
+    <width>450</width>
+    <height>450</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>LIMIT</name>
+      <width>450</width>
+      <height>450</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>HEADER FC</name>
+      <text>FC$(FIELD_CAGE)</text>
+      <y>50</y>
+      <width>450</width>
+      <height>30</height>
+      <font>
+        <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>LED</name>
+      <x>5</x>
+      <y>100</y>
+      <width>70</width>
+      <height>100</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>ON/OFF</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_ON_OFF</pv_name>
+      <x>25</x>
+      <y>125</y>
+      <width>25</width>
+      <height>25</height>
+      <off_color>
+        <color name="Grid" red="128" green="128" blue="128">
+        </color>
+      </off_color>
+      <on_color>
+        <color red="0" green="128" blue="0">
+        </color>
+      </on_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>ON/OFF</name>
+      <x>8</x>
+      <y>155</y>
+      <width>60</width>
+      <height>25</height>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="linearmeter" version="3.0.0">
+      <name>HV_V_RBV</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</pv_name>
+      <x>85</x>
+      <y>100</y>
+      <width>355</width>
+      <height>75</height>
+      <display_mode>1</display_mode>
+    </widget>
+    <widget type="linearmeter" version="3.0.0">
+      <name>HV_I_RBV</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</pv_name>
+      <x>85</x>
+      <y>180</y>
+      <width>355</width>
+      <height>75</height>
+      <display_mode>1</display_mode>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>STATE</name>
+      <y>265</y>
+      <width>450</width>
+      <height>185</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>STATE</name>
+      <text>STATUS</text>
+      <y>275</y>
+      <height>30</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STAT</pv_name>
+      <x>25</x>
+      <y>315</y>
+      <width>400</width>
+      <height>30</height>
+      <numBits>14</numBits>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>State</name>
+      <text>STATE</text>
+      <x>25</x>
+      <y>375</y>
+      <height>25</height>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="15.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>STAT_NO</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STAT</pv_name>
+      <x>130</x>
+      <y>375</y>
+      <height>25</height>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>STAT_LABEL</name>
+      <text></text>
+      <x>235</x>
+      <y>375</y>
+      <height>25</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="STAT_LABEL" prop_id="text" out_exp="false">
+          <exp bool_exp="(pv0 &amp; 128) == 128">
+            <value>TRIP</value>
+          </exp>
+          <exp bool_exp="(pv0 &amp; 2048) == 2048">
+            <value>KILL</value>
+          </exp>
+          <exp bool_exp="(pv0 &amp; 4096) == 4096">
+            <value>INTERLOCK</value>
+          </exp>
+          <exp bool_exp="(pv0 &amp; 8) == 8">
+            <value>OVERCURRENT</value>
+          </exp>
+          <exp bool_exp="(pv0 &amp; 16) == 16">
+            <value>OVERVOLTAGE</value>
+          </exp>
+          <exp bool_exp="(pv0 &amp; 32) == 32">
+            <value>UNVERVOLTAGE</value>
+          </exp>
+          <exp bool_exp="(pv0 &amp; 64) == 64">
+            <value>VMAX PROTECTION</value>
+          </exp>
+          <exp bool_exp="(pv0 &amp; 256) == 256">
+            <value>OVERPOWER</value>
+          </exp>
+          <exp bool_exp="(pv0 &amp; 512) == 512">
+            <value>OVERTEMPERATURE</value>
+          </exp>
+          <exp bool_exp="(pv0 &amp; 8192) == 8192">
+            <value>CALIBRATION ERROR</value>
+          </exp>
+          <exp bool_exp="(pv0 &amp; 1024) == 1024">
+            <value>DISABLED</value>
+          </exp>
+          <exp bool_exp="(pv0 &amp; 2) == 2">
+            <value>RAMP UP</value>
+          </exp>
+          <exp bool_exp="(pv0 &amp; 4) == 4">
+            <value>RAMP DOWN</value>
+          </exp>
+          <exp bool_exp="(pv0 &amp; 1) == 1">
+            <value>CHANNEL ON</value>
+          </exp>
+          <exp bool_exp="pv0 == 0">
+            <value>CHANNEL OFF</value>
+          </exp>
+          <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STAT</pv_name>
+        </rule>
+      </rules>
+    </widget>
+  </widget>
+</display>

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
-  <width>300</width>
+  <width>350</width>
   <height>331</height>
   <grid_visible>false</grid_visible>
   <widget type="group" version="3.0.0">
     <name>Board</name>
+    <width>350</width>
     <height>331</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="rectangle" version="2.0.0">
       <name>BoardLimit</name>
-      <width>300</width>
+      <width>350</width>
       <height>331</height>
       <line_width>1</line_width>
       <line_color>
@@ -24,9 +25,9 @@
     </widget>
     <widget type="label" version="2.0.0">
       <name>Board Number</name>
-      <text>$(BOARD)</text>
+      <text>PMT$(PMT)</text>
       <x>1</x>
-      <width>298</width>
+      <width>348</width>
       <height>30</height>
       <font>
         <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
@@ -38,8 +39,8 @@
     <widget type="led" version="2.0.0">
       <name>PMT_STAT</name>
       <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_STATE</pv_name>
-      <x>100</x>
-      <y>40</y>
+      <x>20</x>
+      <y>50</y>
       <width>25</width>
       <height>25</height>
       <off_color>
@@ -54,8 +55,8 @@
     <widget type="textupdate" version="2.0.0">
       <name>PMT_STAT</name>
       <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_STATE</pv_name>
-      <x>140</x>
-      <y>40</y>
+      <x>1</x>
+      <y>80</y>
       <width>60</width>
       <height>25</height>
       <background_color>
@@ -69,9 +70,9 @@
     <widget type="linearmeter" version="3.0.0">
       <name>Voltage</name>
       <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_V_RBV</pv_name>
-      <x>1</x>
-      <y>80</y>
-      <width>298</width>
+      <x>55</x>
+      <y>35</y>
+      <width>290</width>
       <height>100</height>
       <colors>
         <foreground_color>
@@ -105,11 +106,16 @@
         <is_gradient_enabled>true</is_gradient_enabled>
         <is_highlighting_of_active_regions_enabled>true</is_highlighting_of_active_regions_enabled>
       </colors>
+      <maximum>10.0</maximum>
+      <level_lolo>0.0</level_lolo>
+      <level_low>0.0</level_low>
+      <level_high>0.0</level_high>
+      <level_hihi>0.0</level_hihi>
     </widget>
     <widget type="rectangle" version="2.0.0">
       <name>CountRate Area</name>
       <y>181</y>
-      <width>300</width>
+      <width>350</width>
       <height>150</height>
       <line_width>1</line_width>
       <line_color>
@@ -126,7 +132,7 @@
       <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):COUNTRATE</pv_name>
       <x>1</x>
       <y>182</y>
-      <width>298</width>
+      <width>348</width>
       <height>148</height>
       <log_scale>true</log_scale>
       <limits_from_pv>false</limits_from_pv>

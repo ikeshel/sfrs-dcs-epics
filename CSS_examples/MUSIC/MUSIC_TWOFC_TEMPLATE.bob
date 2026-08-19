@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>1820</width>
+  <height>1373</height>
+  <grid_visible>false</grid_visible>
+  <widget type="embedded" version="2.0.0">
+    <name>MUSIC_FC1</name>
+    <macros>
+      <FIELD_CAGE>1</FIELD_CAGE>
+    </macros>
+    <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
+    <x>410</x>
+    <y>461</y>
+    <width>450</width>
+    <height>450</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>MUSIC_FC2</name>
+    <macros>
+      <FIELD_CAGE>2</FIELD_CAGE>
+    </macros>
+    <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
+    <x>960</x>
+    <y>461</y>
+    <width>450</width>
+    <height>450</height>
+  </widget>
+</display>
