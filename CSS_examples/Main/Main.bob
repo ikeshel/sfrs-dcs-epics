@@ -3,27 +3,6 @@
   <width>1920</width>
   <height>1440</height>
   <grid_visible>false</grid_visible>
-  <widget type="rectangle" version="2.0.0">
-    <name>Title-limit</name>
-    <width>1920</width>
-    <height>14</height>
-    <line_width>2</line_width>
-    <line_color>
-      <color name="Grid" red="128" green="128" blue="128">
-      </color>
-    </line_color>
-    <background_color>
-      <color name="Background" red="255" green="255" blue="255">
-      </color>
-    </background_color>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Title</name>
-    <text>SFRS</text>
-    <width>50</width>
-    <height>13</height>
-    <horizontal_alignment>1</horizontal_alignment>
-  </widget>
   <widget type="navtabs" version="2.0.0">
     <name>Screens</name>
     <tabs>
@@ -73,7 +52,6 @@
         </deselected_color>
       </tab>
     </tabs>
-    <y>13</y>
     <width>1920</width>
     <height>1427</height>
     <tab_width>60</tab_width>

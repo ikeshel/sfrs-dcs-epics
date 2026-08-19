@@ -2,38 +2,42 @@
 <display version="2.0.0">
   <width>1820</width>
   <height>1373</height>
-  <grid_visible>false</grid_visible>
-  <widget type="embedded" version="2.0.0">
-    <name>MUSIC_FC1</name>
-    <macros>
-      <FIELD_CAGE>1</FIELD_CAGE>
-    </macros>
-    <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
-    <x>70</x>
-    <y>130</y>
-    <width>500</width>
+  <widget type="group" version="3.0.0">
+    <name>Group</name>
+    <x>130</x>
+    <y>170</y>
+    <width>1520</width>
     <height>810</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>MUSIC_FC2</name>
-    <macros>
-      <FIELD_CAGE>2</FIELD_CAGE>
-    </macros>
-    <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
-    <x>580</x>
-    <y>130</y>
-    <width>500</width>
-    <height>810</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>MUSIC_FC3</name>
-    <macros>
-      <FIELD_CAGE>3</FIELD_CAGE>
-    </macros>
-    <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
-    <x>1090</x>
-    <y>130</y>
-    <width>500</width>
-    <height>810</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>MUSIC_FC3</name>
+      <macros>
+        <FIELD_CAGE>3</FIELD_CAGE>
+      </macros>
+      <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
+      <x>1020</x>
+      <width>500</width>
+      <height>810</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>MUSIC_FC2</name>
+      <macros>
+        <FIELD_CAGE>2</FIELD_CAGE>
+      </macros>
+      <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
+      <x>510</x>
+      <width>500</width>
+      <height>810</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>MUSIC_FC1</name>
+      <macros>
+        <FIELD_CAGE>1</FIELD_CAGE>
+      </macros>
+      <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
+      <width>500</width>
+      <height>810</height>
+    </widget>
   </widget>
 </display>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
-  <width>450</width>
-  <height>450</height>
+  <width>500</width>
+  <height>800</height>
   <grid_visible>false</grid_visible>
   <widget type="group" version="3.0.0">
     <name>MUSIC_ONEBOX</name>
     <width>470</width>
-    <height>720</height>
+    <height>800</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="rectangle" version="2.0.0">
-      <name>LIMIT</name>
-      <width>450</width>
-      <height>450</height>
+      <name>rectLIMIT</name>
+      <width>500</width>
+      <height>800</height>
       <line_width>1</line_width>
       <line_color>
         <color name="Button_Background" red="210" green="210" blue="210">
@@ -25,7 +25,7 @@
     </widget>
     <widget type="label" version="2.0.0">
       <name>HEADER FC</name>
-      <text>FC$(FIELD_CAGE)</text>
+      <text>$(CHAMBER):MUSIC1:FC$(FIELD_CAGE)</text>
       <y>9</y>
       <width>450</width>
       <height>30</height>
@@ -37,60 +37,10 @@
       <vertical_alignment>1</vertical_alignment>
     </widget>
     <widget type="rectangle" version="2.0.0">
-      <name>LED</name>
-      <x>25</x>
-      <y>39</y>
-      <width>295</width>
-      <height>50</height>
-      <line_width>1</line_width>
-      <line_color>
-        <color name="Button_Background" red="210" green="210" blue="210">
-        </color>
-      </line_color>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>ON/OFF</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_ON_OFF</pv_name>
-      <x>40</x>
-      <y>50</y>
-      <width>25</width>
-      <height>25</height>
-      <off_color>
-        <color name="Grid" red="128" green="128" blue="128">
-        </color>
-      </off_color>
-      <on_color>
-        <color red="0" green="128" blue="0">
-        </color>
-      </on_color>
-    </widget>
-    <widget type="linearmeter" version="3.0.0">
-      <name>HV_V_RBV</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</pv_name>
-      <x>110</x>
-      <y>100</y>
-      <width>330</width>
-      <height>75</height>
-      <display_mode>1</display_mode>
-    </widget>
-    <widget type="linearmeter" version="3.0.0">
-      <name>HV_I_RBV</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</pv_name>
-      <x>110</x>
-      <y>180</y>
-      <width>330</width>
-      <height>75</height>
-      <display_mode>1</display_mode>
-    </widget>
-    <widget type="rectangle" version="2.0.0">
       <name>STATE</name>
       <y>265</y>
       <width>450</width>
-      <height>185</height>
+      <height>75</height>
       <line_width>1</line_width>
       <line_color>
         <color name="Button_Background" red="210" green="210" blue="210">
@@ -115,17 +65,17 @@
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor</name>
       <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STATE</pv_name>
-      <x>25</x>
-      <y>315</y>
-      <width>400</width>
-      <height>30</height>
+      <x>110</x>
+      <y>275</y>
+      <width>315</width>
+      <height>22</height>
       <numBits>14</numBits>
     </widget>
     <widget type="label" version="2.0.0">
       <name>State</name>
       <text>STATE</text>
       <x>25</x>
-      <y>375</y>
+      <y>305</y>
       <height>25</height>
       <font>
         <font family="Liberation Sans" style="REGULAR" size="15.0">
@@ -138,7 +88,7 @@
       <name>STAT_NO</name>
       <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STATE</pv_name>
       <x>130</x>
-      <y>375</y>
+      <y>305</y>
       <height>25</height>
       <background_color>
         <color name="Background" red="255" green="255" blue="255">
@@ -147,87 +97,122 @@
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
     </widget>
-    <widget type="label" version="2.0.0">
-      <name>STAT_LABEL</name>
-      <text></text>
-      <x>235</x>
-      <y>375</y>
-      <height>25</height>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="STAT_LABEL" prop_id="text" out_exp="false">
-          <exp bool_exp="(pv0 &amp; 128) == 128">
-            <value>TRIP</value>
-          </exp>
-          <exp bool_exp="(pv0 &amp; 2048) == 2048">
-            <value>KILL</value>
-          </exp>
-          <exp bool_exp="(pv0 &amp; 4096) == 4096">
-            <value>INTERLOCK</value>
-          </exp>
-          <exp bool_exp="(pv0 &amp; 8) == 8">
-            <value>OVERCURRENT</value>
-          </exp>
-          <exp bool_exp="(pv0 &amp; 16) == 16">
-            <value>OVERVOLTAGE</value>
-          </exp>
-          <exp bool_exp="(pv0 &amp; 32) == 32">
-            <value>UNVERVOLTAGE</value>
-          </exp>
-          <exp bool_exp="(pv0 &amp; 64) == 64">
-            <value>VMAX PROTECTION</value>
-          </exp>
-          <exp bool_exp="(pv0 &amp; 256) == 256">
-            <value>OVERPOWER</value>
-          </exp>
-          <exp bool_exp="(pv0 &amp; 512) == 512">
-            <value>OVERTEMPERATURE</value>
-          </exp>
-          <exp bool_exp="(pv0 &amp; 8192) == 8192">
-            <value>CALIBRATION ERROR</value>
-          </exp>
-          <exp bool_exp="(pv0 &amp; 1024) == 1024">
-            <value>DISABLED</value>
-          </exp>
-          <exp bool_exp="(pv0 &amp; 2) == 2">
-            <value>RAMP UP</value>
-          </exp>
-          <exp bool_exp="(pv0 &amp; 4) == 4">
-            <value>RAMP DOWN</value>
-          </exp>
-          <exp bool_exp="(pv0 &amp; 1) == 1">
-            <value>CHANNEL ON</value>
-          </exp>
-          <exp bool_exp="pv0 == 0">
-            <value>CHANNEL OFF</value>
-          </exp>
-          <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STATE</pv_name>
-        </rule>
-      </rules>
-    </widget>
     <widget type="bool_button" version="2.0.0">
       <name>Boolean Button</name>
       <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_ENABLE</pv_name>
       <x>85</x>
       <y>50</y>
       <width>215</width>
+      <labels_from_pv>true</labels_from_pv>
     </widget>
     <widget type="databrowser" version="2.0.0">
       <name>Data Browser</name>
       <file>FMF1_MUSIC1_FC1.plt</file>
       <x>25</x>
-      <y>470</y>
-      <height>240</height>
+      <y>360</y>
+      <width>435</width>
+      <height>420</height>
       <selection_value_pv>SFRS:FMF1:MUSIC1:FC1:HV_V_RBV</selection_value_pv>
     </widget>
-    <widget type="spinner" version="2.0.0">
-      <name>Spinner</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
+    <widget type="rectangle" version="2.0.0">
+      <name>rect_V_SET</name>
       <x>10</x>
       <y>100</y>
+      <width>130</width>
+      <height>150</height>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>spin_V_SET</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
+      <x>34</x>
+      <y>120</y>
       <width>90</width>
       <height>30</height>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="18.0">
+        </font>
+      </font>
+      <background_color>
+        <color name="Header_ForeGround" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <minimum></minimum>
+      <maximum></maximum>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>acbt_V_SET</name>
+      <text>SET</text>
+      <x>24</x>
+      <y>200</y>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group</name>
+    <x>153</x>
+    <y>100</y>
+    <width>330</width>
+    <height>155</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="linearmeter" version="3.0.0">
+      <name>HV_V_RBV</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</pv_name>
+      <width>330</width>
+      <height>75</height>
+      <display_mode>1</display_mode>
+      <colors>
+        <foreground_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color red="0" green="0" blue="0" alpha="0">
+          </color>
+        </background_color>
+        <needle_color>
+          <color red="0" green="0" blue="0">
+          </color>
+        </needle_color>
+        <knob_color>
+          <color red="0" green="0" blue="0">
+          </color>
+        </knob_color>
+        <normal_status_color>
+          <color red="194" green="198" blue="195">
+          </color>
+        </normal_status_color>
+        <minor_warning_color>
+          <color red="242" green="148" blue="141">
+          </color>
+        </minor_warning_color>
+        <major_warning_color>
+          <color red="240" green="60" blue="46">
+          </color>
+        </major_warning_color>
+        <is_gradient_enabled>true</is_gradient_enabled>
+        <is_highlighting_of_active_regions_enabled>true</is_highlighting_of_active_regions_enabled>
+      </colors>
+      <minimum></minimum>
+      <maximum></maximum>
+      <level_lolo></level_lolo>
+      <level_low></level_low>
+      <level_high></level_high>
+      <level_hihi></level_hihi>
+    </widget>
+    <widget type="linearmeter" version="3.0.0">
+      <name>HV_I_RBV</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</pv_name>
+      <y>80</y>
+      <width>330</width>
+      <height>75</height>
+      <display_mode>1</display_mode>
     </widget>
   </widget>
 </display>

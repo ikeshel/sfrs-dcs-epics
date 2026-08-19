@@ -36,8 +36,8 @@
         <blue>0</blue>
       </color>
       <min>-1.0</min>
-      <max>110.0</max>
-      <grid>false</grid>
+      <max>200.0</max>
+      <grid>true</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
     </axis>
@@ -46,26 +46,26 @@
       <name>aI</name>
       <use_axis_name>false</use_axis_name>
       <use_trace_names>true</use_trace_names>
-      <right>false</right>
+      <right>true</right>
       <color>
-        <red>0</red>
+        <red>255</red>
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>0.0</min>
-      <max>0.1</max>
+      <min>0.001</min>
+      <max>0.3</max>
       <grid>false</grid>
       <autoscale>false</autoscale>
-      <log_scale>false</log_scale>
+      <log_scale>true</log_scale>
     </axis>
   </axes>
   <annotations>
   </annotations>
   <pvlist>
     <pv>
-      <display_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</display_name>
+      <display_name>HV_V</display_name>
       <visible>true</visible>
-      <name>SFRS:FMF1:MUSIC1:FC1:HV_V_RBV</name>
+      <name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</name>
       <axis>0</axis>
       <color>
         <red>51</red>
@@ -83,7 +83,7 @@
       <request>OPTIMIZED</request>
     </pv>
     <pv>
-      <display_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</display_name>
+      <display_name></display_name>
       <visible>true</visible>
       <name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</name>
       <axis>0</axis>
@@ -108,14 +108,14 @@
       </archive>
     </pv>
     <pv>
-      <display_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</display_name>
+      <display_name>HV_I_RBV</display_name>
       <visible>true</visible>
       <name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</name>
       <axis>1</axis>
       <color>
-        <red>179</red>
-        <green>26</green>
-        <blue>26</blue>
+        <red>255</red>
+        <green>0</green>
+        <blue>0</blue>
       </color>
       <trace_type>AREA</trace_type>
       <linewidth>2</linewidth>
