@@ -60,6 +60,7 @@
     <y>120</y>
     <width>90</width>
     <height>30</height>
+    <visible>false</visible>
     <background_color>
       <color name="Background" red="255" green="255" blue="255">
       </color>
@@ -217,6 +218,7 @@ if PVUtil.getInt(pvs[0]) != 0:
       <x>150</x>
       <y>40</y>
       <height>25</height>
+      <visible>false</visible>
       <background_color>
         <color name="Background" red="255" green="255" blue="255">
         </color>
@@ -297,5 +299,30 @@ if PVUtil.getInt(pvs[0]) != 0:
     <width>480</width>
     <height>440</height>
     <selection_value_pv>SFRS:FMF1:MUSIC1:FC1:HV_V_RBV</selection_value_pv>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</pv_name>
+    <x>270</x>
+    <y>100</y>
+    <width>90</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Header_ForeGround" red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Background" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <format>1</format>
+    <precision>2</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
   </widget>
 </display>
