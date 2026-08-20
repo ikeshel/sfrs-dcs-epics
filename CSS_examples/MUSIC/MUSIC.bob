@@ -4,7 +4,7 @@
   <height>1268</height>
   <grid_visible>false</grid_visible>
   <widget type="tabs" version="2.0.0">
-    <name>Tabs</name>
+    <name>TabsMUSIC</name>
     <tabs>
       <tab>
         <name>FMF1:MUSIC1</name>
@@ -17,7 +17,7 @@
             <file>MUSIC_TWOFC_TEMPLATE.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -32,7 +32,7 @@
             <file>MUSIC_THREEFC_TEMPLATE.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
