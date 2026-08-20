@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <width>1820</width>
-  <height>1373</height>
+  <height>1226</height>
   <grid_visible>false</grid_visible>
   <widget type="group" version="3.0.0">
     <name>$(CHAMBER) - PLSCI1</name>
     <width>1820</width>
-    <height>1373</height>
+    <height>1226</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
@@ -46,7 +46,7 @@
       </macros>
       <file>boardcard_PLSCI.bob</file>
       <x>1470</x>
-      <y>521</y>
+      <y>441</y>
       <width>350</width>
       <height>331</height>
     </widget>
@@ -56,7 +56,7 @@
       <x>360</x>
       <y>341</y>
       <width>1100</width>
-      <height>691</height>
+      <height>544</height>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Board 4</name>
@@ -65,7 +65,7 @@
       </macros>
       <file>boardcard_PLSCI.bob</file>
       <x>1095</x>
-      <y>1042</y>
+      <y>895</y>
       <width>350</width>
       <height>331</height>
     </widget>
@@ -76,7 +76,7 @@
       </macros>
       <file>boardcard_PLSCI.bob</file>
       <x>735</x>
-      <y>1042</y>
+      <y>895</y>
       <width>350</width>
       <height>331</height>
     </widget>
@@ -87,7 +87,7 @@
       </macros>
       <file>boardcard_PLSCI.bob</file>
       <x>375</x>
-      <y>1042</y>
+      <y>895</y>
       <width>350</width>
       <height>331</height>
     </widget>
@@ -97,7 +97,7 @@
         <PMT>7</PMT>
       </macros>
       <file>boardcard_PLSCI.bob</file>
-      <y>521</y>
+      <y>441</y>
       <width>350</width>
       <height>331</height>
     </widget>

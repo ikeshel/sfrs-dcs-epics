@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <width>1820</width>
-  <height>1373</height>
+  <height>1226</height>
   <grid_visible>false</grid_visible>
   <widget type="group" version="3.0.0">
     <name>$(CHAMBER) - SCIFI$(ID)</name>
     <width>1820</width>
-    <height>1373</height>
+    <height>1226</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
@@ -18,7 +18,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>275</x>
-      <y>171</y>
+      <y>91</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -31,7 +31,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>490</x>
-      <y>171</y>
+      <y>91</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -44,7 +44,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>705</x>
-      <y>171</y>
+      <y>91</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -57,7 +57,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>920</x>
-      <y>171</y>
+      <y>91</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -70,7 +70,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>1135</x>
-      <y>171</y>
+      <y>91</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -83,7 +83,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>1350</x>
-      <y>171</y>
+      <y>91</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -95,8 +95,8 @@
         <DEV>0</DEV>
       </macros>
       <file>boardcard_SCIFI.bob</file>
-      <x>140</x>
-      <y>691</y>
+      <x>147</x>
+      <y>624</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -108,18 +108,18 @@
         <DEV>1</DEV>
       </macros>
       <file>boardcard_SCIFI.bob</file>
-      <x>140</x>
-      <y>431</y>
+      <x>147</x>
+      <y>351</y>
       <width>200</width>
       <height>250</height>
     </widget>
     <widget type="picture" version="2.0.0">
       <name>Scifi</name>
       <file>det_scifi.svg</file>
-      <x>360</x>
-      <y>431</y>
+      <x>357</x>
+      <y>351</y>
       <width>1105</width>
-      <height>510</height>
+      <height>523</height>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Board 9</name>
@@ -130,7 +130,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>1350</x>
-      <y>951</y>
+      <y>884</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -143,7 +143,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>1135</x>
-      <y>951</y>
+      <y>884</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -156,7 +156,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>920</x>
-      <y>951</y>
+      <y>884</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -169,7 +169,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>705</x>
-      <y>951</y>
+      <y>884</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -182,7 +182,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>490</x>
-      <y>951</y>
+      <y>884</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -195,7 +195,7 @@
       </macros>
       <file>boardcard_SCIFI.bob</file>
       <x>275</x>
-      <y>951</y>
+      <y>884</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -207,8 +207,8 @@
         <DEV>0</DEV>
       </macros>
       <file>boardcard_SCIFI.bob</file>
-      <x>1485</x>
-      <y>431</y>
+      <x>1472</x>
+      <y>351</y>
       <width>200</width>
       <height>250</height>
     </widget>
@@ -220,8 +220,8 @@
         <DEV>1</DEV>
       </macros>
       <file>boardcard_SCIFI.bob</file>
-      <x>1485</x>
-      <y>691</y>
+      <x>1472</x>
+      <y>624</y>
       <width>200</width>
       <height>250</height>
     </widget>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <width>1825</width>
-  <height>1415</height>
+  <height>1268</height>
   <grid_visible>false</grid_visible>
   <widget type="tabs" version="2.0.0">
     <name>Tabs</name>
@@ -38,6 +38,6 @@
       </tab>
     </tabs>
     <width>1825</width>
-    <height>1415</height>
+    <height>1268</height>
   </widget>
 </display>

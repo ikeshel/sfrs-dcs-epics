@@ -4,7 +4,7 @@
   <height>250</height>
   <grid_visible>false</grid_visible>
   <widget type="group" version="3.0.0">
-    <name>Board</name>
+    <name>BoardCard_SCIFI</name>
     <width>200</width>
     <height>250</height>
     <style>3</style>
@@ -197,43 +197,18 @@
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
     </widget>
-    <widget type="textupdate" version="2.0.0">
+    <widget type="textentry" version="3.0.0">
       <name>Bias Set</name>
       <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_V_SET</pv_name>
       <x>10</x>
       <y>215</y>
-      <width>50</width>
+      <width>55</width>
       <background_color>
         <color name="Background" red="255" green="255" blue="255">
         </color>
       </background_color>
-      <format>1</format>
-      <precision>1</precision>
       <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="State" prop_id="foreground_color" out_exp="false">
-          <exp bool_exp="pv0 == 0">
-            <value>
-              <color name="Grid" red="128" green="128" blue="128">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0 == 1">
-            <value>
-              <color red="0" green="128" blue="0">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0 == 2">
-            <value>
-              <color red="255" green="0" blue="0">
-              </color>
-            </value>
-          </exp>
-          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_STATE</pv_name>
-        </rule>
-      </rules>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Bias Set and Bias RBV</name>

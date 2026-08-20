@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <width>1920</width>
-  <height>1440</height>
+  <height>1280</height>
   <grid_visible>false</grid_visible>
   <widget type="navtabs" version="2.0.0">
     <name>Screens</name>
@@ -53,7 +53,7 @@
       </tab>
     </tabs>
     <width>1920</width>
-    <height>1427</height>
+    <height>1280</height>
     <tab_width>60</tab_width>
   </widget>
 </display>
