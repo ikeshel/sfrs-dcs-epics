@@ -4,13 +4,13 @@
   <height>1268</height>
   <grid_visible>false</grid_visible>
   <widget type="tabs" version="2.0.0">
-    <name>SCIFI</name>
+    <name>tabsSCIFI</name>
     <tabs>
       <tab>
         <name>FPF2:SCIFI1</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FPF2:SCIFI1</name>
+            <name>emdiFPF2:SCIFI1</name>
             <macros>
               <CHAMBER>FPF2</CHAMBER>
               <ID>1</ID>
@@ -18,7 +18,7 @@
             <file>BoardTemplate_SCIFI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -26,7 +26,7 @@
         <name>FPF2:SCIFI2</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FPF2:SCIFI2</name>
+            <name>emdiFPF2:SCIFI2</name>
             <macros>
               <CHAMBER>FPF2</CHAMBER>
               <ID>2</ID>
@@ -34,7 +34,7 @@
             <file>BoardTemplate_SCIFI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -42,7 +42,7 @@
         <name>FPF3:SCIFI1</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FPF3:SCIFI1</name>
+            <name>emdiFPF3:SCIFI1</name>
             <macros>
               <CHAMBER>FPF3</CHAMBER>
               <ID>1</ID>
@@ -50,7 +50,7 @@
             <file>BoardTemplate_SCIFI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -58,7 +58,7 @@
         <name>FPF4:SCIFI1</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FPF4:SCIFI1</name>
+            <name>emdiFPF4:SCIFI1</name>
             <macros>
               <CHAMBER>FPF4</CHAMBER>
               <ID>1</ID>
@@ -66,7 +66,7 @@
             <file>BoardTemplate_SCIFI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -74,7 +74,7 @@
         <name>FPF4:SCIFI2</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FPF4:SCIFI2</name>
+            <name>emdiFPF4:SCIFI2</name>
             <macros>
               <CHAMBER>FPF4</CHAMBER>
               <ID>2</ID>
@@ -82,7 +82,7 @@
             <file>BoardTemplate_SCIFI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -90,7 +90,7 @@
         <name>FMF1:SCIFI1</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FMF1:SCIFI1</name>
+            <name>emdiFMF1:SCIFI1</name>
             <macros>
               <CHAMBER>FMF1</CHAMBER>
               <ID>1</ID>
@@ -98,7 +98,7 @@
             <file>BoardTemplate_SCIFI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -106,7 +106,7 @@
         <name>FMF1:SCIFI2</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FMF1:SCIFI2</name>
+            <name>emdiFMF1:SCIFI2</name>
             <macros>
               <CHAMBER>FMF1</CHAMBER>
               <ID>2</ID>
@@ -114,7 +114,7 @@
             <file>BoardTemplate_SCIFI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -122,7 +122,7 @@
         <name>FMF2:SCIFI1</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FMF2:SCIFI1</name>
+            <name>emdiFMF2:SCIFI1</name>
             <macros>
               <CHAMBER>FMF2</CHAMBER>
               <ID>1</ID>
@@ -130,7 +130,7 @@
             <file>BoardTemplate_SCIFI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -138,7 +138,7 @@
         <name>FMF2:SCIFI2</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FMF2:SCIFI2</name>
+            <name>emdiFMF2:SCIFI2</name>
             <macros>
               <CHAMBER>FMF2</CHAMBER>
               <ID>2</ID>
@@ -146,7 +146,7 @@
             <file>BoardTemplate_SCIFI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -154,7 +154,7 @@
         <name>FMF3:SCIFI1</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FMF3:SCIFI1</name>
+            <name>emdiFMF3:SCIFI1</name>
             <macros>
               <CHAMBER>FMF3</CHAMBER>
               <ID>1</ID>
@@ -162,7 +162,7 @@
             <file>BoardTemplate_SCIFI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -170,7 +170,7 @@
         <name>FMF3:SCIFI2</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FMF3:SCIFI2</name>
+            <name>emdiFMF3:SCIFI2</name>
             <macros>
               <CHAMBER>FMF3</CHAMBER>
               <ID>2</ID>
@@ -178,7 +178,7 @@
             <file>BoardTemplate_SCIFI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -186,7 +186,7 @@
         <name>FHF1:SCIFI1</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FHF1:SCIFI1</name>
+            <name>emdiFHF1:SCIFI1</name>
             <macros>
               <CHAMBER>FHF1</CHAMBER>
               <ID>1</ID>
@@ -194,7 +194,7 @@
             <file>BoardTemplate_SCIFI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -202,7 +202,7 @@
         <name>FHF1:SCIFI2</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FHF1:SCIFI2</name>
+            <name>emdiFHF1:SCIFI2</name>
             <macros>
               <ID>2</ID>
               <CHAMBER>FHF1</CHAMBER>
@@ -210,7 +210,7 @@
             <file>BoardTemplate_SCIFI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -218,7 +218,7 @@
         <name>FHF1:SCIFI3</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FHF1:SCIFI3</name>
+            <name>emdiFHF1:SCIFI3</name>
             <macros>
               <ID>3</ID>
               <CHAMBER>FHF1</CHAMBER>
@@ -226,7 +226,7 @@
             <file>BoardTemplate_SCIFI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>

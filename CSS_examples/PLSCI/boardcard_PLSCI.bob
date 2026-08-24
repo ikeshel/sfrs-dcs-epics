@@ -4,13 +4,13 @@
   <height>331</height>
   <grid_visible>false</grid_visible>
   <widget type="group" version="3.0.0">
-    <name>Board</name>
+    <name>grupPMT_PLSCI</name>
     <width>350</width>
     <height>331</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="rectangle" version="2.0.0">
-      <name>BoardLimit</name>
+      <name>rectLIMIT</name>
       <width>350</width>
       <height>331</height>
       <line_width>1</line_width>
@@ -24,7 +24,7 @@
       </background_color>
     </widget>
     <widget type="label" version="2.0.0">
-      <name>Board Number</name>
+      <name>labePMT_NUMBER</name>
       <text>PMT$(PMT)</text>
       <x>1</x>
       <width>348</width>
@@ -36,39 +36,46 @@
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
     </widget>
-    <widget type="led" version="2.0.0">
-      <name>PMT_STAT</name>
-      <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_STATE</pv_name>
-      <x>20</x>
-      <y>50</y>
-      <width>25</width>
-      <height>25</height>
-      <off_color>
-        <color name="Grid" red="128" green="128" blue="128">
-        </color>
-      </off_color>
-      <on_color>
-        <color red="0" green="128" blue="0">
-        </color>
-      </on_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>PMT_STAT</name>
-      <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_STATE</pv_name>
+    <widget type="group" version="3.0.0">
+      <name>grupPMT_STAT</name>
       <x>1</x>
-      <y>80</y>
+      <y>50</y>
       <width>60</width>
-      <height>25</height>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <format>6</format>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
+      <height>55</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="led" version="2.0.0">
+        <name>ledPMT_STAT</name>
+        <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_STATE</pv_name>
+        <x>19</x>
+        <width>25</width>
+        <height>25</height>
+        <off_color>
+          <color name="Grid" red="128" green="128" blue="128">
+          </color>
+        </off_color>
+        <on_color>
+          <color red="0" green="128" blue="0">
+          </color>
+        </on_color>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>teupPMT_STAT</name>
+        <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_STATE</pv_name>
+        <y>30</y>
+        <width>60</width>
+        <height>25</height>
+        <background_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <format>6</format>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
     </widget>
     <widget type="linearmeter" version="3.0.0">
-      <name>Voltage</name>
+      <name>limeHV_V_RBV</name>
       <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):HV_V_RBV</pv_name>
       <x>55</x>
       <y>35</y>
@@ -112,32 +119,39 @@
       <level_high>0.0</level_high>
       <level_hihi>0.0</level_hihi>
     </widget>
-    <widget type="rectangle" version="2.0.0">
-      <name>CountRate Area</name>
+    <widget type="group" version="3.0.0">
+      <name>grupCOUNTRATE</name>
       <y>181</y>
       <width>350</width>
       <height>150</height>
-      <line_width>1</line_width>
-      <line_color>
-        <color name="Button_Background" red="210" green="210" blue="210">
-        </color>
-      </line_color>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-    </widget>
-    <widget type="meter" version="3.0.0">
-      <name>CountRate</name>
-      <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):COUNTRATE</pv_name>
-      <x>1</x>
-      <y>182</y>
-      <width>348</width>
-      <height>148</height>
-      <log_scale>true</log_scale>
-      <limits_from_pv>false</limits_from_pv>
-      <minimum>0.1</minimum>
-      <maximum>1.0E7</maximum>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="rectangle" version="2.0.0">
+        <name>rectCOUNTRATE_AREA</name>
+        <width>350</width>
+        <height>150</height>
+        <line_width>1</line_width>
+        <line_color>
+          <color name="Button_Background" red="210" green="210" blue="210">
+          </color>
+        </line_color>
+        <background_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+      </widget>
+      <widget type="meter" version="3.0.0">
+        <name>metrCOUNTRATE</name>
+        <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT$(PMT):COUNTRATE</pv_name>
+        <x>1</x>
+        <y>1</y>
+        <width>348</width>
+        <height>148</height>
+        <log_scale>true</log_scale>
+        <limits_from_pv>false</limits_from_pv>
+        <minimum>0.1</minimum>
+        <maximum>1.0E7</maximum>
+      </widget>
     </widget>
   </widget>
 </display>

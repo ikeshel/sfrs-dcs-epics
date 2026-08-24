@@ -4,13 +4,13 @@
   <height>1226</height>
   <grid_visible>false</grid_visible>
   <widget type="group" version="3.0.0">
-    <name>$(CHAMBER) - SCIFI$(ID)</name>
+    <name>grup$(CHAMBER) - SCIFI$(ID)</name>
     <width>1820</width>
     <height>1226</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
-      <name>Board 1</name>
+      <name>emdiBOARD1</name>
       <macros>
         <BOARD>BOARD 1</BOARD>
         <SFP>0</SFP>
@@ -23,7 +23,7 @@
       <height>250</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 2</name>
+      <name>emdiBOARD2</name>
       <macros>
         <BOARD>BOARD 2</BOARD>
         <SFP>0</SFP>
@@ -36,7 +36,7 @@
       <height>250</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 3</name>
+      <name>emdiBOARD3</name>
       <macros>
         <BOARD>BOARD 3</BOARD>
         <SFP>0</SFP>
@@ -49,7 +49,7 @@
       <height>250</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 4</name>
+      <name>emdiBOARD4</name>
       <macros>
         <BOARD>BOARD 4</BOARD>
         <SFP>0</SFP>
@@ -62,7 +62,7 @@
       <height>250</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 5</name>
+      <name>emdiBOARD5</name>
       <macros>
         <BOARD>BOARD 5</BOARD>
         <SFP>0</SFP>
@@ -75,7 +75,7 @@
       <height>250</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 6</name>
+      <name>emdiBOARD6</name>
       <macros>
         <BOARD>BOARD 6</BOARD>
         <SFP>0</SFP>
@@ -88,7 +88,7 @@
       <height>250</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 7</name>
+      <name>emdiBOARD7</name>
       <macros>
         <BOARD>BOARD 7</BOARD>
         <SFP>1</SFP>
@@ -101,7 +101,7 @@
       <height>250</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 8</name>
+      <name>emdiBOARD8</name>
       <macros>
         <BOARD>BOARD 8</BOARD>
         <SFP>1</SFP>
@@ -114,7 +114,7 @@
       <height>250</height>
     </widget>
     <widget type="picture" version="2.0.0">
-      <name>Scifi</name>
+      <name>pictSCIFI</name>
       <file>det_scifi.svg</file>
       <x>357</x>
       <y>351</y>
@@ -122,7 +122,7 @@
       <height>523</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 9</name>
+      <name>emdiBOARD9</name>
       <macros>
         <BOARD>BOARD 9</BOARD>
         <SFP>2</SFP>
@@ -135,7 +135,7 @@
       <height>250</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 10</name>
+      <name>emdiBOARD10</name>
       <macros>
         <BOARD>BOARD 10</BOARD>
         <SFP>2</SFP>
@@ -148,7 +148,7 @@
       <height>250</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 11</name>
+      <name>emdiBOARD11</name>
       <macros>
         <BOARD>BOARD 11</BOARD>
         <SFP>2</SFP>
@@ -161,7 +161,7 @@
       <height>250</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 12</name>
+      <name>emdiBOARD12</name>
       <macros>
         <BOARD>BOARD 12</BOARD>
         <SFP>2</SFP>
@@ -174,7 +174,7 @@
       <height>250</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 13</name>
+      <name>emdiBOARD13</name>
       <macros>
         <BOARD>BOARD 13</BOARD>
         <SFP>2</SFP>
@@ -187,7 +187,7 @@
       <height>250</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 14</name>
+      <name>emdiBOARD14</name>
       <macros>
         <BOARD>BOARD 14</BOARD>
         <SFP>2</SFP>
@@ -200,7 +200,7 @@
       <height>250</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 15</name>
+      <name>emdiBOARD15</name>
       <macros>
         <BOARD>BOARD 15</BOARD>
         <SFP>3</SFP>
@@ -213,7 +213,7 @@
       <height>250</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 16</name>
+      <name>emdiBOARD16</name>
       <macros>
         <BOARD>BOARD 16</BOARD>
         <SFP>3</SFP>

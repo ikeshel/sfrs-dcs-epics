@@ -4,13 +4,13 @@
   <height>250</height>
   <grid_visible>false</grid_visible>
   <widget type="group" version="3.0.0">
-    <name>BoardCard_SCIFI</name>
+    <name>grupBOARDCARD_SCIFI</name>
     <width>200</width>
     <height>250</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="rectangle" version="2.0.0">
-      <name>Board</name>
+      <name>rectLIMIT</name>
       <width>200</width>
       <height>250</height>
       <line_width>1</line_width>
@@ -23,261 +23,343 @@
         </color>
       </background_color>
     </widget>
-    <widget type="label" version="2.0.0">
-      <name>Board Number</name>
-      <text>$(BOARD)</text>
+    <widget type="group" version="3.0.0">
+      <name>grupBOARD_DESCRIPTION</name>
       <width>200</width>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
+      <height>45</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>labeHEADER</name>
+        <text>$(BOARD)</text>
+        <width>200</width>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>labeDESCRIPTION</name>
+        <text>SFP $(SFP), DEV $(DEV)</text>
+        <x>20</x>
+        <y>25</y>
+        <width>180</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="12.0">
+          </font>
+        </font>
+      </widget>
     </widget>
-    <widget type="label" version="2.0.0">
-      <name>Board Description</name>
-      <text>SFP $(SFP), DEV $(DEV)</text>
-      <x>20</x>
-      <y>25</y>
+    <widget type="group" version="3.0.0">
+      <name>grupTEMP</name>
+      <x>10</x>
+      <y>45</y>
       <width>180</width>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="12.0">
+      <height>125</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>labeFPGA</name>
+        <text>FPGA</text>
+        <x>15</x>
+        <width>50</width>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
         </font>
-      </font>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>FPGA</name>
-      <text>FPGA</text>
-      <x>25</x>
-      <y>45</y>
-      <width>50</width>
-      <font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="thermometer" version="2.0.0">
+        <name>thmtFPGA</name>
+        <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):FPGA:TEMP</pv_name>
+        <x>25</x>
+        <y>25</y>
+        <width>30</width>
+        <height>75</height>
+        <rules>
+          <rule name="Thermometer_Alarm" prop_id="fill_color" out_exp="false">
+            <exp bool_exp="55 &gt; pv0 &gt;= 45">
+              <value>
+                <color name="MINOR" red="255" green="128" blue="0">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0 &gt;= 55">
+              <value>
+                <color name="MAJOR" red="255" green="0" blue="0">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="5 &gt;= pv0 &gt; 0">
+              <value>
+                <color name="MINOR" red="255" green="128" blue="0">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0 = 0">
+              <value>
+                <color name="Grid" red="128" green="128" blue="128">
+                </color>
+              </value>
+            </exp>
+            <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):FPGA:TEMP</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <limits_from_pv>false</limits_from_pv>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>teupFPGA</name>
+        <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):FPGA:TEMP</pv_name>
+        <y>105</y>
+        <width>80</width>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
         </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
+        <background_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <precision>1</precision>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>labeSiPM</name>
+        <text>SiPM</text>
+        <x>115</x>
+        <width>50</width>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="thermometer" version="2.0.0">
+        <name>thmtSiPM</name>
+        <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:TEMP</pv_name>
+        <x>125</x>
+        <y>25</y>
+        <width>30</width>
+        <height>75</height>
+        <rules>
+          <rule name="Thermometer_Alarm" prop_id="fill_color" out_exp="false">
+            <exp bool_exp="55 &gt; pv0 &gt;= 45">
+              <value>
+                <color name="MINOR" red="255" green="128" blue="0">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0 &gt;= 55">
+              <value>
+                <color name="MAJOR" red="255" green="0" blue="0">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="5 &gt;= pv0 &gt; 0">
+              <value>
+                <color name="MINOR" red="255" green="128" blue="0">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0 = 0">
+              <value>
+                <color name="Grid" red="128" green="128" blue="128">
+                </color>
+              </value>
+            </exp>
+            <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:TEMP</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <limits_from_pv>false</limits_from_pv>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>teupSiPM</name>
+        <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:TEMP</pv_name>
+        <x>100</x>
+        <y>105</y>
+        <width>80</width>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <precision>1</precision>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
     </widget>
-    <widget type="thermometer" version="2.0.0">
-      <name>FPGA Thermometer</name>
-      <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):FPGA:TEMP</pv_name>
-      <x>35</x>
-      <y>70</y>
-      <width>30</width>
-      <height>75</height>
-      <rules>
-        <rule name="Thermometer_Alarm" prop_id="fill_color" out_exp="false">
-          <exp bool_exp="55 &gt; pv0 &gt;= 45">
-            <value>
-              <color name="MINOR" red="255" green="128" blue="0">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0 &gt;= 55">
-            <value>
-              <color name="MAJOR" red="255" green="0" blue="0">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="5 &gt;= pv0 &gt; 0">
-            <value>
-              <color name="MINOR" red="255" green="128" blue="0">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0 = 0">
-            <value>
-              <color name="Grid" red="128" green="128" blue="128">
-              </color>
-            </value>
-          </exp>
-          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):FPGA:TEMP</pv_name>
-        </rule>
-      </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-      <limits_from_pv>false</limits_from_pv>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>FPGA Value</name>
-      <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):FPGA:TEMP</pv_name>
+    <widget type="group" version="3.0.0">
+      <name>grupBIAS</name>
       <x>10</x>
-      <y>150</y>
-      <width>80</width>
-      <font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      <y>175</y>
+      <width>130</width>
+      <height>70</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>labeBIAS_TITLE</name>
+        <text>Bias Set    |    RBV</text>
+        <width>120</width>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
         </font>
-      </font>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <format>1</format>
-      <precision>1</precision>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>SiPM</name>
-      <text>SiPM</text>
-      <x>125</x>
-      <y>45</y>
-      <width>50</width>
-      <font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-    <widget type="thermometer" version="2.0.0">
-      <name>SiPM Thermometer</name>
-      <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:TEMP</pv_name>
-      <x>135</x>
-      <y>70</y>
-      <width>30</width>
-      <height>75</height>
-      <rules>
-        <rule name="Thermometer_Alarm" prop_id="fill_color" out_exp="false">
-          <exp bool_exp="55 &gt; pv0 &gt;= 45">
-            <value>
-              <color name="MINOR" red="255" green="128" blue="0">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0 &gt;= 55">
-            <value>
-              <color name="MAJOR" red="255" green="0" blue="0">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="5 &gt;= pv0 &gt; 0">
-            <value>
-              <color name="MINOR" red="255" green="128" blue="0">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0 = 0">
-            <value>
-              <color name="Grid" red="128" green="128" blue="128">
-              </color>
-            </value>
-          </exp>
-          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:TEMP</pv_name>
-        </rule>
-      </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-      <limits_from_pv>false</limits_from_pv>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>SIPM Value</name>
-      <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:TEMP</pv_name>
-      <x>110</x>
-      <y>150</y>
-      <width>80</width>
-      <font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </font>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <format>1</format>
-      <precision>1</precision>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Bias Title</name>
-      <text>Bias Set | RBV</text>
-      <x>10</x>
-      <y>185</y>
-      <font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Bias Set</name>
-      <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_V_SET</pv_name>
-      <x>10</x>
-      <y>215</y>
-      <width>55</width>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <horizontal_alignment>1</horizontal_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Bias Set and Bias RBV</name>
-      <text>|</text>
-      <x>68</x>
-      <y>215</y>
-      <width>10</width>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="State" prop_id="foreground_color" out_exp="false">
-          <exp bool_exp="pv0 == 0">
-            <value>
-              <color name="Grid" red="128" green="128" blue="128">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0 == 1">
-            <value>
-              <color red="0" green="128" blue="0">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0 == 2">
-            <value>
-              <color red="255" green="0" blue="0">
-              </color>
-            </value>
-          </exp>
-          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_STATE</pv_name>
-        </rule>
-      </rules>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Bias RBV</name>
-      <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_V_RBV</pv_name>
-      <x>80</x>
-      <y>215</y>
-      <width>50</width>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <format>1</format>
-      <precision>1</precision>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="State" prop_id="foreground_color" out_exp="false">
-          <exp bool_exp="pv0 == 0">
-            <value>
-              <color name="Grid" red="128" green="128" blue="128">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0 == 1">
-            <value>
-              <color red="0" green="128" blue="0">
-              </color>
-            </value>
-          </exp>
-          <exp bool_exp="pv0 == 2">
-            <value>
-              <color red="255" green="0" blue="0">
-              </color>
-            </value>
-          </exp>
-          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_STATE</pv_name>
-        </rule>
-      </rules>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>teupBIAS_V_SET</name>
+        <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_V_SET</pv_name>
+        <y>25</y>
+        <width>55</width>
+        <visible>false</visible>
+        <format>1</format>
+        <precision>2</precision>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>teenBIAS_V_SET</name>
+        <pv_name>loc://BIASSetEdit$(CHAMBER)SCIFI$(ID)SFP$(SFP)DEV$(DEV)(0)</pv_name>
+        <y>25</y>
+        <width>55</width>
+        <background_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <horizontal_alignment>1</horizontal_alignment>
+        <scripts>
+          <script file="EmbeddedPy">
+            <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
+
+if PVUtil.getInt(pvs[2]) == 0:
+    try:
+        live_value = PVUtil.getDouble(pvs[0])
+        pvs[1].write(live_value)
+        pvs[2].write(1)
+        print("Initial voltage loaded:" + str(live_value))
+    except Exception as error:
+        print("INITIALIZATION ERROR:" + str(error))]]></text>
+            <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_V_SET</pv_name>
+            <pv_name trigger="false">loc://BIASSetEdit$(CHAMBER)SCIFI$(ID)SFP$(SFP)DEV$(DEV)(0)</pv_name>
+            <pv_name trigger="false">loc://BIASSetInitialized$(CHAMBER)SCIFI$(ID)SFP$(SFP)DEV$(DEV)(0)</pv_name>
+          </script>
+        </scripts>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>acbtBIAS_V_SET</name>
+        <actions>
+          <action type="write_pv">
+            <description>Write PV</description>
+            <pv_name>loc://BIASSetApply$(CHAMBER)SCIFI$(ID)SFP$(SFP)DEV$(DEV)(0)</pv_name>
+            <value>1</value>
+          </action>
+        </actions>
+        <text>SET</text>
+        <y>50</y>
+        <width>55</width>
+        <height>20</height>
+        <scripts>
+          <script file="EmbeddedPy">
+            <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
+
+if PVUtil.getInt(pvs[0]) != 0:
+    try:
+        requested_value = PVUtil.getDouble(pvs[1])
+        print("Writing voltage:" + str(requested_value))
+        pvs[2].write(requested_value)
+        print("Voltage write command sent")
+    except Exception as error:
+        print("VOLTAGE WRITE ERROR:" + str(error))
+    finally:
+        pvs[0].write(0)]]></text>
+            <pv_name>loc://BIASSetApply$(CHAMBER)SCIFI$(ID)SFP$(SFP)DEV$(DEV)(0)</pv_name>
+            <pv_name trigger="false">loc://BIASSetEdit$(CHAMBER)SCIFI$(ID)SFP$(SFP)DEV$(DEV)(0)</pv_name>
+            <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_V_SET</pv_name>
+          </script>
+        </scripts>
+        <show_confirm_dialog>true</show_confirm_dialog>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>labeBIAS_SET_BIAS_RBV</name>
+        <text>|</text>
+        <x>68</x>
+        <y>25</y>
+        <width>10</width>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="State" prop_id="foreground_color" out_exp="false">
+            <exp bool_exp="pv0 == 0">
+              <value>
+                <color name="Grid" red="128" green="128" blue="128">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0 == 1">
+              <value>
+                <color red="0" green="128" blue="0">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0 == 2">
+              <value>
+                <color red="255" green="0" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_STATE</pv_name>
+          </rule>
+        </rules>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>teupBIAS_RBV</name>
+        <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_V_RBV</pv_name>
+        <x>80</x>
+        <y>25</y>
+        <width>50</width>
+        <background_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <precision>1</precision>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="State" prop_id="foreground_color" out_exp="false">
+            <exp bool_exp="pv0 == 0">
+              <value>
+                <color name="Grid" red="128" green="128" blue="128">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0 == 1">
+              <value>
+                <color red="0" green="128" blue="0">
+                </color>
+              </value>
+            </exp>
+            <exp bool_exp="pv0 == 2">
+              <value>
+                <color red="255" green="0" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP$(SFP):DEV$(DEV):SIPM:BIAS_STATE</pv_name>
+          </rule>
+        </rules>
+      </widget>
     </widget>
   </widget>
 </display>

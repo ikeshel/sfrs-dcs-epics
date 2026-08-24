@@ -4,20 +4,20 @@
   <height>1268</height>
   <grid_visible>false</grid_visible>
   <widget type="tabs" version="2.0.0">
-    <name>PLSCI</name>
+    <name>tabsPLSCI</name>
     <tabs>
       <tab>
         <name>FPF2:PLSCI1</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FPF2:PLSCI1</name>
+            <name>emdiFPF2:PLSCI1</name>
             <macros>
               <CHAMBER>FPF2</CHAMBER>
             </macros>
             <file>BoardTemplate_6_PLSCI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -25,14 +25,14 @@
         <name>FPF4:PLSCI1</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FPF4:PLSCI1</name>
+            <name>emdiFPF4:PLSCI1</name>
             <macros>
               <CHAMBER>FPF4</CHAMBER>
             </macros>
             <file>BoardTemplate_6_PLSCI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -40,14 +40,14 @@
         <name>FMF1:PLSCI1</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FMF1:PLSCI1</name>
+            <name>emdiFMF1:PLSCI1</name>
             <macros>
               <CHAMBER>FMF1</CHAMBER>
             </macros>
             <file>BoardTemplate_6_PLSCI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -55,14 +55,14 @@
         <name>FMF2:PLSCI1</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FMF2:PLSCI1</name>
+            <name>emdiFMF2:PLSCI1</name>
             <macros>
               <CHAMBER>FMF2</CHAMBER>
             </macros>
             <file>BoardTemplate_8_PLSCI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -70,14 +70,14 @@
         <name>FMF3:PLSCI1</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FMF3:PLSCI1</name>
+            <name>emdiFMF3:PLSCI1</name>
             <macros>
               <CHAMBER>FMF3</CHAMBER>
             </macros>
             <file>BoardTemplate_6_PLSCI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>
@@ -85,14 +85,14 @@
         <name>FHF1:PLSCI1</name>
         <children>
           <widget type="embedded" version="2.0.0">
-            <name>FHF1:PLSCI1</name>
+            <name>emdiFHF1:PLSCI1</name>
             <macros>
               <CHAMBER>FHF1</CHAMBER>
             </macros>
             <file>BoardTemplate_8_PLSCI.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1373</height>
+            <height>1226</height>
           </widget>
         </children>
       </tab>

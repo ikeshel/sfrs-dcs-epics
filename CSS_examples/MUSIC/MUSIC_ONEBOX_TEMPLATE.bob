@@ -103,7 +103,7 @@ if PVUtil.getInt(pvs[2]) == 0:
         live_value = PVUtil.getDouble(pvs[0])
         pvs[1].write(live_value)
         pvs[2].write(1)
-        print("Initial voltagel loaded: " + str(live_value))
+        print("Initial voltage loaded: " + str(live_value))
     except Exception as error:
         print("INITIALIZATION ERROR: " + str(error))]]></text>
             <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
@@ -146,6 +146,7 @@ if PVUtil.getInt(pvs[0]) != 0:
           </script>
         </scripts>
         <tooltip>$(actions)</tooltip>
+        <show_confirm_dialog>true</show_confirm_dialog>
       </widget>
       <widget type="linearmeter" version="3.0.0">
         <name>limeHV_V_RBV</name>

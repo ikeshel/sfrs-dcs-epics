@@ -4,13 +4,13 @@
   <height>1226</height>
   <grid_visible>false</grid_visible>
   <widget type="group" version="3.0.0">
-    <name>$(CHAMBER) - PLSCI1</name>
+    <name>grup$(CHAMBER) - PLSCI1</name>
     <width>1820</width>
     <height>1226</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
-      <name>Board 6</name>
+      <name>emdiBOARD6</name>
       <macros>
         <PMT>6</PMT>
       </macros>
@@ -20,7 +20,7 @@
       <height>331</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 1</name>
+      <name>emdiBOARD1</name>
       <macros>
         <PMT>1</PMT>
       </macros>
@@ -30,7 +30,7 @@
       <height>331</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 2</name>
+      <name>emdiBOARD2</name>
       <macros>
         <PMT>2</PMT>
       </macros>
@@ -40,7 +40,7 @@
       <height>331</height>
     </widget>
     <widget type="picture" version="2.0.0">
-      <name>Plsci_6_</name>
+      <name>pictPLSCI_6_</name>
       <file>det_plsci6.svg</file>
       <x>375</x>
       <y>341</y>
@@ -48,7 +48,7 @@
       <height>544</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 3</name>
+      <name>emdiBOARD3</name>
       <macros>
         <PMT>3</PMT>
       </macros>
@@ -59,7 +59,7 @@
       <height>331</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 4</name>
+      <name>emdiBOARD4</name>
       <macros>
         <PMT>4</PMT>
       </macros>
@@ -70,7 +70,7 @@
       <height>331</height>
     </widget>
     <widget type="embedded" version="2.0.0">
-      <name>Board 5</name>
+      <name>emdiBOARD5</name>
       <macros>
         <PMT>5</PMT>
       </macros>
