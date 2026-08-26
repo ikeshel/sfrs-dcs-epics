@@ -1,0 +1,22 @@
+source: Main/Main.bob
+
+screen:
+  width: 1920
+  height: 1280
+
+tabs:
+  widget: nataSCREENS
+
+  width: 1920
+  height: 1280
+  tab_width: 60
+
+  items:
+    - name: SCIFI
+      file: ../SCIFI/SCIFI.bob
+
+    - name: PLSCI
+      file: ../PLSCI/PLSCI.bob
+
+    - name: MUSIC
+      file: ../MUSIC/MUSIC.bob

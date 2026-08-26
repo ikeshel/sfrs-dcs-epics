@@ -1,0 +1,14 @@
+version: 1
+
+main:
+  config: main.yaml
+
+detectors:
+  scifi:
+    config: detectors/scifi.yaml
+
+  plsci:
+    config: detectors/plsci.yaml
+
+  music:
+    config: detectors/music.yaml

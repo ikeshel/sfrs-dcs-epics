@@ -1,0 +1,45 @@
+detector: SCIFI
+
+source:
+  board_template: SCIFI/BoardTemplate_SCIFI.bob
+
+canvas:
+  width: 1820
+  height: 1226
+
+board:
+  width: 200
+  height: 250
+
+picture:
+  widget: pictSCIFI
+  x: 357
+  y: 351
+  width: 1105
+  height: 523
+
+layout:
+
+  top:
+    boards: [1, 2, 3, 4, 5, 6]
+    start_x: 275
+    y: 91
+    gap: 25
+  
+  left:
+    boards: [8, 7]
+    x: 147
+    start_y: 351
+    gap: 23
+  
+  bottom:
+    boards: [14, 13, 12, 11, 10, 9]
+    start_x: 275
+    y: 884
+    gap: 15
+  
+  right:
+    boards: [15, 16]
+    x: 1472
+    start_y: 351
+    gap: 23

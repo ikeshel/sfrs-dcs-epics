@@ -1,0 +1,44 @@
+detector: MUSIC
+
+canvas:
+  width: 1820
+  height: 1226
+
+field_cage:
+  width: 500
+  height: 800
+
+templates:
+
+  two_fc:
+
+    source: MUSIC/MUSIC_TWOFC_TEMPLATE.bob
+
+    layout:
+
+      row:
+
+        widgets:
+          - MUSIC_FC1
+          - MUSIC_FC2
+
+        start_x: 360
+        y: 213
+        gap: 100
+
+  three_fc:
+
+    source: MUSIC/MUSIC_THREEFC_TEMPLATE.bob
+
+    layout:
+
+      row:
+
+        widgets:
+          - MUSIC_FC1
+          - MUSIC_FC2
+          - MUSIC_FC3
+
+        start_x: 60
+        y: 213
+        gap: 100

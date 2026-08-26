@@ -1,0 +1,70 @@
+detector: PLSCI
+
+canvas:
+  width: 1820
+  height: 1226
+
+board:
+  width: 350
+  height: 331
+
+templates:
+
+  six_board:
+    source: PLSCI/BoardTemplate_6_PLSCI.bob
+
+    picture:
+      widget: pictPLSCI_6_
+      x: 375
+      y: 341
+      width: 1070
+      height: 544
+
+    layout:
+
+      top:
+        boards: [6, 1, 2]
+        start_x: 375
+        y: 0
+        gap: 10
+
+      bottom:
+        boards: [5, 4, 3]
+        start_x: 375
+        y: 895
+        gap: 10
+
+
+  eight_board:
+    source: PLSCI/BoardTemplate_8_PLSCI.bob
+
+    picture:
+      widget: pictPLSCI_8_
+      x: 360
+      y: 341
+      width: 1100
+      height: 544
+
+    layout:
+
+      top:
+        boards: [8, 1, 2]
+        start_x: 375
+        y: 0
+        gap: 10
+
+      left:
+        boards: [7]
+        x: 0
+        start_y: 441
+
+      right:
+        boards: [3]
+        x: 1470
+        start_y: 441
+
+      bottom:
+        boards: [6, 5, 4]
+        start_x: 375
+        y: 895
+        gap: 10
