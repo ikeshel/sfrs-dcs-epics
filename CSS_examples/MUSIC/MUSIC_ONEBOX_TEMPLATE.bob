@@ -189,8 +189,32 @@ if PVUtil.getInt(pvs[0]) != 0:
         <height>75</height>
         <display_mode>1</display_mode>
         <precision>0</precision>
-        <limits_from_pv>3</limits_from_pv>
         <maximum>3000.0</maximum>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>teupHV_V_RBV_1</name>
+        <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</pv_name>
+        <x>260</x>
+        <y>82</y>
+        <width>90</width>
+        <height>30</height>
+        <font>
+          <font family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <foreground_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </foreground_color>
+        <background_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <transparent>true</transparent>
+        <format>1</format>
+        <precision>2</precision>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
       </widget>
     </widget>
     <widget type="group" version="3.0.0">
