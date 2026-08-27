@@ -6,7 +6,7 @@ canvas:
 
 field_cage:
   width: 500
-  height: 800
+  height: 965
 
 templates:
 
@@ -23,7 +23,7 @@ templates:
           - MUSIC_FC2
 
         start_x: 360
-        y: 213
+        y: 130.5
         gap: 100
 
   three_fc:
@@ -40,5 +40,5 @@ templates:
           - MUSIC_FC3
 
         start_x: 60
-        y: 213
+        y: 130.5
         gap: 100

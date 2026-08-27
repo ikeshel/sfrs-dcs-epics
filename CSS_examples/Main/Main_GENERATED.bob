@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<display version="2.0.0">
+  <width>1920</width>
+  <height>1280</height>
+  <grid_visible>false</grid_visible>
+  <widget type="navtabs" version="2.0.0">
+    <name>nataSCREENS</name>
+    <tabs>
+      <tab>
+        <name>SCIFI</name>
+        <file>../SCIFI/SCIFI.bob</file>
+        <macros>
+        </macros>
+        <group_name />
+        <selected_color>
+          <color red="236" green="236" blue="236">
+          </color>
+        </selected_color>
+        <deselected_color>
+          <color red="200" green="200" blue="200">
+          </color>
+        </deselected_color>
+      </tab>
+      <tab>
+        <name>PLSCI</name>
+        <file>../PLSCI/PLSCI.bob</file>
+        <macros>
+        </macros>
+        <group_name />
+        <selected_color>
+          <color red="236" green="236" blue="236">
+          </color>
+        </selected_color>
+        <deselected_color>
+          <color red="200" green="200" blue="200">
+          </color>
+        </deselected_color>
+      </tab>
+      <tab>
+        <name>MUSIC</name>
+        <file>../MUSIC/MUSIC.bob</file>
+        <macros>
+        </macros>
+        <group_name />
+        <selected_color>
+          <color red="236" green="236" blue="236">
+          </color>
+        </selected_color>
+        <deselected_color>
+          <color red="200" green="200" blue="200">
+          </color>
+        </deselected_color>
+      </tab>
+    </tabs>
+    <width>1920</width>
+    <height>1280</height>
+    <tab_width>60</tab_width>
+  </widget>
+</display>

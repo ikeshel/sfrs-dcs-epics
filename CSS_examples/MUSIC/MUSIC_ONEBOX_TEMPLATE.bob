@@ -1,18 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <width>500</width>
-  <height>800</height>
+  <height>965</height>
   <grid_visible>false</grid_visible>
-  <widget type="group" version="3.0.0">
-    <name>grupONE_FC</name>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectLIMIT</name>
     <width>500</width>
     <height>800</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Background" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>labeHEADER</name>
+    <text>$(CHAMBER):MUSIC1:FC$(FIELD_CAGE)</text>
+    <y>10</y>
+    <width>500</width>
+    <height>30</height>
+    <font>
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>bobuHV_ENABLE</name>
+    <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_ENABLE</pv_name>
+    <x>25</x>
+    <y>50</y>
+    <width>215</width>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>grupHV_400V</name>
+    <x>10</x>
+    <y>100</y>
+    <width>480</width>
+    <height>155</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="rectangle" version="2.0.0">
-      <name>rectLIMIT</name>
-      <width>500</width>
-      <height>800</height>
+      <name>rect400V_SET</name>
+      <width>130</width>
+      <height>120</height>
       <line_width>1</line_width>
       <line_color>
         <color name="Button_Background" red="210" green="210" blue="210">
@@ -23,80 +59,38 @@
         </color>
       </background_color>
     </widget>
-    <widget type="label" version="2.0.0">
-      <name>labeHEADER</name>
-      <text>$(CHAMBER):MUSIC1:FC$(FIELD_CAGE)</text>
-      <y>10</y>
-      <width>500</width>
+    <widget type="textupdate" version="2.0.0">
+      <name>teupHV_400V_SET</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
+      <x>20</x>
+      <y>20</y>
+      <width>90</width>
       <height>30</height>
-      <font>
-        <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
-        </font>
-      </font>
+      <visible>false</visible>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <precision>2</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
     </widget>
-    <widget type="bool_button" version="2.0.0">
-      <name>bobuHV_ENABLE</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_ENABLE</pv_name>
-      <x>25</x>
-      <y>50</y>
-      <width>215</width>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>grupHV</name>
-      <x>10</x>
-      <y>100</y>
-      <width>480</width>
-      <height>155</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="rectangle" version="2.0.0">
-        <name>rectV_SET</name>
-        <width>130</width>
-        <height>120</height>
-        <line_width>1</line_width>
-        <line_color>
-          <color name="Button_Background" red="210" green="210" blue="210">
-          </color>
-        </line_color>
-        <background_color>
-          <color name="Background" red="255" green="255" blue="255">
-          </color>
-        </background_color>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>teupHV_V_SET</name>
-        <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
-        <x>20</x>
-        <y>20</y>
-        <width>90</width>
-        <height>30</height>
-        <visible>false</visible>
-        <background_color>
-          <color name="Background" red="255" green="255" blue="255">
-          </color>
-        </background_color>
-        <format>1</format>
-        <precision>2</precision>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-      <widget type="textentry" version="3.0.0">
-        <name>teenHV_V_SET</name>
-        <pv_name>loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
-        <x>20</x>
-        <y>20</y>
-        <width>90</width>
-        <height>30</height>
-        <background_color>
-          <color name="Background" red="255" green="255" blue="255">
-          </color>
-        </background_color>
-        <horizontal_alignment>1</horizontal_alignment>
-        <scripts>
-          <script file="EmbeddedPy">
-            <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
+    <widget type="textentry" version="3.0.0">
+      <name>teenHV_400V_SET</name>
+      <pv_name>loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
+      <x>20</x>
+      <y>20</y>
+      <width>90</width>
+      <height>30</height>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <scripts>
+        <script file="EmbeddedPy">
+          <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
 
 if PVUtil.getInt(pvs[2]) == 0:
     try:
@@ -106,27 +100,27 @@ if PVUtil.getInt(pvs[2]) == 0:
         print("Initial voltage loaded: " + str(live_value))
     except Exception as error:
         print("INITIALIZATION ERROR: " + str(error))]]></text>
-            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
-            <pv_name trigger="false">loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
-            <pv_name trigger="false">loc://HVSetInitialized$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
-          </script>
-        </scripts>
-      </widget>
-      <widget type="action_button" version="3.0.0">
-        <name>acbtV_SET</name>
-        <actions>
-          <action type="write_pv">
-            <description>Write PV</description>
-            <pv_name>loc://HVSetApply$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
-            <value>1</value>
-          </action>
-        </actions>
-        <text>SET</text>
-        <x>15</x>
-        <y>70</y>
-        <scripts>
-          <script file="EmbeddedPy">
-            <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
+          <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
+          <pv_name trigger="false">loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
+          <pv_name trigger="false">loc://HVSetInitialized$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
+        </script>
+      </scripts>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>acbt400V_SET</name>
+      <actions>
+        <action type="write_pv">
+          <description>Write PV</description>
+          <pv_name>loc://HVSetApply$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
+          <value>1</value>
+        </action>
+      </actions>
+      <text>SET</text>
+      <x>15</x>
+      <y>70</y>
+      <scripts>
+        <script file="EmbeddedPy">
+          <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
 
 if PVUtil.getInt(pvs[0]) != 0:
         try:
@@ -140,167 +134,341 @@ if PVUtil.getInt(pvs[0]) != 0:
             print("VOLTAGE WRITE ERROR: " + str(error))
         finally:
             pvs[0].write(0)]]></text>
-            <pv_name>loc://HVSetApply$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
-            <pv_name trigger="false">loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
-            <pv_name trigger="false">SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
-          </script>
-        </scripts>
-        <tooltip>$(actions)</tooltip>
-        <show_confirm_dialog>true</show_confirm_dialog>
-      </widget>
-      <widget type="linearmeter" version="3.0.0">
-        <name>limeHV_V_RBV</name>
-        <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</pv_name>
-        <x>140</x>
-        <width>330</width>
-        <height>75</height>
-        <display_mode>1</display_mode>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>teupHV_V_RBV</name>
-        <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</pv_name>
-        <x>260</x>
-        <width>90</width>
-        <height>30</height>
-        <font>
-          <font family="Liberation Sans" style="BOLD" size="14.0">
-          </font>
-        </font>
-        <foreground_color>
-          <color name="Background" red="255" green="255" blue="255">
-          </color>
-        </foreground_color>
-        <background_color>
-          <color name="Background" red="255" green="255" blue="255">
-          </color>
-        </background_color>
-        <transparent>true</transparent>
-        <format>1</format>
-        <precision>2</precision>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-      <widget type="linearmeter" version="3.0.0">
-        <name>limeHV_I_RBV</name>
-        <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</pv_name>
-        <x>140</x>
-        <y>80</y>
-        <width>330</width>
-        <height>75</height>
-        <display_mode>1</display_mode>
-        <precision>0</precision>
-        <maximum>3000.0</maximum>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>teupHV_V_RBV_1</name>
-        <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</pv_name>
-        <x>260</x>
-        <y>82</y>
-        <width>90</width>
-        <height>30</height>
-        <font>
-          <font family="Liberation Sans" style="BOLD" size="14.0">
-          </font>
-        </font>
-        <foreground_color>
-          <color name="Background" red="255" green="255" blue="255">
-          </color>
-        </foreground_color>
-        <background_color>
-          <color name="Background" red="255" green="255" blue="255">
-          </color>
-        </background_color>
-        <transparent>true</transparent>
-        <format>1</format>
-        <precision>2</precision>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
+          <pv_name>loc://HVSetApply$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
+          <pv_name trigger="false">loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
+          <pv_name trigger="false">SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
+        </script>
+      </scripts>
+      <tooltip>$(actions)</tooltip>
+      <show_confirm_dialog>true</show_confirm_dialog>
     </widget>
-    <widget type="group" version="3.0.0">
-      <name>grupSTATUS</name>
-      <x>10</x>
-      <y>265</y>
+    <widget type="linearmeter" version="3.0.0">
+      <name>limeHV_400V_RBV</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</pv_name>
+      <x>140</x>
+      <width>330</width>
+      <height>75</height>
+      <display_mode>1</display_mode>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>teupHV_400V_RBV</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</pv_name>
+      <x>260</x>
+      <width>90</width>
+      <height>30</height>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <format>1</format>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="linearmeter" version="3.0.0">
+      <name>limeHV_I_RBV_400V</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</pv_name>
+      <x>140</x>
+      <y>80</y>
+      <width>330</width>
+      <height>75</height>
+      <display_mode>1</display_mode>
+      <precision>0</precision>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>teupHV_I_RBV_400V</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</pv_name>
+      <x>260</x>
+      <y>80</y>
+      <width>90</width>
+      <height>30</height>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <format>1</format>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>grupHV_4000V</name>
+    <x>10</x>
+    <y>265</y>
+    <width>480</width>
+    <height>155</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>rect4000V_SET</name>
+      <width>130</width>
+      <height>120</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>teupHV_4000V_SET</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
+      <x>20</x>
+      <y>20</y>
+      <width>90</width>
+      <height>30</height>
+      <visible>false</visible>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>teenHV_4000V_SET</name>
+      <pv_name>loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
+      <x>20</x>
+      <y>20</y>
+      <width>90</width>
+      <height>30</height>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <scripts>
+        <script file="EmbeddedPy">
+          <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
+
+if PVUtil.getInt(pvs[2]) == 0:
+    try:
+        live_value = PVUtil.getDouble(pvs[0])
+        pvs[1].write(live_value)
+        pvs[2].write(1)
+        print("Initial voltage loaded: " + str(live_value))
+    except Exception as error:
+        print("INITIALIZATION ERROR: " + str(error))]]></text>
+          <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
+          <pv_name trigger="false">loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
+          <pv_name trigger="false">loc://HVSetInitialized$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
+        </script>
+      </scripts>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>acbt4000V_SET</name>
+      <actions>
+        <action type="write_pv">
+          <description>Write PV</description>
+          <pv_name>loc://HVSetApply$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
+          <value>1</value>
+        </action>
+      </actions>
+      <text>SET</text>
+      <x>15</x>
+      <y>70</y>
+      <scripts>
+        <script file="EmbeddedPy">
+          <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
+
+if PVUtil.getInt(pvs[0]) != 0:
+        try:
+            requested_value = PVUtil.getDouble(pvs[1])
+            print("Writing voltage: " + str(requested_value))
+
+            pvs[2].write(requested_value)
+
+            print("Voltage write command sent")
+        except Exception as error:
+            print("VOLTAGE WRITE ERROR: " + str(error))
+        finally:
+            pvs[0].write(0)]]></text>
+          <pv_name>loc://HVSetApply$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
+          <pv_name trigger="false">loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
+          <pv_name trigger="false">SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
+        </script>
+      </scripts>
+      <tooltip>$(actions)</tooltip>
+      <show_confirm_dialog>true</show_confirm_dialog>
+    </widget>
+    <widget type="linearmeter" version="3.0.0">
+      <name>limeHV_4000V_RBV</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</pv_name>
+      <x>140</x>
+      <width>330</width>
+      <height>75</height>
+      <display_mode>1</display_mode>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>teupHV_4000V_RBV</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</pv_name>
+      <x>260</x>
+      <width>90</width>
+      <height>30</height>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <format>1</format>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="linearmeter" version="3.0.0">
+      <name>limeHV_I_RBV_4000V</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</pv_name>
+      <x>140</x>
+      <y>80</y>
+      <width>330</width>
+      <height>75</height>
+      <display_mode>1</display_mode>
+      <precision>0</precision>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>teupHV_I_RBV_4000V</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</pv_name>
+      <x>260</x>
+      <y>80</y>
+      <width>90</width>
+      <height>30</height>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <format>1</format>
+      <precision>2</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>grupSTATUS</name>
+    <x>10</x>
+    <y>430</y>
+    <width>480</width>
+    <height>75</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>rectSTATE</name>
       <width>480</width>
       <height>75</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="rectangle" version="2.0.0">
-        <name>rectSTATE</name>
-        <width>480</width>
-        <height>75</height>
-        <line_width>1</line_width>
-        <line_color>
-          <color name="Button_Background" red="210" green="210" blue="210">
-          </color>
-        </line_color>
-        <background_color>
-          <color name="Background" red="255" green="255" blue="255">
-          </color>
-        </background_color>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>labeSTATUS</name>
-        <text>STATUS</text>
-        <x>15</x>
-        <y>10</y>
-        <height>30</height>
-        <font>
-          <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
-          </font>
+      <line_width>1</line_width>
+      <line_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>labeSTATUS</name>
+      <text>STATUS</text>
+      <x>15</x>
+      <y>10</y>
+      <height>30</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
         </font>
-        <horizontal_alignment>1</horizontal_alignment>
-      </widget>
-      <widget type="byte_monitor" version="2.0.0">
-        <name>bymoSTATE</name>
-        <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STATE</pv_name>
-        <x>150</x>
-        <y>10</y>
-        <width>315</width>
-        <height>22</height>
-        <numBits>14</numBits>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>labeSTATE</name>
-        <text>STATE</text>
-        <x>15</x>
-        <y>40</y>
-        <height>25</height>
-        <font>
-          <font family="Liberation Sans" style="REGULAR" size="15.0">
-          </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>bymoSTATE</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STATE</pv_name>
+      <x>150</x>
+      <y>10</y>
+      <width>315</width>
+      <height>22</height>
+      <numBits>14</numBits>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>labeSTATE</name>
+      <text>STATE</text>
+      <x>10</x>
+      <y>40</y>
+      <width>80</width>
+      <height>25</height>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="15.0">
         </font>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>teupSTAT_NO</name>
-        <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STATE</pv_name>
-        <x>150</x>
-        <y>40</y>
-        <height>25</height>
-        <background_color>
-          <color name="Background" red="255" green="255" blue="255">
-          </color>
-        </background_color>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>labeSTAT_LABEL</name>
-        <text></text>
-        <x>260</x>
-        <y>40</y>
-        <width>200</width>
-        <height>25</height>
-        <background_color>
-          <color name="Button_Background" red="210" green="210" blue="210">
-          </color>
-        </background_color>
-        <vertical_alignment>1</vertical_alignment>
-        <scripts>
-          <script file="EmbeddedPy">
-            <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>teupSTAT_NO</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STATE</pv_name>
+      <x>100</x>
+      <y>40</y>
+      <width>80</width>
+      <height>25</height>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>labeSTAT_LABEL</name>
+      <text></text>
+      <x>190</x>
+      <y>40</y>
+      <width>200</width>
+      <height>25</height>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <scripts>
+        <script file="EmbeddedPy">
+          <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
 
 state = PVUtil.getInt(pvs[0])
 
@@ -335,19 +503,26 @@ else:
 widget.setPropertyValue("text", text)
 
 print("HV_STATE=" + str(state) + " -> " + text)]]></text>
-            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STATE</pv_name>
-          </script>
-        </scripts>
-      </widget>
+          <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STATE</pv_name>
+        </script>
+      </scripts>
     </widget>
-    <widget type="databrowser" version="2.0.0">
-      <name>dabrHV_PLOT</name>
-      <file>FMF1_MUSIC1_FC1.plt</file>
-      <x>10</x>
-      <y>350</y>
-      <width>480</width>
-      <height>440</height>
-      <selection_value_pv>SFRS:FMF1:MUSIC1:FC1:HV_V_RBV</selection_value_pv>
+    <widget type="action_button" version="3.0.0">
+      <name>acbtSTATUS_HELP</name>
+      <text>HELP</text>
+      <x>400</x>
+      <y>40</y>
+      <width>70</width>
+      <height>25</height>
     </widget>
+  </widget>
+  <widget type="databrowser" version="2.0.0">
+    <name>dabrHV_PLOT</name>
+    <file>FMF1_MUSIC1_FC1.plt</file>
+    <x>10</x>
+    <y>515</y>
+    <width>480</width>
+    <height>440</height>
+    <selection_value_pv>SFRS:FMF1:MUSIC1:FC1:HV_V_RBV</selection_value_pv>
   </widget>
 </display>

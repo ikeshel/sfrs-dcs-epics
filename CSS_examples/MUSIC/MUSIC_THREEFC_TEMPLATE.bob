@@ -10,9 +10,9 @@
     </macros>
     <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
     <x>60</x>
-    <y>213</y>
+    <y>130</y>
     <width>500</width>
-    <height>800</height>
+    <height>965</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>MUSIC_FC2</name>
@@ -21,9 +21,9 @@
     </macros>
     <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
     <x>660</x>
-    <y>213</y>
+    <y>130</y>
     <width>500</width>
-    <height>800</height>
+    <height>965</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>MUSIC_FC3</name>
@@ -32,8 +32,8 @@
     </macros>
     <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
     <x>1260</x>
-    <y>213</y>
+    <y>130</y>
     <width>500</width>
-    <height>800</height>
+    <height>965</height>
   </widget>
 </display>

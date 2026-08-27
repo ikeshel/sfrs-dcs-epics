@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<display version="2.0.0">
+  <width>1820</width>
+  <height>1226</height>
+  <grid_visible>false</grid_visible>
+  <widget type="group" version="3.0.0">
+    <name>grup$(CHAMBER) - SCIFI$(ID)</name>
+    <width>1820</width>
+    <height>1226</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD1</name>
+      <macros>
+        <BOARD>BOARD 1</BOARD>
+        <SFP>0</SFP>
+        <DEV>0</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>275</x>
+      <y>91</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD2</name>
+      <macros>
+        <BOARD>BOARD 2</BOARD>
+        <SFP>0</SFP>
+        <DEV>1</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>500</x>
+      <y>91</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD3</name>
+      <macros>
+        <BOARD>BOARD 3</BOARD>
+        <SFP>0</SFP>
+        <DEV>2</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>725</x>
+      <y>91</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD4</name>
+      <macros>
+        <BOARD>BOARD 4</BOARD>
+        <SFP>0</SFP>
+        <DEV>3</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>950</x>
+      <y>91</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD5</name>
+      <macros>
+        <BOARD>BOARD 5</BOARD>
+        <SFP>0</SFP>
+        <DEV>4</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>1175</x>
+      <y>91</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD6</name>
+      <macros>
+        <BOARD>BOARD 6</BOARD>
+        <SFP>0</SFP>
+        <DEV>5</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>1400</x>
+      <y>91</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD7</name>
+      <macros>
+        <BOARD>BOARD 7</BOARD>
+        <SFP>1</SFP>
+        <DEV>0</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>147</x>
+      <y>624</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD8</name>
+      <macros>
+        <BOARD>BOARD 8</BOARD>
+        <SFP>1</SFP>
+        <DEV>1</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>147</x>
+      <y>351</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="picture" version="2.0.0">
+      <name>pictSCIFI</name>
+      <file>det_scifi.svg</file>
+      <x>357</x>
+      <y>351</y>
+      <width>1105</width>
+      <height>523</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD9</name>
+      <macros>
+        <BOARD>BOARD 9</BOARD>
+        <SFP>2</SFP>
+        <DEV>0</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>1350</x>
+      <y>884</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD10</name>
+      <macros>
+        <BOARD>BOARD 10</BOARD>
+        <SFP>2</SFP>
+        <DEV>1</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>1135</x>
+      <y>884</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD11</name>
+      <macros>
+        <BOARD>BOARD 11</BOARD>
+        <SFP>2</SFP>
+        <DEV>2</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>920</x>
+      <y>884</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD12</name>
+      <macros>
+        <BOARD>BOARD 12</BOARD>
+        <SFP>2</SFP>
+        <DEV>3</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>705</x>
+      <y>884</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD13</name>
+      <macros>
+        <BOARD>BOARD 13</BOARD>
+        <SFP>2</SFP>
+        <DEV>4</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>490</x>
+      <y>884</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD14</name>
+      <macros>
+        <BOARD>BOARD 14</BOARD>
+        <SFP>2</SFP>
+        <DEV>5</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>275</x>
+      <y>884</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD15</name>
+      <macros>
+        <BOARD>BOARD 15</BOARD>
+        <SFP>3</SFP>
+        <DEV>0</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>1472</x>
+      <y>351</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD16</name>
+      <macros>
+        <BOARD>BOARD 16</BOARD>
+        <SFP>3</SFP>
+        <DEV>1</DEV>
+      </macros>
+      <file>boardcard_SCIFI.bob</file>
+      <x>1472</x>
+      <y>624</y>
+      <width>200</width>
+      <height>250</height>
+    </widget>
+  </widget>
+</display>
