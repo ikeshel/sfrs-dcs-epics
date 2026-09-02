@@ -509,11 +509,19 @@ print("HV_STATE=" + str(state) + " -> " + text)]]></text>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>acbtSTATUS_HELP</name>
-      <text>HELP</text>
+      <actions>
+        <action type="open_display">
+          <description>opdiINFO_BOX</description>
+          <file>MUISC_Status_Information_Box.bob</file>
+          <target>window</target>
+        </action>
+      </actions>
+      <text>INFO</text>
       <x>400</x>
       <y>40</y>
       <width>70</width>
       <height>25</height>
+      <tooltip>$(actions)</tooltip>
     </widget>
   </widget>
   <widget type="databrowser" version="2.0.0">
