@@ -13,10 +13,10 @@ tabs:
 
   items:
     - name: SCIFI
-      file: ../SCIFI/SCIFI.bob
+      file: ../SCIFI/SCIFI_GENERATED.bob
 
     - name: PLSCI
-      file: ../PLSCI/PLSCI.bob
+      file: ../PLSCI/PLSCI_GENERATED.bob
 
     - name: MUSIC
-      file: ../MUSIC/MUSIC.bob
+      file: ../MUSIC/MUSIC_GENERATED.bob

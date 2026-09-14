@@ -1,5 +1,8 @@
 detector: PLSCI
 
+source:
+  wrapper: PLSCI/PLSCI.bob
+
 canvas:
   width: 1820
   height: 1226

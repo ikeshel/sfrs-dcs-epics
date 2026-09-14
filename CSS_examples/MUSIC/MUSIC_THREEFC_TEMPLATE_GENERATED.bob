@@ -20,7 +20,7 @@
       <FIELD_CAGE>2</FIELD_CAGE>
     </macros>
     <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
-    <x>660</x>
+    <x>570</x>
     <y>130</y>
     <width>500</width>
     <height>965</height>
@@ -31,7 +31,7 @@
       <FIELD_CAGE>3</FIELD_CAGE>
     </macros>
     <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
-    <x>1260</x>
+    <x>1080</x>
     <y>130</y>
     <width>500</width>
     <height>965</height>

@@ -1,6 +1,7 @@
 detector: SCIFI
 
 source:
+  wrapper: SCIFI/SCIFI.bob
   board_template: SCIFI/BoardTemplate_SCIFI.bob
 
 canvas:

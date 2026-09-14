@@ -1,5 +1,8 @@
 detector: MUSIC
 
+source:
+  wrapper: MUSIC/MUSIC.bob
+
 canvas:
   width: 1820
   height: 1226

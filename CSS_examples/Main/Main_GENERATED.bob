@@ -8,7 +8,7 @@
     <tabs>
       <tab>
         <name>SCIFI</name>
-        <file>../SCIFI/SCIFI.bob</file>
+        <file>../SCIFI/SCIFI_GENERATED.bob</file>
         <macros>
         </macros>
         <group_name />
@@ -23,7 +23,7 @@
       </tab>
       <tab>
         <name>PLSCI</name>
-        <file>../PLSCI/PLSCI.bob</file>
+        <file>../PLSCI/PLSCI_GENERATED.bob</file>
         <macros>
         </macros>
         <group_name />
@@ -38,7 +38,7 @@
       </tab>
       <tab>
         <name>MUSIC</name>
-        <file>../MUSIC/MUSIC.bob</file>
+        <file>../MUSIC/MUSIC_GENERATED.bob</file>
         <macros>
         </macros>
         <group_name />

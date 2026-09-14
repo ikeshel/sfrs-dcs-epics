@@ -529,6 +529,55 @@ def generate_music_templates(
         positions=three_positions,
     )
 
+def update_wrapper_bob(
+    source_file: Path,
+    output_file: Path,
+    replacements: dict[str, str],
+) -> None:
+    tree = ET.parse(source_file)
+    root = tree.getroot()
+
+    modified_count = 0
+
+    for widget in root.iter("widget"):
+        widget_type = (widget.get("type") or "").strip()
+
+        if widget_type != "embedded":
+            continue
+
+        file_element = widget.find("file")
+
+        if file_element is None or file_element.text is None:
+            continue
+
+        old_file = file_element.text.strip()
+
+        if old_file not in replacements:
+            continue
+
+        new_file = replacements[old_file]
+        file_element.text = new_file
+        modified_count += 1
+
+        print(
+            f"{source_file.name}: "
+            f"{old_file} -> {new_file}"
+        )
+
+    if modified_count == 0:
+        raise ValueError(
+            f"No embedded file references were updated in {source_file}."
+        )
+
+    tree.write(
+        output_file,
+        encoding="UTF-8",
+        xml_declaration=True,
+    )
+
+    print()
+    print(f"Updated {modified_count} embedded file references.")
+    print(f"Generated wrapper: {output_file}")
 
 def update_main_bob(
     source_file: Path,
@@ -707,10 +756,19 @@ def generate_all(master_config_file: Path) -> None:
 
     print("Generating SCIFI ...\n")
 
-    scifi_config_file = layout_dir / master_config["detectors"]["scifi"]["config"]
+    scifi_config_file = (
+        layout_dir
+        / master_config["detectors"]["scifi"]["config"]
+    )
+
     scifi_config = load_config(scifi_config_file)
 
-    scifi_source = project_root / scifi_config["source"]["board_template"]
+    # Generate SCIFI board template
+    scifi_source = (
+        project_root
+        / scifi_config["source"]["board_template"]
+    )
+
     scifi_output = get_generated_path(scifi_source)
 
     scifi_positions = calculate_board_positions(scifi_config)
@@ -722,13 +780,35 @@ def generate_all(master_config_file: Path) -> None:
         positions=scifi_positions,
     )
 
+    # Generate SCIFI wrapper
+    scifi_wrapper_source = (
+        project_root
+        / scifi_config["source"]["wrapper"]
+    )
+
+    scifi_wrapper_output = get_generated_path(
+        scifi_wrapper_source
+    )
+
+    update_wrapper_bob(
+        source_file=scifi_wrapper_source,
+        output_file=scifi_wrapper_output,
+        replacements={
+            scifi_source.name: scifi_output.name,
+        },
+    )
+
     # -----------------------------------
     # PLSCI
     # -----------------------------------
 
     print("\nGenerating PLSCI...\n")
 
-    plsci_config_file = layout_dir / master_config["detectors"]["plsci"]["config"]
+    plsci_config_file = (
+        layout_dir
+        / master_config["detectors"]["plsci"]["config"]
+    )
+
     plsci_config = load_config(plsci_config_file)
 
     six_source = (
@@ -741,12 +821,34 @@ def generate_all(master_config_file: Path) -> None:
         / plsci_config["templates"]["eight_board"]["source"]
     )
 
+    six_output = get_generated_path(six_source)
+    eight_output = get_generated_path(eight_source)
+
     generate_plsci_templates(
         config_file=plsci_config_file,
         six_source=six_source,
-        six_output=get_generated_path(six_source),
+        six_output=six_output,
         eight_source=eight_source,
-        eight_output=get_generated_path(eight_source),
+        eight_output=eight_output,
+    )
+
+    # Generate PLSCI wrapper
+    plsci_wrapper_source = (
+        project_root
+        / plsci_config["source"]["wrapper"]
+    )
+
+    plsci_wrapper_output = get_generated_path(
+        plsci_wrapper_source
+    )
+
+    update_wrapper_bob(
+        source_file=plsci_wrapper_source,
+        output_file=plsci_wrapper_output,
+        replacements={
+            six_source.name: six_output.name,
+            eight_source.name: eight_output.name,
+        },
     )
 
     # -----------------------------------
@@ -755,7 +857,11 @@ def generate_all(master_config_file: Path) -> None:
 
     print("\nGenerating MUSIC...\n")
 
-    music_config_file = layout_dir / master_config["detectors"]["music"]["config"]
+    music_config_file = (
+        layout_dir
+        / master_config["detectors"]["music"]["config"]
+    )
+
     music_config = load_config(music_config_file)
 
     two_source = (
@@ -768,12 +874,34 @@ def generate_all(master_config_file: Path) -> None:
         / music_config["templates"]["three_fc"]["source"]
     )
 
+    two_output = get_generated_path(two_source)
+    three_output = get_generated_path(three_source)
+
     generate_music_templates(
         config_file=music_config_file,
         two_source=two_source,
-        two_output=get_generated_path(two_source),
+        two_output=two_output,
         three_source=three_source,
-        three_output=get_generated_path(three_source),
+        three_output=three_output,
+    )
+
+    # Generate MUSIC wrapper
+    music_wrapper_source = (
+        project_root
+        / music_config["source"]["wrapper"]
+    )
+
+    music_wrapper_output = get_generated_path(
+        music_wrapper_source
+    )
+
+    update_wrapper_bob(
+        source_file=music_wrapper_source,
+        output_file=music_wrapper_output,
+        replacements={
+            two_source.name: two_output.name,
+            three_source.name: three_output.name,
+        },
     )
 
     # -----------------------------------
