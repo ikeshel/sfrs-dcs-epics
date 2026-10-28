@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>150</width>
+  <height>250</height>
+  <grid_visible>false</grid_visible>
+  <widget type="group" version="3.0.0">
+    <name>grupMUSIC2FCCARD</name>
+    <width>150</width>
+    <height>250</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>rectMUSICCARD</name>
+      <width>150</width>
+      <height>250</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <transparent>true</transparent>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>lablMUSICCARD</name>
+      <text>$(CHAMBER):MUSIC1</text>
+      <x>1</x>
+      <width>147</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <wrap_words>false</wrap_words>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>grupFCSTATUS</name>
+      <y>25</y>
+      <width>150</width>
+      <height>155</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="rectangle" version="2.0.0">
+        <name>rectFCSTATUS</name>
+        <width>150</width>
+        <height>155</height>
+        <line_width>1</line_width>
+        <line_color>
+          <color name="Button_Background" red="210" green="210" blue="210">
+          </color>
+        </line_color>
+        <transparent>true</transparent>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablFCSTATUS</name>
+        <text>FCs Status</text>
+        <x>2</x>
+        <y>2</y>
+        <width>146</width>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablFCs</name>
+        <text>Field Cages</text>
+        <x>2</x>
+        <y>27</y>
+        <width>80</width>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablFC_COUNT_VALUE</name>
+        <text>Label</text>
+        <x>88</x>
+        <y>27</y>
+        <width>58</width>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <scripts>
+          <script file="EmbeddedPy" check_connections="false">
+            <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
+
+total_fc = 2
+online_fc = 0
+
+for pv in pvs:
+    state = PVUtil.getInt(pv)
+
+    if (state & (1 << 0)) != 0:
+        online_fc += 1
+
+text = str(online_fc) + " / " + str(total_fc)
+
+widget.setPropertyValue("text", text)]]></text>
+            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC1:HV_STATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC2:HV_STATE</pv_name>
+          </script>
+        </scripts>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablHVSTATUS</name>
+        <text>HV Status</text>
+        <x>2</x>
+        <y>52</y>
+        <width>40</width>
+        <height>40</height>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablHV_STATUS_VALUE</name>
+        <text>Label</text>
+        <x>50</x>
+        <y>62</y>
+        <width>95</width>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <scripts>
+          <script file="EmbeddedPy" check_connections="false">
+            <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
+
+total_fc = len(pvs)
+online_fc = 0
+warning = False
+disconnected = False
+
+error_bits = [
+    3,   # Overcurrent
+    4,   # Overvoltage
+    5,   # Undervoltage
+    6,   # VMAX protection
+    7,   # Trip
+    8,   # Overpower
+    9,   # Overtemperature
+    11,  # Kill
+    12,  # Interlock
+    13   # Calibration error
+]
+
+for pv in pvs:
+    try:
+        state = PVUtil.getInt(pv)
+
+        if (state & (1 << 0)) != 0:
+            online_fc += 1
+
+        for bit in error_bits:
+            if (state & (1 << bit)) != 0:
+                warning = True
+
+    except:
+        disconnected = True
+
+if disconnected:
+    text = "DISCONNECTED"
+elif warning:
+    text = "WARNING"
+elif online_fc == 0:
+    text = "OFF"
+else:
+    text = "OK"
+
+widget.setPropertyValue("text", text)]]></text>
+            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC1:HV_STATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC2:HV_STATE</pv_name>
+          </script>
+        </scripts>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablFC1</name>
+        <text>Field Cage 1</text>
+        <x>2</x>
+        <y>97</y>
+        <width>80</width>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablFC1_STATUS_VALUE</name>
+        <text>Label</text>
+        <x>78</x>
+        <y>97</y>
+        <width>68</width>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <scripts>
+          <script file="EmbeddedPy" check_connections="false">
+            <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
+
+state = PVUtil.getInt(pvs[0])
+
+if (state & (1 << 0)) != 0:
+    text = "ON"
+else:
+    text = "OFF"
+
+widget.setPropertyValue("text", text)]]></text>
+            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC1:HV_STATE</pv_name>
+          </script>
+        </scripts>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablFC2</name>
+        <text>Field Cage 2</text>
+        <x>2</x>
+        <y>122</y>
+        <width>80</width>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablFC2_STATUS_VALUE</name>
+        <text>Label</text>
+        <x>78</x>
+        <y>122</y>
+        <width>68</width>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <scripts>
+          <script file="EmbeddedPy" check_connections="false">
+            <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
+
+state = PVUtil.getInt(pvs[0])
+
+if (state & (1 << 0)) != 0:
+    text = "ON"
+else:
+    text = "OFF"
+
+widget.setPropertyValue("text", text)]]></text>
+            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC2:HV_STATE</pv_name>
+          </script>
+        </scripts>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>grupMUSICDETAILS</name>
+      <x>2</x>
+      <y>185</y>
+      <width>139</width>
+      <height>62</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>lablMUSICDETAILS</name>
+        <text>Details</text>
+        <x>3</x>
+        <width>50</width>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablDESCRIPTION</name>
+        <text>For details click the button</text>
+        <x>59</x>
+        <y>2</y>
+        <width>80</width>
+        <height>60</height>
+        <horizontal_alignment>1</horizontal_alignment>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>acbtMUSICDETAILS</name>
+        <actions>
+          <action type="open_display">
+            <description>Open Display</description>
+            <file>MUSIC_TWOFC_TEMPLATE.bob</file>
+            <target>tab</target>
+          </action>
+        </actions>
+        <text>Details</text>
+        <y>27</y>
+        <width>55</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+  </widget>
+</display>

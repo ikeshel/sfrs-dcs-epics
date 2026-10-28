@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>1825</width>
+  <height>1268</height>
+  <grid_visible>false</grid_visible>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectOVERVIEW</name>
+    <width>1825</width>
+    <height>1268</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Background" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="picture" version="2.0.0">
+    <name>pictOVERVIEW</name>
+    <file>sfrs-layout-2026-10-14-12-43-21.png</file>
+    <x>1</x>
+    <width>1823</width>
+    <height>1268</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFPF2SCIFI1</name>
+    <macros>
+      <CHAMBER>FPF2</CHAMBER>
+      <ID>1</ID>
+    </macros>
+    <file>../SCIFI/SCIFI_CARD_OVERVIEW.bob</file>
+    <x>100</x>
+    <y>20</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFPF2SCIFI2</name>
+    <macros>
+      <CHAMBER>FPF2</CHAMBER>
+      <ID>2</ID>
+    </macros>
+    <file>../SCIFI/SCIFI_CARD_OVERVIEW.bob</file>
+    <x>260</x>
+    <y>20</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFPF3SCIFI1</name>
+    <macros>
+      <CHAMBER>FPF3</CHAMBER>
+      <ID>1</ID>
+    </macros>
+    <file>../SCIFI/SCIFI_CARD_OVERVIEW.bob</file>
+    <x>430</x>
+    <y>20</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFPF4SCIFI1</name>
+    <macros>
+      <CHAMBER>FPF4</CHAMBER>
+      <ID>1</ID>
+    </macros>
+    <file>../SCIFI/SCIFI_CARD_OVERVIEW.bob</file>
+    <x>600</x>
+    <y>20</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFPF4SCIFI2</name>
+    <macros>
+      <CHAMBER>FPF4</CHAMBER>
+      <ID>2</ID>
+    </macros>
+    <file>../SCIFI/SCIFI_CARD_OVERVIEW.bob</file>
+    <x>760</x>
+    <y>20</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFMF1SCIFI1</name>
+    <macros>
+      <CHAMBER>FMF1</CHAMBER>
+      <ID>1</ID>
+    </macros>
+    <file>../SCIFI/SCIFI_CARD_OVERVIEW.bob</file>
+    <x>930</x>
+    <y>20</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFMF1SCIFI2</name>
+    <macros>
+      <CHAMBER>FMF1</CHAMBER>
+      <ID>2</ID>
+    </macros>
+    <file>../SCIFI/SCIFI_CARD_OVERVIEW.bob</file>
+    <x>930</x>
+    <y>280</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFMF2SCIFI1</name>
+    <macros>
+      <ID>1</ID>
+      <CHAMBER>FMF2</CHAMBER>
+    </macros>
+    <file>../SCIFI/SCIFI_CARD_OVERVIEW.bob</file>
+    <x>1100</x>
+    <y>20</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFMF2SCIFI2</name>
+    <macros>
+      <ID>2</ID>
+      <CHAMBER>FMF2</CHAMBER>
+    </macros>
+    <file>../SCIFI/SCIFI_CARD_OVERVIEW.bob</file>
+    <x>1100</x>
+    <y>280</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFMF3SCIFI1</name>
+    <macros>
+      <ID>1</ID>
+      <CHAMBER>FMF3</CHAMBER>
+    </macros>
+    <file>../SCIFI/SCIFI_CARD_OVERVIEW.bob</file>
+    <x>1270</x>
+    <y>20</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFMF3SCIFI2</name>
+    <macros>
+      <ID>2</ID>
+      <CHAMBER>FMF3</CHAMBER>
+    </macros>
+    <file>../SCIFI/SCIFI_CARD_OVERVIEW.bob</file>
+    <x>1270</x>
+    <y>280</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFHF1SCIFI1</name>
+    <macros>
+      <ID>1</ID>
+      <CHAMBER>FHF1</CHAMBER>
+    </macros>
+    <file>../SCIFI/SCIFI_CARD_OVERVIEW.bob</file>
+    <x>1440</x>
+    <y>20</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFHF1SCIFI2</name>
+    <macros>
+      <ID>2</ID>
+      <CHAMBER>FHF1</CHAMBER>
+    </macros>
+    <file>../SCIFI/SCIFI_CARD_OVERVIEW.bob</file>
+    <x>1440</x>
+    <y>280</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFHF1SCIFI3</name>
+    <macros>
+      <CHAMBER>FHF1</CHAMBER>
+      <ID>3</ID>
+    </macros>
+    <file>../SCIFI/SCIFI_CARD_OVERVIEW.bob</file>
+    <x>1600</x>
+    <y>20</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFPF2PLSCI1</name>
+    <macros>
+      <CHAMBER>FPF2</CHAMBER>
+    </macros>
+    <file>../PLSCI/PLSCI6_CARD_OVERVIEW.bob</file>
+    <x>300</x>
+    <y>525</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFPF4PLSCI1</name>
+    <macros>
+      <CHAMBER>FPF4</CHAMBER>
+    </macros>
+    <file>../PLSCI/PLSCI6_CARD_OVERVIEW.bob</file>
+    <x>525</x>
+    <y>475</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFMF1PLSCI1</name>
+    <macros>
+      <CHAMBER>FMF1</CHAMBER>
+    </macros>
+    <file>../PLSCI/PLSCI6_CARD_OVERVIEW.bob</file>
+    <x>710</x>
+    <y>650</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFMF2PLSCI1</name>
+    <macros>
+      <CHAMBER>FMF2</CHAMBER>
+    </macros>
+    <file>../PLSCI/PLSCI8_CARD_OVERVIEW.bob</file>
+    <x>925</x>
+    <y>800</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFMF3PLSCI1</name>
+    <macros>
+      <CHAMBER>FMF3</CHAMBER>
+    </macros>
+    <file>../PLSCI/PLSCI6_CARD_OVERVIEW.bob</file>
+    <x>1240</x>
+    <y>840</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFHF1PLSCI1</name>
+    <macros>
+      <CHAMBER>FHF1</CHAMBER>
+    </macros>
+    <file>../PLSCI/PLSCI8_CARD_OVERVIEW.bob</file>
+    <x>1450</x>
+    <y>830</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFMF1MUSIC1</name>
+    <macros>
+      <CHAMBER>FMF1</CHAMBER>
+    </macros>
+    <file>../MUSIC/MUSIC2FC_CARD_OVERVIEW.bob</file>
+    <x>710</x>
+    <y>950</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>emdiFHF1MUSIC1</name>
+    <macros>
+      <CHAMBER>FHF1</CHAMBER>
+    </macros>
+    <file>../MUSIC/MUSIC3FC_CARD_OVERVIEW.bob</file>
+    <x>1625</x>
+    <y>950</y>
+    <width>150</width>
+    <height>250</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>lablWEBSITESOURCEDESCP</name>
+    <text>Click the button to go to S-FRS Overview website</text>
+    <x>52</x>
+    <y>755</y>
+    <width>150</width>
+    <height>40</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>acbtWEBSITESOURCE</name>
+    <actions execute_as_one="true">
+      <action type="open_webpage">
+        <description>SFRS - Overview</description>
+        <url>https://sfrs-web.gsi.de/</url>
+      </action>
+    </actions>
+    <text>Source / Website</text>
+    <x>50</x>
+    <y>800</y>
+    <width>150</width>
+  </widget>
+</display>

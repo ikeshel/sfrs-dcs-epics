@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>150</width>
+  <height>250</height>
+  <grid_visible>false</grid_visible>
+  <widget type="group" version="3.0.0">
+    <name>grupSCIFICARDOVERVIEW</name>
+    <width>150</width>
+    <height>250</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>rectSCIFICARD</name>
+      <width>150</width>
+      <height>250</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <transparent>true</transparent>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>lablSCIFICARD</name>
+      <text>$(CHAMBER):SCIFI$(ID)</text>
+      <x>2</x>
+      <width>146</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>lablCOUNT_SCRIPT</name>
+      <height>100</height>
+      <visible>false</visible>
+      <scripts>
+        <script file="EmbeddedPy" check_connections="false">
+          <text><![CDATA[
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+
+
+def read_value(index):
+    try:
+        severity = PVUtil.getSeverity(pvs[index])
+        if severity is None or severity >= 3:
+            return None
+
+        return PVUtil.getDouble(pvs[index])
+    except:
+        return None
+
+
+def classify_temp(value):
+    if value is None or value <= 0:
+        return None
+
+    if value >= 55:
+        return "CRIT"
+
+    if value >= 45 or value <= 5:
+        return "LOW"
+
+    return "OK"
+
+
+volt_critical = 0
+volt_ok = 0
+
+temp_critical = 0
+temp_low = 0
+temp_ok = 0
+
+# 16 boards, 3 PVs per board:
+# FPGA temperature, SiPM bias state, SiPM temperature
+for board in range(16):
+    base = board * 3
+
+    # Voltage / bias state
+    bias = read_value(base + 1)
+
+    if bias == 2:
+        volt_critical += 1
+    elif bias == 1:
+        volt_ok += 1
+    # State 0 and invalid values are excluded.
+
+    # Temperature: FPGA and SiPM
+    fpga_temp = classify_temp(read_value(base))
+    sipm_temp = classify_temp(read_value(base + 2))
+
+    states = [fpga_temp, sipm_temp]
+
+    # Critical has priority over Low.
+    if "CRIT" in states:
+        temp_critical += 1
+    elif "LOW" in states:
+        temp_low += 1
+    elif fpga_temp == "OK" and sipm_temp == "OK":
+        temp_ok += 1
+    # Invalid or disconnected readings cannot produce OK.
+
+
+def update_label(name, value):
+    target = ScriptUtil.findWidgetByName(widget, name)
+
+    if target is not None:
+        target.setPropertyValue("text", str(value))
+    else:
+        print("Count label not found: " + name)
+
+
+update_label("lablVOLTCRIT", volt_critical)
+update_label("lablVOLTLOW", 0)
+update_label("lablVOLTOK", volt_ok)
+
+update_label("lablTEMPCRIT", temp_critical)
+update_label("lablTEMPLOW", temp_low)
+update_label("lablTEMPOK", temp_ok)]]></text>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV0:FPGA:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV0:SIPM:BIAS_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV0:SIPM:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV1:FPGA:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV1:SIPM:BIAS_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV1:SIPM:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV2:FPGA:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV2:SIPM:BIAS_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV2:SIPM:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV3:FPGA:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV3:SIPM:BIAS_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV3:SIPM:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV4:FPGA:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV4:SIPM:BIAS_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV4:SIPM:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV5:FPGA:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV5:SIPM:BIAS_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP0:DEV5:SIPM:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP1:DEV0:FPGA:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP1:DEV0:SIPM:BIAS_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP1:DEV0:SIPM:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP1:DEV1:FPGA:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP1:DEV1:SIPM:BIAS_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP1:DEV1:SIPM:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV0:FPGA:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV0:SIPM:BIAS_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV0:SIPM:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV1:FPGA:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV1:SIPM:BIAS_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV1:SIPM:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV2:FPGA:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV2:SIPM:BIAS_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV2:SIPM:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV3:FPGA:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV3:SIPM:BIAS_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV3:SIPM:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV4:FPGA:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV4:SIPM:BIAS_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV4:SIPM:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV5:FPGA:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV5:SIPM:BIAS_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP2:DEV5:SIPM:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP3:DEV0:FPGA:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP3:DEV0:SIPM:BIAS_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP3:DEV0:SIPM:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP3:DEV1:FPGA:TEMP</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP3:DEV1:SIPM:BIAS_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):SCIFI$(ID):SFP3:DEV1:SIPM:TEMP</pv_name>
+        </script>
+      </scripts>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>grupBOARDS_STATUS</name>
+      <y>25</y>
+      <width>150</width>
+      <height>150</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="rectangle" version="2.0.0">
+        <name>rectBOARDSTATUS</name>
+        <width>150</width>
+        <height>150</height>
+        <line_width>1</line_width>
+        <line_color>
+          <color name="Button_Background" red="210" green="210" blue="210">
+          </color>
+        </line_color>
+        <transparent>true</transparent>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablBOARDSTATUS</name>
+        <text>Boards Status</text>
+        <x>2</x>
+        <y>5</y>
+        <width>146</width>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablSTATUSVOLT</name>
+        <text>VOLT</text>
+        <x>50</x>
+        <y>35</y>
+        <width>40</width>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablSTATUSTEMP</name>
+        <text>TEMP</text>
+        <x>100</x>
+        <y>35</y>
+        <width>40</width>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablSTATUSCRIT</name>
+        <text>Critical</text>
+        <x>2</x>
+        <y>65</y>
+        <width>44</width>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="CriticalRed" prop_id="foreground_color" out_exp="false">
+            <exp bool_exp="true">
+              <value>
+                <color name="MAJOR" red="255" green="0" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>loc://critical_color_test(1)</pv_name>
+          </rule>
+        </rules>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablVOLTCRIT</name>
+        <x>50</x>
+        <y>65</y>
+        <width>40</width>
+        <rules>
+          <rule name="CriticalRed" prop_id="foreground_color" out_exp="false">
+            <exp bool_exp="true">
+              <value>
+                <color name="MAJOR" red="255" green="0" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>loc://critical_color_test(1)</pv_name>
+          </rule>
+        </rules>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablTEMPCRIT</name>
+        <x>100</x>
+        <y>65</y>
+        <width>40</width>
+        <rules>
+          <rule name="CriticalRed" prop_id="foreground_color" out_exp="false">
+            <exp bool_exp="true">
+              <value>
+                <color name="MAJOR" red="255" green="0" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>loc://temp_critical_color_test(1)</pv_name>
+          </rule>
+        </rules>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablSTATUSLOW</name>
+        <text>Low</text>
+        <x>2</x>
+        <y>95</y>
+        <width>44</width>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="lowOrange" prop_id="foreground_color" out_exp="false">
+            <exp bool_exp="true">
+              <value>
+                <color name="MINOR" red="255" green="128" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>loc://volt_low_color_test(1)</pv_name>
+          </rule>
+        </rules>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablVOLTLOW</name>
+        <x>50</x>
+        <y>95</y>
+        <width>40</width>
+        <rules>
+          <rule name="LowOrange" prop_id="foreground_color" out_exp="false">
+            <exp bool_exp="true">
+              <value>
+                <color name="MINOR" red="255" green="128" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>loc://volt_low_color_test(1)</pv_name>
+          </rule>
+        </rules>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablTEMPLOW</name>
+        <x>100</x>
+        <y>95</y>
+        <width>40</width>
+        <rules>
+          <rule name="LowOrange" prop_id="foreground_color" out_exp="false">
+            <exp bool_exp="true">
+              <value>
+                <color name="MINOR" red="255" green="128" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>loc://temp_low_color_test(1)</pv_name>
+          </rule>
+        </rules>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablSTATUSOK</name>
+        <text>OK</text>
+        <x>2</x>
+        <y>125</y>
+        <width>44</width>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="OkGreen" prop_id="foreground_color" out_exp="false">
+            <exp bool_exp="true">
+              <value>
+                <color name="Off" red="60" green="100" blue="60">
+                </color>
+              </value>
+            </exp>
+            <pv_name>loc://volt_ok_color_test(1)</pv_name>
+          </rule>
+        </rules>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablVOLTOK</name>
+        <x>50</x>
+        <y>125</y>
+        <width>40</width>
+        <rules>
+          <rule name="OkGreen" prop_id="foreground_color" out_exp="false">
+            <exp bool_exp="true">
+              <value>
+                <color red="0" green="128" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>loc://volt_ok_color_test(1)</pv_name>
+          </rule>
+        </rules>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablTEMPOK</name>
+        <x>100</x>
+        <y>125</y>
+        <width>40</width>
+        <rules>
+          <rule name="OkGreen" prop_id="foreground_color" out_exp="false">
+            <exp bool_exp="true">
+              <value>
+                <color name="Off" red="60" green="100" blue="60">
+                </color>
+              </value>
+            </exp>
+            <pv_name>loc://temp_ok_color_test(1)</pv_name>
+          </rule>
+        </rules>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>grupDETAILS</name>
+      <x>2</x>
+      <y>180</y>
+      <width>139</width>
+      <height>62</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>lablSCIFIDETAILS</name>
+        <text>Details</text>
+        <width>50</width>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablDESCRIPTION</name>
+        <text>For details click the button</text>
+        <x>59</x>
+        <y>2</y>
+        <width>80</width>
+        <height>60</height>
+        <horizontal_alignment>1</horizontal_alignment>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>acbtSCIFIDETAILS</name>
+        <actions>
+          <action type="open_display">
+            <description>Open Display</description>
+            <file>BoardTemplate_SCIFI.bob</file>
+            <target>tab</target>
+          </action>
+        </actions>
+        <text>Details</text>
+        <y>30</y>
+        <width>55</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+  </widget>
+</display>
