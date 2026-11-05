@@ -30,24 +30,17 @@
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
   </widget>
-  <widget type="bool_button" version="2.0.0">
-    <name>bobuHV_ENABLE</name>
-    <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):ENABLE</pv_name>
-    <x>25</x>
-    <y>35</y>
-    <width>215</width>
-    <height>21</height>
-  </widget>
   <widget type="group" version="3.0.0">
     <name>grupHV_400V</name>
     <x>10</x>
-    <y>70</y>
+    <y>40</y>
     <width>480</width>
-    <height>155</height>
+    <height>185</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="rectangle" version="2.0.0">
       <name>rect400V_SET</name>
+      <y>49</y>
       <width>130</width>
       <height>84</height>
       <line_width>1</line_width>
@@ -80,8 +73,8 @@
     <widget type="textentry" version="3.0.0">
       <name>teenHV_400V_SET</name>
       <pv_name>loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)$(CHANNEL)(0)</pv_name>
-      <x>20</x>
-      <y>14</y>
+      <x>15</x>
+      <y>100</y>
       <width>90</width>
       <height>21</height>
       <background_color>
@@ -116,9 +109,9 @@ if PVUtil.getInt(pvs[2]) == 0:
           <value>1</value>
         </action>
       </actions>
-      <text>SET</text>
+      <text>V_SET</text>
       <x>15</x>
-      <y>49</y>
+      <y>58</y>
       <scripts>
         <script file="EmbeddedPy">
           <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
@@ -210,6 +203,13 @@ if PVUtil.getInt(pvs[0]) != 0:
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
     </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>bobuHV_ENABLE</name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):ENABLE</pv_name>
+      <y>6</y>
+      <width>130</width>
+      <height>35</height>
+    </widget>
   </widget>
   <widget type="group" version="3.0.0">
     <name>grupSTATUS</name>
@@ -284,7 +284,7 @@ if PVUtil.getInt(pvs[0]) != 0:
     </widget>
     <widget type="label" version="2.0.0">
       <name>labeSTAT_LABEL</name>
-      <text/>
+      <text></text>
       <x>190</x>
       <y>28</y>
       <width>200</width>
