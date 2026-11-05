@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>400</width>
+  <height>500</height>
+  <grid_visible>false</grid_visible>
+  <widget type="group" version="3.0.0">
+    <name>grupSTATUS</name>
+    <width>400</width>
+    <height>500</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>labeSTATUS</name>
+      <text>Status - Information Box</text>
+      <width>400</width>
+      <height>30</height>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="picture" version="2.0.0">
+      <name>pictSTATUS</name>
+      <file>image.png</file>
+      <y>40</y>
+      <width>400</width>
+      <height>460</height>
+    </widget>
+  </widget>
+</display>

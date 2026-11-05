@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<display version="2.0.0">
+  <width>1820</width>
+  <height>1226</height>
+  <grid_visible>false</grid_visible>
+  <widget type="group" version="3.0.0">
+    <name>grup$(CHAMBER) - PLSCI1</name>
+    <width>1820</width>
+    <height>1226</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD6</name>
+      <macros>
+        <PMT>6</PMT>
+      </macros>
+      <file>boardcard_PLSCI.bob</file>
+      <x>375</x>
+      <width>350</width>
+      <height>331</height>
+    <y>0</y></widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD1</name>
+      <macros>
+        <PMT>1</PMT>
+      </macros>
+      <file>boardcard_PLSCI.bob</file>
+      <x>735</x>
+      <width>350</width>
+      <height>331</height>
+    <y>0</y></widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD2</name>
+      <macros>
+        <PMT>2</PMT>
+      </macros>
+      <file>boardcard_PLSCI.bob</file>
+      <x>1095</x>
+      <width>350</width>
+      <height>331</height>
+    <y>0</y></widget>
+    <widget type="picture" version="2.0.0">
+      <name>pictPLSCI_6_</name>
+      <file>det_plsci6.svg</file>
+      <x>375</x>
+      <y>341</y>
+      <width>1070</width>
+      <height>544</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD3</name>
+      <macros>
+        <PMT>3</PMT>
+      </macros>
+      <file>boardcard_PLSCI.bob</file>
+      <x>1095</x>
+      <y>895</y>
+      <width>350</width>
+      <height>331</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD4</name>
+      <macros>
+        <PMT>4</PMT>
+      </macros>
+      <file>boardcard_PLSCI.bob</file>
+      <x>735</x>
+      <y>895</y>
+      <width>350</width>
+      <height>331</height>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>emdiBOARD5</name>
+      <macros>
+        <PMT>5</PMT>
+      </macros>
+      <file>boardcard_PLSCI.bob</file>
+      <x>375</x>
+      <y>895</y>
+      <width>350</width>
+      <height>331</height>
+    </widget>
+  </widget>
+</display>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>150</width>
+  <height>250</height>
+  <grid_visible>false</grid_visible>
+  <widget type="group" version="3.0.0">
+    <name>grupPLSCI6CARDOVERVIEW</name>
+    <width>150</width>
+    <height>250</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>rectPLSCICARD</name>
+      <width>150</width>
+      <height>250</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <transparent>true</transparent>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>lablPLSCICARD</name>
+      <text>$(CHAMBER):PLSCI1</text>
+      <x>2</x>
+      <width>146</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>grupPMTSTATUS</name>
+      <y>25</y>
+      <width>150</width>
+      <height>155</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="rectangle" version="2.0.0">
+        <name>rectPMTSTATUS</name>
+        <width>150</width>
+        <height>155</height>
+        <line_width>1</line_width>
+        <line_color>
+          <color name="Button_Background" red="210" green="210" blue="210">
+          </color>
+        </line_color>
+        <transparent>true</transparent>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablPMTSTATUS</name>
+        <text>PMTs Status</text>
+        <x>2</x>
+        <y>2</y>
+        <width>146</width>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablSTATEON</name>
+        <text>ON</text>
+        <x>70</x>
+        <y>20</y>
+        <width>25</width>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablSTATETOTAL</name>
+        <text>TOTAL</text>
+        <x>95</x>
+        <y>20</y>
+        <width>50</width>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablPMTsON</name>
+        <text>PMTs ON</text>
+        <y>40</y>
+        <width>65</width>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablPMT_ON_COUNT</name>
+        <text>Label</text>
+        <x>70</x>
+        <y>40</y>
+        <width>65</width>
+        <height>15</height>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <scripts>
+          <script file="EmbeddedPy" check_connections="false">
+            <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
+
+on_count = 0
+
+for pv in pvs:
+    try:
+        value = PVUtil.getDouble(pv)
+        if value == 1:
+            on_count += 1
+    except:
+        pass
+
+widget.setPropertyValue("text", str(on_count) + " / 6")]]></text>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT01:HV_STATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT02:HV_STATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT03:HV_STATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT04:HV_STATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT05:HV_STATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT06:HV_STATE</pv_name>
+          </script>
+        </scripts>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablHV_STATUS_TITLE</name>
+        <text>HV Status</text>
+        <y>70</y>
+        <width>50</width>
+        <height>40</height>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablHV_STATUS_VALUE</name>
+        <text>Label</text>
+        <x>55</x>
+        <y>70</y>
+        <width>90</width>
+        <height>40</height>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <scripts>
+          <script file="EmbeddedPy" check_connections="false">
+            <text><![CDATA[
+from org.csstudio.display.builder.runtime.script import PVUtil
+
+on_count = 0
+warning_count = 0
+off_count = 0
+unavailable_count = 0
+
+for i in range(6):
+    try:
+        rbv = PVUtil.getDouble(pvs[i])
+        setpoint = PVUtil.getDouble(pvs[i + 6])
+        state = PVUtil.getDouble(pvs[i + 12])
+
+        if state == 0:
+            off_count += 1
+        elif state == 1:
+            on_count += 1
+
+            if abs(rbv - setpoint) > 0.01:
+                warning_count += 1
+        else:
+            unavailable_count += 1
+
+    except:
+        unavailable_count += 1
+
+if unavailable_count > 0:
+    status = "DISCONNECTED"
+elif warning_count > 0:
+    status = "WARNING"
+elif on_count == 0:
+    status = "OFF"
+else:
+    status = "OK"
+
+widget.setPropertyValue("text", status)]]></text>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT01:HV_V_RBV</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT02:HV_V_RBV</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT03:HV_V_RBV</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT04:HV_V_RBV</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT05:HV_V_RBV</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT06:HV_V_RBV</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT01:HV_V_SET</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT02:HV_V_SET</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT03:HV_V_SET</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT04:HV_V_SET</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT05:HV_V_SET</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT06:HV_V_SET</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT01:HV_STATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT02:HV_STATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT03:HV_STATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT04:HV_STATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT05:HV_STATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT06:HV_STATE</pv_name>
+          </script>
+        </scripts>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablCOUNTRATE</name>
+        <text>Countrate</text>
+        <y>115</y>
+        <width>50</width>
+        <height>40</height>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablTOTAL_COUNTRATE</name>
+        <text>Label</text>
+        <x>55</x>
+        <y>115</y>
+        <width>90</width>
+        <height>40</height>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <scripts>
+          <script file="EmbeddedPy" check_connections="false">
+            <text><![CDATA[
+from org.csstudio.display.builder.runtime.script import PVUtil
+from java.lang import Double
+
+total_rate = 0.0
+valid_count = 0
+
+for pv in pvs:
+    try:
+        value = PVUtil.getDouble(pv)
+
+        if not Double.isNaN(value) and not Double.isInfinite(value):
+            total_rate += value
+            valid_count += 1
+
+    except:
+        pass
+
+if valid_count == 6:
+    widget.setPropertyValue(
+        "text", "{:.0f} Hz".format(total_rate)
+    )
+else:
+    widget.setPropertyValue(
+        "text", "DISCONNECTED"
+    )]]></text>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT01:COUNTRATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT02:COUNTRATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT03:COUNTRATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT04:COUNTRATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT05:COUNTRATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):PLSCI1:PMT06:COUNTRATE</pv_name>
+          </script>
+        </scripts>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>grupDETAILS</name>
+      <x>2</x>
+      <y>185</y>
+      <width>139</width>
+      <height>62</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>lablPLSCIDETAILS</name>
+        <text>Details</text>
+        <x>3</x>
+        <width>50</width>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>lablDESCRIPTION</name>
+        <text>For details click the button</text>
+        <x>59</x>
+        <y>2</y>
+        <width>80</width>
+        <height>60</height>
+        <horizontal_alignment>1</horizontal_alignment>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>acbtPLSCIDETAILS</name>
+        <actions>
+          <action type="open_display">
+            <description>Open Display</description>
+            <file>BoardTemplate_6_PLSCI.bob</file>
+            <target>tab</target>
+          </action>
+        </actions>
+        <text>Details</text>
+        <y>27</y>
+        <width>55</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
+    </widget>
+  </widget>
+</display>

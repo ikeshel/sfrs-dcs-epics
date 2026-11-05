@@ -1,0 +1,191 @@
+version: 1
+
+source:
+  overview: OVERVIEW/Overview.bob
+  main: MAIN/MainPage.bob
+
+screen:
+  width: 1825
+  height: 1268
+
+background:
+  widget: pictOVERVIEW
+  file: sfrs-layout-2026-10-14-12-43-21.png
+
+cards:
+  - name: emdiFPF2SCIFI1
+    type: SCIFI
+    file: ../SCIFI/SCIFI_CARD_OVERVIEW.bob
+    chamber: FPF2
+    id: 1
+    x: 100
+    y: 20
+
+  - name: emdiFPF2SCIFI2
+    type: SCIFI
+    file: ../SCIFI/SCIFI_CARD_OVERVIEW.bob
+    chamber: FPF2
+    id: 2
+    x: 260
+    y: 20
+
+  - name: emdiFPF3SCIFI1
+    type: SCIFI
+    file: ../SCIFI/SCIFI_CARD_OVERVIEW.bob
+    chamber: FPF3
+    id: 1
+    x: 430
+    y: 20
+
+  - name: emdiFPF4SCIFI1
+    type: SCIFI
+    file: ../SCIFI/SCIFI_CARD_OVERVIEW.bob
+    chamber: FPF4
+    id: 1
+    x: 600
+    y: 20
+
+  - name: emdiFPF4SCIFI2
+    type: SCIFI
+    file: ../SCIFI/SCIFI_CARD_OVERVIEW.bob
+    chamber: FPF4
+    id: 2
+    x: 760
+    y: 20
+
+  - name: emdiFMF1SCIFI1
+    type: SCIFI
+    file: ../SCIFI/SCIFI_CARD_OVERVIEW.bob
+    chamber: FMF1
+    id: 1
+    x: 930
+    y: 20
+
+  - name: emdiFMF1SCIFI2
+    type: SCIFI
+    file: ../SCIFI/SCIFI_CARD_OVERVIEW.bob
+    chamber: FMF1
+    id: 2
+    x: 930
+    y: 280
+  
+  - name: emdiFMF2SCIFI1
+    type: SCIFI
+    file: ../SCIFI/SCIFI_CARD_OVERVIEW.bob
+    chamber: FMF2
+    id: 1
+    x: 1100
+    y: 20
+  
+  - name: emdiFMF2SCIFI2
+    type: SCIFI
+    file: ../SCIFI/SCIFI_CARD_OVERVIEW.bob
+    chamber: FMF2
+    id: 2
+    x: 1100
+    y: 280
+  
+  - name: emdiFMF3SCIFI1
+    type: SCIFI
+    file: ../SCIFI/SCIFI_CARD_OVERVIEW.bob
+    chamber: FMF3
+    id: 1
+    x: 1270
+    y: 20
+  
+  - name: emdiFMF3SCIFI2
+    type: SCIFI
+    file: ../SCIFI/SCIFI_CARD_OVERVIEW.bob
+    chamber: FMF3
+    id: 2
+    x: 1270
+    y: 280
+
+  - name: emdiFHF1SCIFI1
+    type: SCIFI
+    file: ../SCIFI/SCIFI_CARD_OVERVIEW.bob
+    chamber: FHF1
+    id: 1
+    x: 1440
+    y: 20
+  
+  - name: emdiFHF1SCIFI2
+    type: SCIFI
+    file: ../SCIFI/SCIFI_CARD_OVERVIEW.bob
+    chamber: FHF1
+    id: 2
+    x: 1440
+    y: 280
+  
+  - name: emdiFHF1SCIFI3
+    type: SCIFI
+    file: ../SCIFI/SCIFI_CARD_OVERVIEW.bob
+    chamber: FHF1
+    id: 3
+    x: 1600
+    y: 20
+  
+  - name: emdiFPF2PLSCI1
+    type: PLSCI
+    file: ../PLSCI/PLSCI6_CARD_OVERVIEW.bob
+    chamber: FPF2
+    x: 300
+    y: 525
+
+  - name: emdiFPF4PLSCI1
+    type: PLSCI
+    file: ../PLSCI/PLSCI6_CARD_OVERVIEW.bob
+    chamber: FPF4
+    x: 525
+    y: 475
+  
+  - name: emdiFMF1PLSCI1
+    type: PLSCI
+    file: ../PLSCI/PLSCI6_CARD_OVERVIEW.bob
+    chamber: FMF1
+    x: 710
+    y: 650
+
+  - name: emdiFMF2PLSCI1
+    type: PLSCI
+    file: ../PLSCI/PLSCI8_CARD_OVERVIEW.bob
+    chamber: FMF2
+    x: 925
+    y: 800
+
+  - name: emdiFMF3PLSCI1
+    type: PLSCI
+    file: ../PLSCI/PLSCI6_CARD_OVERVIEW.bob
+    chamber: FMF3
+    x: 1240
+    y: 840
+
+  - name: emdiFHF1PLSCI1
+    type: PLSCI
+    file: ../PLSCI/PLSCI8_CARD_OVERVIEW.bob
+    chamber: FHF1
+    x: 1450
+    y: 830
+
+  - name: emdiFMF1MUSIC1
+    type: MUSIC
+    file: ../MUSIC/MUSIC2FC_CARD_OVERVIEW.bob
+    chamber: FMF1
+    x: 710
+    y: 950
+  
+  - name: emdiFHF1MUSIC1
+    type: MUSIC
+    file: ../MUSIC/MUSIC3FC_CARD_OVERVIEW.bob
+    chamber: FHF1
+    x: 1625
+    y: 950
+
+card:
+  width: 150
+  height: 250
+
+website:
+  label_widget: lablWEBSITESOURCEDESCP
+  button_widget: acbtWEBSITESOURCE
+  url: https://sfrs-web.gsi.de/

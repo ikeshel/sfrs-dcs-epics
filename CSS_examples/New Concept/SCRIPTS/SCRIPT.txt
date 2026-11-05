@@ -1,0 +1,85 @@
+SCRIPT FOR SCIFI CARD OVERVIEW COUNTER
+
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+
+
+def read_value(index):
+    try:
+        severity = PVUtil.getSeverity(pvs[index])
+        if severity is None or severity >= 3:
+            return None
+
+        return PVUtil.getDouble(pvs[index])
+    except:
+        return None
+
+
+def classify_temp(value):
+    if value is None or value <= 0:
+        return None
+
+    if value >= 55:
+        return "CRIT"
+
+    if value >= 45 or value <= 5:
+        return "LOW"
+
+    return "OK"
+
+
+volt_critical = 0
+volt_ok = 0
+
+temp_critical = 0
+temp_low = 0
+temp_ok = 0
+
+# 16 boards, 3 PVs per board:
+# FPGA temperature, SiPM bias state, SiPM temperature
+for board in range(16):
+    base = board * 3
+
+    # Voltage / bias state
+    bias = read_value(base + 1)
+
+    if bias == 2:
+        volt_critical += 1
+    elif bias == 1:
+        volt_ok += 1
+    # State 0 and invalid values are excluded.
+
+    # Temperature: FPGA and SiPM
+    fpga_temp = classify_temp(read_value(base))
+    sipm_temp = classify_temp(read_value(base + 2))
+
+    states = [fpga_temp, sipm_temp]
+
+    # Critical has priority over Low.
+    if "CRIT" in states:
+        temp_critical += 1
+    elif "LOW" in states:
+        temp_low += 1
+    elif fpga_temp == "OK" and sipm_temp == "OK":
+        temp_ok += 1
+    # Invalid or disconnected readings cannot produce OK.
+
+
+def update_label(name, value):
+    target = ScriptUtil.findWidgetByName(widget, name)
+
+    if target is not None:
+        target.setPropertyValue("text", str(value))
+    else:
+        print("Count label not found: " + name)
+
+
+update_label("lablVOLTCRIT", volt_critical)
+update_label("lablVOLTLOW", 0)
+update_label("lablVOLTOK", volt_ok)
+
+update_label("lablTEMPCRIT", temp_critical)
+update_label("lablTEMPLOW", temp_low)
+update_label("lablTEMPOK", temp_ok)
+
+---------------------------
+
