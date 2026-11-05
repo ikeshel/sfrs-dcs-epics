@@ -1,39 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <width>1820</width>
-  <height>1226</height>
+  <height>1392</height>
   <grid_visible>false</grid_visible>
   <widget type="embedded" version="2.0.0">
-    <name>MUSIC_FC1</name>
+    <name>MUSIC_FC1:NHV</name>
     <macros>
       <FIELD_CAGE>1</FIELD_CAGE>
+      <CHANNEL>NHV</CHANNEL>
     </macros>
     <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
     <x>60</x>
-    <y>130</y>
+    <y>10</y>
     <width>500</width>
-    <height>965</height>
+    <height>676</height>
   </widget>
   <widget type="embedded" version="2.0.0">
-    <name>MUSIC_FC2</name>
+    <name>MUSIC_FC2:NHV</name>
     <macros>
       <FIELD_CAGE>2</FIELD_CAGE>
+      <CHANNEL>NHV</CHANNEL>
     </macros>
     <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
     <x>660</x>
-    <y>130</y>
+    <y>10</y>
     <width>500</width>
-    <height>965</height>
+    <height>676</height>
   </widget>
   <widget type="embedded" version="2.0.0">
-    <name>MUSIC_FC3</name>
+    <name>MUSIC_FC3:NHV</name>
     <macros>
       <FIELD_CAGE>3</FIELD_CAGE>
+      <CHANNEL>NHV</CHANNEL>
     </macros>
     <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
     <x>1260</x>
-    <y>130</y>
+    <y>10</y>
     <width>500</width>
-    <height>965</height>
+    <height>676</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>MUSIC_FC1:PHV</name>
+    <macros>
+      <FIELD_CAGE>1</FIELD_CAGE>
+      <CHANNEL>PHV</CHANNEL>
+    </macros>
+    <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
+    <x>60</x>
+    <y>706</y>
+    <width>500</width>
+    <height>676</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>MUSIC_FC2:PHV</name>
+    <macros>
+      <FIELD_CAGE>2</FIELD_CAGE>
+      <CHANNEL>PHV</CHANNEL>
+    </macros>
+    <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
+    <x>660</x>
+    <y>706</y>
+    <width>500</width>
+    <height>676</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>MUSIC_FC3:PHV</name>
+    <macros>
+      <FIELD_CAGE>3</FIELD_CAGE>
+      <CHANNEL>PHV</CHANNEL>
+    </macros>
+    <file>MUSIC_ONEBOX_TEMPLATE.bob</file>
+    <x>1260</x>
+    <y>706</y>
+    <width>500</width>
+    <height>676</height>
   </widget>
 </display>

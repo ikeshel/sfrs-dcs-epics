@@ -2,13 +2,13 @@ source: Main/Main.bob
 
 screen:
   width: 1920
-  height: 1280
+  height: 1446
 
 tabs:
   widget: nataSCREENS
 
   width: 1920
-  height: 1280
+  height: 1446
   tab_width: 60
 
   items:

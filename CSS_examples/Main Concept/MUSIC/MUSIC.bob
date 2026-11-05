@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <width>1825</width>
-  <height>1268</height>
+  <height>1434</height>
   <grid_visible>false</grid_visible>
   <widget type="tabs" version="2.0.0">
     <name>TabsMUSIC</name>
@@ -17,7 +17,7 @@
             <file>MUSIC_TWOFC_TEMPLATE.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1226</height>
+            <height>1392</height>
           </widget>
         </children>
       </tab>
@@ -32,12 +32,12 @@
             <file>MUSIC_THREEFC_TEMPLATE.bob</file>
             <y>2</y>
             <width>1820</width>
-            <height>1226</height>
+            <height>1392</height>
           </widget>
         </children>
       </tab>
     </tabs>
     <width>1825</width>
-    <height>1268</height>
+    <height>1434</height>
   </widget>
 </display>

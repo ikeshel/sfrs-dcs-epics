@@ -1,47 +1,44 @@
 detector: MUSIC
-
 source:
   wrapper: MUSIC/MUSIC.bob
-
 canvas:
   width: 1820
-  height: 1226
-
+  height: 1392
 field_cage:
   width: 500
-  height: 965
-
+  height: 676
 templates:
-
   two_fc:
-
     source: MUSIC/MUSIC_TWOFC_TEMPLATE.bob
-
     layout:
-
-      row:
-
-        widgets:
-          - MUSIC_FC1
-          - MUSIC_FC2
-
-        start_x: 360
-        y: 130.5
-        gap: 100
-
+      rows:
+        - widgets:
+            - MUSIC_FC1:NHV
+            - MUSIC_FC2:NHV
+          start_x: 360
+          y: 10
+          gap: 100
+        - widgets:
+            - MUSIC_FC1:PHV
+            - MUSIC_FC2:PHV
+          start_x: 360
+          y: 706
+          gap: 100
   three_fc:
-
     source: MUSIC/MUSIC_THREEFC_TEMPLATE.bob
-
     layout:
-
-      row:
-
-        widgets:
-          - MUSIC_FC1
-          - MUSIC_FC2
-          - MUSIC_FC3
-
-        start_x: 60
-        y: 130.5
-        gap: 100
+      rows:
+        - widgets:
+            - MUSIC_FC1:NHV
+            - MUSIC_FC2:NHV
+            - MUSIC_FC3:NHV
+          start_x: 60
+          y: 10
+          gap: 100
+        - widgets:
+            - MUSIC_FC1:PHV
+            - MUSIC_FC2:PHV
+            - MUSIC_FC3:PHV
+          start_x: 60
+          y: 706
+          gap: 100

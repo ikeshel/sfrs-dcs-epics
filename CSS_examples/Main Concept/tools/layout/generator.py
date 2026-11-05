@@ -124,21 +124,18 @@ def calculate_music_positions(
     field_cage_width = int(config["field_cage"]["width"])
 
     template = config["templates"][template_name]
-    row = template["layout"]["row"]
-
-    widgets = row["widgets"]
-    start_x = int(row["start_x"])
-    y = int(row["y"])
-    gap = int(row["gap"])
+    layout = template["layout"]
+    rows = layout.get("rows")
+    if rows is None:
+        rows = [layout["row"]]
 
     positions: dict[str, tuple[int, int]] = {}
-
-    for index, widget_name in enumerate(widgets):
-        x = start_x + index * (
-            field_cage_width + gap
-        )
-
-        positions[widget_name] = (x, y)
+    for row in rows:
+        for index, widget_name in enumerate(row["widgets"]):
+            x = int(row["start_x"]) + index * (
+                field_cage_width + int(row["gap"])
+            )
+            positions[widget_name] = (x, int(row["y"]))
 
     return positions
 
