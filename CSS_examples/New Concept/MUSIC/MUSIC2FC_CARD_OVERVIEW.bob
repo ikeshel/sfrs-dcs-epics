@@ -92,8 +92,8 @@ for pv in pvs:
 text = str(online_fc) + " / " + str(total_fc)
 
 widget.setPropertyValue("text", text)]]></text>
-            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC1:HV_STATE</pv_name>
-            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC2:HV_STATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC1:NHV:STATUS</pv_name>
+            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC2:NHV:STATUS</pv_name>
           </script>
         </scripts>
       </widget>
@@ -160,8 +160,8 @@ else:
     text = "OK"
 
 widget.setPropertyValue("text", text)]]></text>
-            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC1:HV_STATE</pv_name>
-            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC2:HV_STATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC1:NHV:STATUS</pv_name>
+            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC2:NHV:STATUS</pv_name>
           </script>
         </scripts>
       </widget>
@@ -193,7 +193,7 @@ else:
     text = "OFF"
 
 widget.setPropertyValue("text", text)]]></text>
-            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC1:HV_STATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC1:NHV:STATUS</pv_name>
           </script>
         </scripts>
       </widget>
@@ -225,7 +225,7 @@ else:
     text = "OFF"
 
 widget.setPropertyValue("text", text)]]></text>
-            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC2:HV_STATE</pv_name>
+            <pv_name>SFRS:$(CHAMBER):MUSIC1:FC2:NHV:STATUS</pv_name>
           </script>
         </scripts>
       </widget>

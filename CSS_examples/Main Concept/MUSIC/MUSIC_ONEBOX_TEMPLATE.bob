@@ -32,7 +32,7 @@
   </widget>
   <widget type="bool_button" version="2.0.0">
     <name>bobuHV_ENABLE</name>
-    <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_ENABLE</pv_name>
+    <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:ENABLE</pv_name>
     <x>25</x>
     <y>50</y>
     <width>215</width>
@@ -61,7 +61,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>teupHV_400V_SET</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:V_SET</pv_name>
       <x>20</x>
       <y>20</y>
       <width>90</width>
@@ -100,7 +100,7 @@ if PVUtil.getInt(pvs[2]) == 0:
         print("Initial voltage loaded: " + str(live_value))
     except Exception as error:
         print("INITIALIZATION ERROR: " + str(error))]]></text>
-          <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
+          <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:V_SET</pv_name>
           <pv_name trigger="false">loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
           <pv_name trigger="false">loc://HVSetInitialized$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
         </script>
@@ -136,7 +136,7 @@ if PVUtil.getInt(pvs[0]) != 0:
             pvs[0].write(0)]]></text>
           <pv_name>loc://HVSetApply$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
           <pv_name trigger="false">loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
-          <pv_name trigger="false">SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
+          <pv_name trigger="false">SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:V_SET</pv_name>
         </script>
       </scripts>
       <tooltip>$(actions)</tooltip>
@@ -144,7 +144,7 @@ if PVUtil.getInt(pvs[0]) != 0:
     </widget>
     <widget type="linearmeter" version="3.0.0">
       <name>limeHV_400V_RBV</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</pv_name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:V_RBV</pv_name>
       <x>140</x>
       <width>330</width>
       <height>75</height>
@@ -152,7 +152,7 @@ if PVUtil.getInt(pvs[0]) != 0:
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>teupHV_400V_RBV</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</pv_name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:V_RBV</pv_name>
       <x>260</x>
       <width>90</width>
       <height>30</height>
@@ -176,7 +176,7 @@ if PVUtil.getInt(pvs[0]) != 0:
     </widget>
     <widget type="linearmeter" version="3.0.0">
       <name>limeHV_I_RBV_400V</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</pv_name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:I_RBV</pv_name>
       <x>140</x>
       <y>80</y>
       <width>330</width>
@@ -186,7 +186,7 @@ if PVUtil.getInt(pvs[0]) != 0:
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>teupHV_I_RBV_400V</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</pv_name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:I_RBV</pv_name>
       <x>260</x>
       <y>80</y>
       <width>90</width>
@@ -234,7 +234,7 @@ if PVUtil.getInt(pvs[0]) != 0:
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>teupHV_4000V_SET</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:V_SET</pv_name>
       <x>20</x>
       <y>20</y>
       <width>90</width>
@@ -273,7 +273,7 @@ if PVUtil.getInt(pvs[2]) == 0:
         print("Initial voltage loaded: " + str(live_value))
     except Exception as error:
         print("INITIALIZATION ERROR: " + str(error))]]></text>
-          <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
+          <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:V_SET</pv_name>
           <pv_name trigger="false">loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
           <pv_name trigger="false">loc://HVSetInitialized$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
         </script>
@@ -309,7 +309,7 @@ if PVUtil.getInt(pvs[0]) != 0:
             pvs[0].write(0)]]></text>
           <pv_name>loc://HVSetApply$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
           <pv_name trigger="false">loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)(0)</pv_name>
-          <pv_name trigger="false">SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</pv_name>
+          <pv_name trigger="false">SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:V_SET</pv_name>
         </script>
       </scripts>
       <tooltip>$(actions)</tooltip>
@@ -317,7 +317,7 @@ if PVUtil.getInt(pvs[0]) != 0:
     </widget>
     <widget type="linearmeter" version="3.0.0">
       <name>limeHV_4000V_RBV</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</pv_name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:V_RBV</pv_name>
       <x>140</x>
       <width>330</width>
       <height>75</height>
@@ -325,7 +325,7 @@ if PVUtil.getInt(pvs[0]) != 0:
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>teupHV_4000V_RBV</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</pv_name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:V_RBV</pv_name>
       <x>260</x>
       <width>90</width>
       <height>30</height>
@@ -349,7 +349,7 @@ if PVUtil.getInt(pvs[0]) != 0:
     </widget>
     <widget type="linearmeter" version="3.0.0">
       <name>limeHV_I_RBV_4000V</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</pv_name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:I_RBV</pv_name>
       <x>140</x>
       <y>80</y>
       <width>330</width>
@@ -359,7 +359,7 @@ if PVUtil.getInt(pvs[0]) != 0:
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>teupHV_I_RBV_4000V</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</pv_name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:I_RBV</pv_name>
       <x>260</x>
       <y>80</y>
       <width>90</width>
@@ -419,7 +419,7 @@ if PVUtil.getInt(pvs[0]) != 0:
     </widget>
     <widget type="byte_monitor" version="2.0.0">
       <name>bymoSTATE</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STATE</pv_name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:STATUS</pv_name>
       <x>150</x>
       <y>10</y>
       <width>315</width>
@@ -442,7 +442,7 @@ if PVUtil.getInt(pvs[0]) != 0:
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>teupSTAT_NO</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STATE</pv_name>
+      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:STATUS</pv_name>
       <x>100</x>
       <y>40</y>
       <width>80</width>
@@ -503,7 +503,7 @@ else:
 widget.setPropertyValue("text", text)
 
 print("HV_STATE=" + str(state) + " -> " + text)]]></text>
-          <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_STATE</pv_name>
+          <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:STATUS</pv_name>
         </script>
       </scripts>
     </widget>
@@ -531,6 +531,6 @@ print("HV_STATE=" + str(state) + " -> " + text)]]></text>
     <y>515</y>
     <width>480</width>
     <height>440</height>
-    <selection_value_pv>SFRS:FMF1:MUSIC1:FC1:HV_V_RBV</selection_value_pv>
+    <selection_value_pv>SFRS:FMF1:MUSIC1:FC1:NHV:V_RBV</selection_value_pv>
   </widget>
 </display>

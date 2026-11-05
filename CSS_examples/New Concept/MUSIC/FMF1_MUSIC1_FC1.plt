@@ -65,7 +65,7 @@
     <pv>
       <display_name>HV_V</display_name>
       <visible>true</visible>
-      <name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_RBV</name>
+      <name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:V_RBV</name>
       <axis>0</axis>
       <color>
         <red>51</red>
@@ -85,7 +85,7 @@
     <pv>
       <display_name></display_name>
       <visible>true</visible>
-      <name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_V_SET</name>
+      <name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:V_SET</name>
       <axis>0</axis>
       <color>
         <red>128</red>
@@ -110,7 +110,7 @@
     <pv>
       <display_name>HV_I_RBV</display_name>
       <visible>true</visible>
-      <name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):HV_I_RBV</name>
+      <name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):NHV:I_RBV</name>
       <axis>1</axis>
       <color>
         <red>255</red>

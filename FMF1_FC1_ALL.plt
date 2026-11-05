@@ -79,9 +79,9 @@
   </annotations>
   <pvlist>
     <pv>
-      <display_name>SFRS:FMF1:MUSIC1:FC1:PHV:V_RBV</display_name>
+      <display_name>SFRS:FMF1:MUSIC1:FC1:NHV:V_RBV</display_name>
       <visible>true</visible>
-      <name>SFRS:FMF1:MUSIC1:FC1:PHV:V_RBV</name>
+      <name>SFRS:FMF1:MUSIC1:FC1:NHV:V_RBV</name>
       <axis>0</axis>
       <color>
         <red>255</red>
@@ -99,9 +99,9 @@
       <request>OPTIMIZED</request>
     </pv>
     <pv>
-      <display_name>SFRS:FMF1:MUSIC1:FC1:PHV:I_RBV</display_name>
+      <display_name>SFRS:FMF1:MUSIC1:FC1:NHV:I_RBV</display_name>
       <visible>true</visible>
-      <name>SFRS:FMF1:MUSIC1:FC1:PHV:I_RBV</name>
+      <name>SFRS:FMF1:MUSIC1:FC1:NHV:I_RBV</name>
       <axis>2</axis>
       <color>
         <red>0</red>
@@ -119,9 +119,9 @@
       <request>OPTIMIZED</request>
     </pv>
     <pv>
-      <display_name>SFRS:FMF1:MUSIC1:FC1:PHV:V_SET</display_name>
+      <display_name>SFRS:FMF1:MUSIC1:FC1:NHV:V_SET</display_name>
       <visible>true</visible>
-      <name>SFRS:FMF1:MUSIC1:FC1:PHV:V_SET</name>
+      <name>SFRS:FMF1:MUSIC1:FC1:NHV:V_SET</name>
       <axis>0</axis>
       <color>
         <red>0</red>
@@ -139,9 +139,9 @@
       <request>OPTIMIZED</request>
     </pv>
     <pv>
-      <display_name>SFRS:FMF1:MUSIC1:FC1:PHV:ENABLE</display_name>
+      <display_name>SFRS:FMF1:MUSIC1:FC1:NHV:ENABLE</display_name>
       <visible>true</visible>
-      <name>SFRS:FMF1:MUSIC1:FC1:PHV:ENABLE</name>
+      <name>SFRS:FMF1:MUSIC1:FC1:NHV:ENABLE</name>
       <axis>1</axis>
       <color>
         <red>255</red>
