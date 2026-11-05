@@ -43,7 +43,7 @@
     <x>10</x>
     <y>70</y>
     <width>480</width>
-    <height>108</height>
+    <height>155</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="rectangle" version="2.0.0">
@@ -148,7 +148,7 @@ if PVUtil.getInt(pvs[0]) != 0:
       <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):V_RBV</pv_name>
       <x>140</x>
       <width>330</width>
-      <height>52</height>
+      <height>75</height>
       <display_mode>1</display_mode>
     </widget>
     <widget type="textupdate" version="2.0.0">
@@ -156,9 +156,9 @@ if PVUtil.getInt(pvs[0]) != 0:
       <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):V_RBV</pv_name>
       <x>260</x>
       <width>90</width>
-      <height>21</height>
+      <height>30</height>
       <font>
-        <font family="Liberation Sans" style="BOLD" size="10">
+        <font family="Liberation Sans" style="BOLD" size="14.0">
         </font>
       </font>
       <foreground_color>
@@ -179,9 +179,9 @@ if PVUtil.getInt(pvs[0]) != 0:
       <name>limeHV_I_RBV_400V</name>
       <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):I_RBV</pv_name>
       <x>140</x>
-      <y>56</y>
+      <y>80</y>
       <width>330</width>
-      <height>52</height>
+      <height>75</height>
       <display_mode>1</display_mode>
       <precision>0</precision>
     </widget>
@@ -189,184 +189,11 @@ if PVUtil.getInt(pvs[0]) != 0:
       <name>teupHV_I_RBV_400V</name>
       <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):I_RBV</pv_name>
       <x>260</x>
-      <y>56</y>
+      <y>80</y>
       <width>90</width>
-      <height>21</height>
+      <height>30</height>
       <font>
-        <font family="Liberation Sans" style="BOLD" size="10">
-        </font>
-      </font>
-      <foreground_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <transparent>true</transparent>
-      <format>1</format>
-      <precision>2</precision>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>grupHV_4000V</name>
-    <x>10</x>
-    <y>186</y>
-    <width>480</width>
-    <height>108</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="rectangle" version="2.0.0">
-      <name>rect4000V_SET</name>
-      <width>130</width>
-      <height>84</height>
-      <line_width>1</line_width>
-      <line_color>
-        <color name="Button_Background" red="210" green="210" blue="210">
-        </color>
-      </line_color>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>teupHV_4000V_SET</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):V_SET</pv_name>
-      <x>20</x>
-      <y>14</y>
-      <width>90</width>
-      <height>21</height>
-      <visible>false</visible>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <format>1</format>
-      <precision>2</precision>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>teenHV_4000V_SET</name>
-      <pv_name>loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)$(CHANNEL)(0)</pv_name>
-      <x>20</x>
-      <y>14</y>
-      <width>90</width>
-      <height>21</height>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <horizontal_alignment>1</horizontal_alignment>
-      <scripts>
-        <script file="EmbeddedPy">
-          <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
-
-if PVUtil.getInt(pvs[2]) == 0:
-    try:
-        live_value = PVUtil.getDouble(pvs[0])
-        pvs[1].write(live_value)
-        pvs[2].write(1)
-        print("Initial voltage loaded: " + str(live_value))
-    except Exception as error:
-        print("INITIALIZATION ERROR: " + str(error))]]></text>
-          <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):V_SET</pv_name>
-          <pv_name trigger="false">loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)$(CHANNEL)(0)</pv_name>
-          <pv_name trigger="false">loc://HVSetInitialized$(CHAMBER)FC$(FIELD_CAGE)$(CHANNEL)(0)</pv_name>
-        </script>
-      </scripts>
-    </widget>
-    <widget type="action_button" version="3.0.0">
-      <name>acbt4000V_SET</name>
-      <actions>
-        <action type="write_pv">
-          <description>Write PV</description>
-          <pv_name>loc://HVSetApply$(CHAMBER)FC$(FIELD_CAGE)$(CHANNEL)(0)</pv_name>
-          <value>1</value>
-        </action>
-      </actions>
-      <text>SET</text>
-      <x>15</x>
-      <y>49</y>
-      <scripts>
-        <script file="EmbeddedPy">
-          <text><![CDATA[from org.csstudio.display.builder.runtime.script import PVUtil
-
-if PVUtil.getInt(pvs[0]) != 0:
-        try:
-            requested_value = PVUtil.getDouble(pvs[1])
-            print("Writing voltage: " + str(requested_value))
-
-            pvs[2].write(requested_value)
-
-            print("Voltage write command sent")
-        except Exception as error:
-            print("VOLTAGE WRITE ERROR: " + str(error))
-        finally:
-            pvs[0].write(0)]]></text>
-          <pv_name>loc://HVSetApply$(CHAMBER)FC$(FIELD_CAGE)$(CHANNEL)(0)</pv_name>
-          <pv_name trigger="false">loc://HVSetEdit$(CHAMBER)FC$(FIELD_CAGE)$(CHANNEL)(0)</pv_name>
-          <pv_name trigger="false">SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):V_SET</pv_name>
-        </script>
-      </scripts>
-      <tooltip>$(actions)</tooltip>
-      <show_confirm_dialog>true</show_confirm_dialog>
-    </widget>
-    <widget type="linearmeter" version="3.0.0">
-      <name>limeHV_4000V_RBV</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):V_RBV</pv_name>
-      <x>140</x>
-      <width>330</width>
-      <height>52</height>
-      <display_mode>1</display_mode>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>teupHV_4000V_RBV</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):V_RBV</pv_name>
-      <x>260</x>
-      <width>90</width>
-      <height>21</height>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="10">
-        </font>
-      </font>
-      <foreground_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </foreground_color>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <transparent>true</transparent>
-      <format>1</format>
-      <precision>2</precision>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-    <widget type="linearmeter" version="3.0.0">
-      <name>limeHV_I_RBV_4000V</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):I_RBV</pv_name>
-      <x>140</x>
-      <y>56</y>
-      <width>330</width>
-      <height>52</height>
-      <display_mode>1</display_mode>
-      <precision>0</precision>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>teupHV_I_RBV_4000V</name>
-      <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):I_RBV</pv_name>
-      <x>260</x>
-      <y>56</y>
-      <width>90</width>
-      <height>21</height>
-      <font>
-        <font family="Liberation Sans" style="BOLD" size="10">
+        <font family="Liberation Sans" style="BOLD" size="14.0">
         </font>
       </font>
       <foreground_color>
@@ -387,7 +214,7 @@ if PVUtil.getInt(pvs[0]) != 0:
   <widget type="group" version="3.0.0">
     <name>grupSTATUS</name>
     <x>10</x>
-    <y>301</y>
+    <y>235</y>
     <width>480</width>
     <height>52</height>
     <style>3</style>
@@ -529,9 +356,9 @@ print("HV_STATE=" + str(state) + " -> " + text)]]></text>
     <name>dabrHV_PLOT</name>
     <file>FMF1_MUSIC1_FC1.plt</file>
     <x>10</x>
-    <y>360</y>
+    <y>294</y>
     <width>480</width>
-    <height>308</height>
+    <height>374</height>
     <selection_value_pv>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):V_RBV</selection_value_pv>
   </widget>
 </display>
