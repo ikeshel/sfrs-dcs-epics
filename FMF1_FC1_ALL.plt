@@ -5,7 +5,7 @@
   <update_period>3.0</update_period>
   <scroll_step>5</scroll_step>
   <scroll>true</scroll>
-  <start>-3 minutes</start>
+  <start>-1 hours</start>
   <end>now</end>
   <archive_rescale>STAGGER</archive_rescale>
   <foreground>
@@ -24,9 +24,43 @@
   <legend_font>Liberation Sans|14|0</legend_font>
   <axes>
     <axis>
+      <visible>false</visible>
+      <name>current</name>
+      <use_axis_name>true</use_axis_name>
+      <use_trace_names>true</use_trace_names>
+      <right>false</right>
+      <color>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+      </color>
+      <min>35.44518858659074</min>
+      <max>35.45531012793631</max>
+      <grid>false</grid>
+      <autoscale>false</autoscale>
+      <log_scale>false</log_scale>
+    </axis>
+    <axis>
       <visible>true</visible>
-      <name>Volt</name>
-      <use_axis_name>false</use_axis_name>
+      <name>NHV</name>
+      <use_axis_name>true</use_axis_name>
+      <use_trace_names>true</use_trace_names>
+      <right>false</right>
+      <color>
+        <red>0</red>
+        <green>0</green>
+        <blue>255</blue>
+      </color>
+      <min>2096.642354990736</min>
+      <max>2102.542820592158</max>
+      <grid>false</grid>
+      <autoscale>false</autoscale>
+      <log_scale>false</log_scale>
+    </axis>
+    <axis>
+      <visible>true</visible>
+      <name>PHV</name>
+      <use_axis_name>true</use_axis_name>
       <use_trace_names>true</use_trace_names>
       <right>false</right>
       <color>
@@ -34,14 +68,14 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>-1.0</min>
-      <max>500.0</max>
+      <min>209.91904482506683</min>
+      <max>210.18744297142868</max>
       <grid>false</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
     </axis>
     <axis>
-      <visible>true</visible>
+      <visible>false</visible>
       <name>Status</name>
       <use_axis_name>false</use_axis_name>
       <use_trace_names>true</use_trace_names>
@@ -51,27 +85,10 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>-0.05</min>
-      <max>1.05</max>
+      <min>0.4027015558698727</min>
+      <max>1.7227015558698726</max>
       <grid>false</grid>
       <autoscale>false</autoscale>
-      <log_scale>false</log_scale>
-    </axis>
-    <axis>
-      <visible>true</visible>
-      <name>current</name>
-      <use_axis_name>false</use_axis_name>
-      <use_trace_names>true</use_trace_names>
-      <right>false</right>
-      <color>
-        <red>0</red>
-        <green>0</green>
-        <blue>0</blue>
-      </color>
-      <min>-1.1</min>
-      <max>1.1</max>
-      <grid>false</grid>
-      <autoscale>true</autoscale>
       <log_scale>false</log_scale>
     </axis>
   </axes>
@@ -82,31 +99,11 @@
       <display_name>SFRS:FMF1:MUSIC1:FC1:NHV:V_RBV</display_name>
       <visible>true</visible>
       <name>SFRS:FMF1:MUSIC1:FC1:NHV:V_RBV</name>
-      <axis>0</axis>
-      <color>
-        <red>255</red>
-        <green>0</green>
-        <blue>0</blue>
-      </color>
-      <trace_type>AREA</trace_type>
-      <linewidth>2</linewidth>
-      <line_style>SOLID</line_style>
-      <point_type>NONE</point_type>
-      <point_size>2</point_size>
-      <waveform_index>0</waveform_index>
-      <period>0.0</period>
-      <ring_size>5000</ring_size>
-      <request>OPTIMIZED</request>
-    </pv>
-    <pv>
-      <display_name>SFRS:FMF1:MUSIC1:FC1:NHV:I_RBV</display_name>
-      <visible>true</visible>
-      <name>SFRS:FMF1:MUSIC1:FC1:NHV:I_RBV</name>
-      <axis>2</axis>
+      <axis>1</axis>
       <color>
         <red>0</red>
-        <green>255</green>
-        <blue>0</blue>
+        <green>26</green>
+        <blue>128</blue>
       </color>
       <trace_type>AREA</trace_type>
       <linewidth>2</linewidth>
@@ -122,10 +119,50 @@
       <display_name>SFRS:FMF1:MUSIC1:FC1:NHV:V_SET</display_name>
       <visible>true</visible>
       <name>SFRS:FMF1:MUSIC1:FC1:NHV:V_SET</name>
+      <axis>1</axis>
+      <color>
+        <red>51</red>
+        <green>77</green>
+        <blue>179</blue>
+      </color>
+      <trace_type>AREA</trace_type>
+      <linewidth>2</linewidth>
+      <line_style>DASH</line_style>
+      <point_type>NONE</point_type>
+      <point_size>2</point_size>
+      <waveform_index>0</waveform_index>
+      <period>0.0</period>
+      <ring_size>5000</ring_size>
+      <request>OPTIMIZED</request>
+    </pv>
+    <pv>
+      <display_name>SFRS:FMF1:MUSIC1:FC1:NHV:I_RBV</display_name>
+      <visible>false</visible>
+      <name>SFRS:FMF1:MUSIC1:FC1:NHV:I_RBV</name>
       <axis>0</axis>
       <color>
-        <red>0</red>
-        <green>0</green>
+        <red>102</red>
+        <green>128</green>
+        <blue>230</blue>
+      </color>
+      <trace_type>AREA</trace_type>
+      <linewidth>2</linewidth>
+      <line_style>DOT</line_style>
+      <point_type>NONE</point_type>
+      <point_size>2</point_size>
+      <waveform_index>0</waveform_index>
+      <period>0.0</period>
+      <ring_size>5000</ring_size>
+      <request>OPTIMIZED</request>
+    </pv>
+    <pv>
+      <display_name>SFRS:FMF1:MUSIC1:FC1:NHV:ENABLE</display_name>
+      <visible>false</visible>
+      <name>SFRS:FMF1:MUSIC1:FC1:NHV:ENABLE</name>
+      <axis>3</axis>
+      <color>
+        <red>204</red>
+        <green>230</green>
         <blue>255</blue>
       </color>
       <trace_type>AREA</trace_type>
@@ -139,18 +176,38 @@
       <request>OPTIMIZED</request>
     </pv>
     <pv>
-      <display_name>SFRS:FMF1:MUSIC1:FC1:NHV:ENABLE</display_name>
+      <display_name>SFRS:FMF1:MUSIC1:FC1:PHV:V_RBV</display_name>
       <visible>true</visible>
-      <name>SFRS:FMF1:MUSIC1:FC1:NHV:ENABLE</name>
-      <axis>1</axis>
+      <name>SFRS:FMF1:MUSIC1:FC1:PHV:V_RBV</name>
+      <axis>2</axis>
       <color>
-        <red>255</red>
-        <green>127</green>
+        <red>153</red>
+        <green>0</green>
         <blue>0</blue>
       </color>
       <trace_type>AREA</trace_type>
       <linewidth>2</linewidth>
       <line_style>SOLID</line_style>
+      <point_type>NONE</point_type>
+      <point_size>2</point_size>
+      <waveform_index>0</waveform_index>
+      <period>0.0</period>
+      <ring_size>5000</ring_size>
+      <request>OPTIMIZED</request>
+    </pv>
+    <pv>
+      <display_name>SFRS:FMF1:MUSIC1:FC1:PHV:V_SET</display_name>
+      <visible>true</visible>
+      <name>SFRS:FMF1:MUSIC1:FC1:PHV:V_SET</name>
+      <axis>2</axis>
+      <color>
+        <red>204</red>
+        <green>51</green>
+        <blue>51</blue>
+      </color>
+      <trace_type>AREA</trace_type>
+      <linewidth>2</linewidth>
+      <line_style>DASH</line_style>
       <point_type>NONE</point_type>
       <point_size>2</point_size>
       <waveform_index>0</waveform_index>

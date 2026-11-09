@@ -1,0 +1,12 @@
+# PLSCI records for x86l-208: FPF2.
+# PMT numbering matches the existing all-chamber substitutions.
+file "db/plsci.template"
+{
+    pattern { CHAMBER, PMT }
+    { FPF2,1 }
+    { FPF2,2 }
+    { FPF2,3 }
+    { FPF2,4 }
+    { FPF2,5 }
+    { FPF2,6 }
+}

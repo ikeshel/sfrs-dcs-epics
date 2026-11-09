@@ -1,0 +1,18 @@
+# PLSCI records for x86l-209: FPF4, FMF1.
+# PMT numbering matches the existing all-chamber substitutions.
+file "db/plsci.template"
+{
+    pattern { CHAMBER, PMT }
+    { FPF4,1 }
+    { FPF4,2 }
+    { FPF4,3 }
+    { FPF4,4 }
+    { FPF4,5 }
+    { FPF4,6 }
+    { FMF1,1 }
+    { FMF1,2 }
+    { FMF1,3 }
+    { FMF1,4 }
+    { FMF1,5 }
+    { FMF1,6 }
+}
