@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Huber Unichiller</name>
+  <macros>
+    <P>SFRS:FHF1:SCIFI3:CHILLER:</P>
+  </macros>
+  <width>1000</width>
+  <height>1005</height>
+  <background_color>
+    <color red="240" green="244" blue="248">
+    </color>
+  </background_color>
+  <grid_visible>false</grid_visible>
+  <widget type="label" version="2.0.0">
+    <name>Title</name>
+    <text>HUBER  /  Unichiller P012 OLE</text>
+    <x>24</x>
+    <y>18</y>
+    <width>650</width>
+    <height>38</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="27.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Prefix</name>
+    <text>$(P)</text>
+    <x>431</x>
+    <y>30</y>
+    <width>545</width>
+    <height>24</height>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Temperature panel</name>
+    <x>24</x>
+    <y>104</y>
+    <width>620</width>
+    <height>160</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Status panel</name>
+    <x>664</x>
+    <y>104</y>
+    <width>312</width>
+    <height>364</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Temperature heading</name>
+    <text>TEMPERATURES</text>
+    <x>44</x>
+    <y>120</y>
+    <width>570</width>
+    <height>24</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Internal label</name>
+    <text>Internal</text>
+    <x>44</x>
+    <y>159</y>
+    <width>185</width>
+    <height>24</height>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Internal</name>
+    <pv_name>$(P)TEMP_RBV</pv_name>
+    <x>44</x>
+    <y>187</y>
+    <width>185</width>
+    <height>40</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="25.0">
+      </font>
+    </font>
+    <precision>2</precision>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Device setpoint label</name>
+    <text>Device setpoint</text>
+    <x>246</x>
+    <y>159</y>
+    <width>185</width>
+    <height>24</height>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Device setpoint</name>
+    <pv_name>$(P)TEMP_SET_RBV</pv_name>
+    <x>246</x>
+    <y>187</y>
+    <width>185</width>
+    <height>40</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="25.0">
+      </font>
+    </font>
+    <precision>2</precision>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>External label</name>
+    <text>External</text>
+    <x>448</x>
+    <y>159</y>
+    <width>185</width>
+    <height>24</height>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>External</name>
+    <pv_name>$(P)TEMP_EXTERNAL_RBV</pv_name>
+    <x>448</x>
+    <y>187</y>
+    <width>185</width>
+    <height>40</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="25.0">
+      </font>
+    </font>
+    <precision>2</precision>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="Dim absent external sensor" prop_id="foreground_color" out_exp="false">
+        <exp bool_exp="pv0 == 0">
+          <value>
+            <color red="150" green="150" blue="150">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)EXTERNAL_SENSOR_PRESENT</pv_name>
+      </rule>
+      <rule name="Inactive external sensor background" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0 == 0">
+          <value>
+            <color red="235" green="235" blue="235">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)EXTERNAL_SENSOR_PRESENT</pv_name>
+      </rule>
+      <rule name="Suppress absent sensor alarm border" prop_id="border_alarm_sensitive" out_exp="false">
+        <exp bool_exp="pv0 == 0">
+          <value>false</value>
+        </exp>
+        <pv_name>$(P)EXTERNAL_SENSOR_PRESENT</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>External note</name>
+    <text>External sensor absent: readout greyed out.</text>
+    <x>62</x>
+    <y>235</y>
+    <width>570</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Status heading</name>
+    <text>DEVICE STATUS</text>
+    <x>684</x>
+    <y>120</y>
+    <width>270</width>
+    <height>24</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Run readback</name>
+    <pv_name>$(P)RUN_RBV</pv_name>
+    <x>684</x>
+    <y>247</y>
+    <width>260</width>
+    <height>32</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="20.0">
+      </font>
+    </font>
+    <precision>2</precision>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Alarm label</name>
+    <text>Alarm code (0 = clear)</text>
+    <x>684</x>
+    <y>297</y>
+    <width>260</width>
+    <height>24</height>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Alarm code</name>
+    <pv_name>$(P)ALARM_RBV</pv_name>
+    <x>684</x>
+    <y>323</y>
+    <width>260</width>
+    <height>32</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="20.0">
+      </font>
+    </font>
+    <precision>2</precision>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>External sensor</name>
+    <pv_name>$(P)EXTERNAL_SENSOR_PRESENT</pv_name>
+    <x>684</x>
+    <y>378</y>
+    <width>210</width>
+    <height>32</height>
+    <off_label>SENSOR ABSENT</off_label>
+    <off_color>
+      <color red="244" green="200" blue="110">
+      </color>
+    </off_color>
+    <on_label>SENSOR PRESENT</on_label>
+    <on_color>
+      <color red="115" green="207" blue="162">
+      </color>
+    </on_color>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="13.0">
+      </font>
+    </font>
+    <square>true</square>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Readback note</name>
+    <text>Status uses device readbacks.</text>
+    <x>684</x>
+    <y>433</y>
+    <width>270</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Control panel</name>
+    <x>24</x>
+    <y>280</y>
+    <width>620</width>
+    <height>188</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Control heading</name>
+    <text>CONTROL</text>
+    <x>44</x>
+    <y>296</y>
+    <width>570</width>
+    <height>24</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Setpoint label</name>
+    <text>New setpoint (°C)</text>
+    <x>44</x>
+    <y>336</y>
+    <width>150</width>
+    <height>24</height>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Temperature command</name>
+    <pv_name>$(P)TEMP_SET</pv_name>
+    <x>238</x>
+    <y>330</y>
+    <width>160</width>
+    <height>36</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="20.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="ActiveText" red="255" green="255" blue="0">
+      </color>
+    </background_color>
+    <precision>2</precision>
+    <horizontal_alignment>2</horizontal_alignment>
+    <tooltip>$(pv_name)
+Enter temperature and press Enter to write. Limits come from the IOC.</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Setpoint help</name>
+    <text>Press Enter to apply.</text>
+    <x>415</x>
+    <y>339</y>
+    <width>205</width>
+    <height>24</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Limits label</name>
+    <text>IOC limits (°C):</text>
+    <x>44</x>
+    <y>383</y>
+    <width>140</width>
+    <height>22</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Minimum temperature</name>
+    <pv_name>$(P)TEMP_SET.DRVL</pv_name>
+    <x>194</x>
+    <y>380</y>
+    <width>90</width>
+    <height>24</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <precision>2</precision>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Maximum temperature</name>
+    <pv_name>$(P)TEMP_SET.DRVH</pv_name>
+    <x>294</x>
+    <y>380</y>
+    <width>90</width>
+    <height>24</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <precision>2</precision>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Run command switch</name>
+    <pv_name>$(P)RUN</pv_name>
+    <x>415</x>
+    <y>382</y>
+    <width>198</width>
+    <height>38</height>
+    <bit>0</bit>
+    <mode>0</mode>
+    <labels_from_pv>false</labels_from_pv>
+    <off_label>OFF — click to Start</off_label>
+    <on_label>ON — click to Stop</on_label>
+    <off_color><color red="150" green="150" blue="150" /></off_color>
+    <on_color><color red="70" green="190" blue="120" /></on_color>
+    <show_led>true</show_led>
+    <tooltip>Toggle RUN command (0 = Stop, 1 = Start). Device status is shown by RUN_RBV.</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Control note</name>
+    <text>Verify the device setpoint and run status after each command.</text>
+    <x>44</x>
+    <y>435</y>
+    <width>570</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Identity label</name>
+    <text>Controller identification</text>
+    <x>540</x>
+    <y>979</y>
+    <width>150</width>
+    <height>24</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="13.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Identity</name>
+    <pv_name>$(P)IDENTITY</pv_name>
+    <x>694</x>
+    <y>979</y>
+    <width>280</width>
+    <height>24</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <precision>2</precision>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Trend panel</name>
+    <x>24</x>
+    <y>484</y>
+    <width>952</width>
+    <height>485</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Trend heading</name>
+    <text>LIVE TEMPERATURE TREND</text>
+    <x>44</x>
+    <y>497</y>
+    <width>650</width>
+    <height>24</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="stripchart" version="2.1.0">
+    <name>Temperature trend</name>
+    <x>34</x>
+    <y>529</y>
+    <width>932</width>
+    <height>430</height>
+    <show_legend>true</show_legend>
+    <start>10 minute</start>
+    <y_axes>
+      <y_axis>
+        <title>Temperature (°C)</title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>-20.0</minimum>
+        <maximum>40.0</maximum>
+        <show_grid>true</show_grid>
+        <visible>true</visible>
+        <color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </color>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>Internal</name>
+        <y_pv>$(P)TEMP_RBV</y_pv>
+        <axis>0</axis>
+        <trace_type>6</trace_type>
+        <color>
+          <color red="32" green="115" blue="190">
+          </color>
+        </color>
+        <line_width>2</line_width>
+        <point_type>0</point_type>
+        <point_size>1</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>Device setpoint</name>
+        <y_pv>$(P)TEMP_SET_RBV</y_pv>
+        <axis>0</axis>
+        <trace_type>6</trace_type>
+        <color>
+          <color red="218" green="125" blue="35">
+          </color>
+        </color>
+        <line_width>2</line_width>
+        <point_type>0</point_type>
+        <point_size>1</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Footer</name>
+    <text>Polling: 2 s (identity: 10 s). Trend records while open.</text>
+    <x>24</x>
+    <y>979</y>
+    <width>485</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>Communication</name>
+    <pv_name>$(P)COMM_OK</pv_name>
+    <x>684</x>
+    <y>170</y>
+    <width>210</width>
+    <height>32</height>
+    <off_label>COMM INVALID</off_label>
+    <off_color>
+      <color red="244" green="200" blue="110">
+      </color>
+    </off_color>
+    <on_label>COMM OK</on_label>
+    <on_color>
+      <color red="115" green="207" blue="162">
+      </color>
+    </on_color>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="13.0">
+      </font>
+    </font>
+    <square>true</square>
+  </widget>
+</display>
