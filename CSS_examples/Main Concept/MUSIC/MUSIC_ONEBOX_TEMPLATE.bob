@@ -143,6 +143,19 @@ if PVUtil.getInt(pvs[0]) != 0:
       <width>330</width>
       <height>75</height>
       <display_mode>1</display_mode>
+      <scripts>
+        <script file="EmbeddedPy" check_connections="false">
+          <text><![CDATA[# NHV display limits: visual guides only, not EPICS alarms.
+if '$(CHANNEL)' in ('NHV', 'NEGATIVE'):
+    # Mode 1 takes display min/max from the PV, levels from this widget.
+    widget.setPropertyValue('limits_from_pv', 1)
+    widget.setPropertyValue('level_lolo', -1.0)
+    widget.setPropertyValue('level_low', -1.0)
+    widget.setPropertyValue('level_high', 4250.0)
+    widget.setPropertyValue('level_hihi', 4500.0)
+]]></text>
+        </script>
+      </scripts>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>teupHV_400V_RBV</name>
@@ -177,6 +190,19 @@ if PVUtil.getInt(pvs[0]) != 0:
       <height>75</height>
       <display_mode>1</display_mode>
       <precision>0</precision>
+      <scripts>
+        <script file="EmbeddedPy" check_connections="false">
+          <text><![CDATA[# NHV display limits: visual guides only, not EPICS alarms.
+if '$(CHANNEL)' in ('NHV', 'NEGATIVE'):
+    # Mode 1 takes display min/max from the PV, levels from this widget.
+    widget.setPropertyValue('limits_from_pv', 1)
+    widget.setPropertyValue('level_lolo', -1.0)
+    widget.setPropertyValue('level_low', -1.0)
+    widget.setPropertyValue('level_high', 75.0)
+    widget.setPropertyValue('level_hihi', 80.0)
+]]></text>
+        </script>
+      </scripts>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>teupHV_I_RBV_400V</name>
@@ -360,5 +386,13 @@ print("HV_STATE=" + str(state) + " -> " + text)]]></text>
     <width>480</width>
     <height>374</height>
     <selection_value_pv>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):V_RBV</selection_value_pv>
+    <scripts>
+      <script file="EmbeddedPy" check_connections="false">
+        <text><![CDATA[# NHV plot: fixed full operating ranges; PHV keeps its existing file.
+if '$(CHANNEL)' in ('NHV', 'NEGATIVE'):
+    widget.setPropertyValue('file', 'MUSIC_NHV.plt')
+]]></text>
+      </script>
+    </scripts>
   </widget>
 </display>

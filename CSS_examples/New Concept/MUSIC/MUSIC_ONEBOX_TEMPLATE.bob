@@ -4,6 +4,22 @@
   <height>676</height>
   <grid_visible>false</grid_visible>
   <widget type="rectangle" version="2.0.0">
+    <name>rectSTATE</name>
+    <x>10</x>
+    <y>210</y>
+    <width>480</width>
+    <height>77</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Background" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
     <name>rectLIMIT</name>
     <width>500</width>
     <height>676</height>
@@ -20,9 +36,8 @@
   <widget type="label" version="2.0.0">
     <name>labeHEADER</name>
     <text>$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL)</text>
-    <y>7</y>
-    <width>500</width>
-    <height>21</height>
+    <y>5</y>
+    <width>490</width>
     <font>
       <font family="Liberation Sans" style="BOLD" size="15.4">
       </font>
@@ -32,14 +47,15 @@
   </widget>
   <widget type="group" version="3.0.0">
     <name>grupHV_400V</name>
-    <x>10</x>
-    <y>40</y>
-    <width>480</width>
-    <height>185</height>
-    <style>3</style>
+    <x>9</x>
+    <y>28</y>
+    <width>482</width>
+    <height>173</height>
+    <style>2</style>
     <transparent>true</transparent>
     <widget type="rectangle" version="2.0.0">
       <name>rect400V_SET</name>
+      <x>5</x>
       <y>49</y>
       <width>130</width>
       <height>84</height>
@@ -137,21 +153,43 @@ if PVUtil.getInt(pvs[0]) != 0:
       <show_confirm_dialog>true</show_confirm_dialog>
     </widget>
     <widget type="linearmeter" version="3.0.0">
-      <name>limeHV_400V_RBV</name>
+      <name>limeHV_V_RBV</name>
       <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):V_RBV</pv_name>
       <x>140</x>
       <width>330</width>
       <height>75</height>
       <display_mode>1</display_mode>
+      <show_units>false</show_units>
+      <scripts>
+        <script file="EmbeddedPy" check_connections="false">
+          <text><![CDATA[# NHV display limits: visual guides only, not EPICS alarms.
+if '$(CHANNEL)' in ('NHV', 'NEGATIVE'):
+    # Mode 1 takes display min/max from the PV, levels from this widget.
+    widget.setPropertyValue('limits_from_pv', 1)
+    widget.setPropertyValue('level_lolo', -1.0)
+    widget.setPropertyValue('level_low', -1.0)
+    widget.setPropertyValue('level_high', 4250.0)
+    widget.setPropertyValue('level_hihi', 4500.0)
+]]></text>
+        </script>
+      </scripts>
+      <minimum></minimum>
+      <maximum></maximum>
+      <level_lolo></level_lolo>
+      <level_low></level_low>
+      <level_high></level_high>
+      <level_hihi></level_hihi>
+      <min_max_tolerance></min_max_tolerance>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>teupHV_400V_RBV</name>
       <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):V_RBV</pv_name>
       <x>260</x>
+      <y>10</y>
       <width>90</width>
       <height>30</height>
       <font>
-        <font family="Liberation Sans" style="BOLD" size="14.0">
+        <font family="Liberation Sans" style="BOLD" size="20.0">
         </font>
       </font>
       <foreground_color>
@@ -169,7 +207,7 @@ if PVUtil.getInt(pvs[0]) != 0:
       <vertical_alignment>1</vertical_alignment>
     </widget>
     <widget type="linearmeter" version="3.0.0">
-      <name>limeHV_I_RBV_400V</name>
+      <name>limeHV_I_RBV</name>
       <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):I_RBV</pv_name>
       <x>140</x>
       <y>80</y>
@@ -177,16 +215,37 @@ if PVUtil.getInt(pvs[0]) != 0:
       <height>75</height>
       <display_mode>1</display_mode>
       <precision>0</precision>
+      <show_units>false</show_units>
+      <scripts>
+        <script file="EmbeddedPy" check_connections="false">
+          <text><![CDATA[# NHV display limits: visual guides only, not EPICS alarms.
+if '$(CHANNEL)' in ('NHV', 'NEGATIVE'):
+    # Mode 1 takes display min/max from the PV, levels from this widget.
+    widget.setPropertyValue('limits_from_pv', 1)
+    widget.setPropertyValue('level_lolo', -1.0)
+    widget.setPropertyValue('level_low', -1.0)
+    widget.setPropertyValue('level_high', 75.0)
+    widget.setPropertyValue('level_hihi', 80.0)
+]]></text>
+        </script>
+      </scripts>
+      <minimum></minimum>
+      <maximum></maximum>
+      <level_lolo></level_lolo>
+      <level_low></level_low>
+      <level_high></level_high>
+      <level_hihi></level_hihi>
+      <min_max_tolerance></min_max_tolerance>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>teupHV_I_RBV_400V</name>
       <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):I_RBV</pv_name>
       <x>260</x>
-      <y>80</y>
+      <y>90</y>
       <width>90</width>
       <height>30</height>
       <font>
-        <font family="Liberation Sans" style="BOLD" size="14.0">
+        <font family="Liberation Sans" style="BOLD" size="20.0">
         </font>
       </font>
       <foreground_color>
@@ -206,33 +265,20 @@ if PVUtil.getInt(pvs[0]) != 0:
     <widget type="bool_button" version="2.0.0">
       <name>bobuHV_ENABLE</name>
       <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):ENABLE</pv_name>
-      <y>6</y>
+      <x>5</x>
+      <y>5</y>
       <width>130</width>
       <height>35</height>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
     <name>grupSTATUS</name>
-    <x>10</x>
-    <y>235</y>
-    <width>480</width>
-    <height>52</height>
-    <style>3</style>
+    <x>9</x>
+    <y>209</y>
+    <width>482</width>
+    <height>79</height>
+    <style>2</style>
     <transparent>true</transparent>
-    <widget type="rectangle" version="2.0.0">
-      <name>rectSTATE</name>
-      <width>480</width>
-      <height>52</height>
-      <line_width>1</line_width>
-      <line_color>
-        <color name="Button_Background" red="210" green="210" blue="210">
-        </color>
-      </line_color>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-    </widget>
     <widget type="label" version="2.0.0">
       <name>labeSTATUS</name>
       <text>STATUS</text>
@@ -254,26 +300,12 @@ if PVUtil.getInt(pvs[0]) != 0:
       <height>15</height>
       <numBits>14</numBits>
     </widget>
-    <widget type="label" version="2.0.0">
-      <name>labeSTATE</name>
-      <text>STATE</text>
-      <x>10</x>
-      <y>28</y>
-      <width>80</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="10.5">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
     <widget type="textupdate" version="2.0.0">
       <name>teupSTAT_NO</name>
       <pv_name>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):STATUS</pv_name>
-      <x>100</x>
-      <y>28</y>
-      <width>80</width>
+      <x>390</x>
+      <y>36</y>
+      <width>70</width>
       <height>18</height>
       <background_color>
         <color name="Background" red="255" green="255" blue="255">
@@ -282,12 +314,27 @@ if PVUtil.getInt(pvs[0]) != 0:
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
     </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>acbtSTATUS_HELP</name>
+      <actions>
+        <action type="open_display">
+          <description>opdiINFO_BOX</description>
+          <file>MUISC_Status_Information_Box.bob</file>
+          <target>window</target>
+        </action>
+      </actions>
+      <text>INFO</text>
+      <x>15</x>
+      <y>28</y>
+      <height>36</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
     <widget type="label" version="2.0.0">
       <name>labeSTAT_LABEL</name>
       <text></text>
-      <x>190</x>
-      <y>28</y>
-      <width>200</width>
+      <x>184</x>
+      <y>38</y>
+      <width>194</width>
       <height>18</height>
       <background_color>
         <color name="Button_Background" red="210" green="210" blue="210">
@@ -335,22 +382,6 @@ print("HV_STATE=" + str(state) + " -> " + text)]]></text>
         </script>
       </scripts>
     </widget>
-    <widget type="action_button" version="3.0.0">
-      <name>acbtSTATUS_HELP</name>
-      <actions>
-        <action type="open_display">
-          <description>opdiINFO_BOX</description>
-          <file>MUISC_Status_Information_Box.bob</file>
-          <target>window</target>
-        </action>
-      </actions>
-      <text>INFO</text>
-      <x>400</x>
-      <y>28</y>
-      <width>70</width>
-      <height>18</height>
-      <tooltip>$(actions)</tooltip>
-    </widget>
   </widget>
   <widget type="databrowser" version="2.0.0">
     <name>dabrHV_PLOT</name>
@@ -359,6 +390,14 @@ print("HV_STATE=" + str(state) + " -> " + text)]]></text>
     <y>294</y>
     <width>480</width>
     <height>374</height>
+    <scripts>
+      <script file="EmbeddedPy" check_connections="false">
+        <text><![CDATA[# NHV plot: fixed full operating ranges; PHV keeps its existing file.
+if '$(CHANNEL)' in ('NHV', 'NEGATIVE'):
+    widget.setPropertyValue('file', 'MUSIC_NHV.plt')
+]]></text>
+      </script>
+    </scripts>
     <selection_value_pv>SFRS:$(CHAMBER):MUSIC1:FC$(FIELD_CAGE):$(CHANNEL):V_RBV</selection_value_pv>
   </widget>
 </display>

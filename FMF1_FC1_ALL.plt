@@ -5,7 +5,7 @@
   <update_period>3.0</update_period>
   <scroll_step>5</scroll_step>
   <scroll>true</scroll>
-  <start>-3 days</start>
+  <start>-3 days -14 hours -24 minutes -6 seconds</start>
   <end>now</end>
   <archive_rescale>STAGGER</archive_rescale>
   <foreground>
@@ -34,8 +34,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>35.44518858659074</min>
-      <max>35.45531012793631</max>
+      <min>35.443729893867406</min>
+      <max>35.45587574348209</max>
       <grid>false</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
@@ -51,8 +51,8 @@
         <green>0</green>
         <blue>255</blue>
       </color>
-      <min>2099.2200000000003</min>
-      <max>2100.66</max>
+      <min>2099.012470588236</min>
+      <max>2100.740470588235</max>
       <grid>false</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
@@ -68,8 +68,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>209.934</min>
-      <max>210.078</max>
+      <min>209.89416470588236</min>
+      <max>210.00936470588238</max>
       <grid>false</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
@@ -85,8 +85,8 @@
         <green>0</green>
         <blue>0</blue>
       </color>
-      <min>0.4027015558698727</min>
-      <max>1.7227015558698726</max>
+      <min>0.21246626175222572</min>
+      <max>1.7964662617522256</max>
       <grid>false</grid>
       <autoscale>false</autoscale>
       <log_scale>false</log_scale>
@@ -114,11 +114,6 @@
       <period>0.0</period>
       <ring_size>5000</ring_size>
       <request>OPTIMIZED</request>
-      <archive>
-        <name>SFRS Archiver</name>
-        <url>pbraw://localhost:17665/retrieval</url>
-        <key>1</key>
-      </archive>
     </pv>
     <pv>
       <display_name>SFRS:FMF1:MUSIC1:FC1:NHV:V_SET</display_name>
@@ -139,11 +134,6 @@
       <period>0.0</period>
       <ring_size>5000</ring_size>
       <request>OPTIMIZED</request>
-      <archive>
-        <name>SFRS Archiver</name>
-        <url>pbraw://localhost:17665/retrieval</url>
-        <key>1</key>
-      </archive>
     </pv>
     <pv>
       <display_name>SFRS:FMF1:MUSIC1:FC1:NHV:I_RBV</display_name>
@@ -164,11 +154,6 @@
       <period>0.0</period>
       <ring_size>5000</ring_size>
       <request>OPTIMIZED</request>
-      <archive>
-        <name>SFRS Archiver</name>
-        <url>pbraw://localhost:17665/retrieval</url>
-        <key>1</key>
-      </archive>
     </pv>
     <pv>
       <display_name>SFRS:FMF1:MUSIC1:FC1:NHV:ENABLE</display_name>
@@ -189,11 +174,6 @@
       <period>0.0</period>
       <ring_size>5000</ring_size>
       <request>OPTIMIZED</request>
-      <archive>
-        <name>SFRS Archiver</name>
-        <url>pbraw://localhost:17665/retrieval</url>
-        <key>1</key>
-      </archive>
     </pv>
     <pv>
       <display_name>SFRS:FMF1:MUSIC1:FC1:PHV:V_RBV</display_name>
@@ -214,11 +194,6 @@
       <period>0.0</period>
       <ring_size>5000</ring_size>
       <request>OPTIMIZED</request>
-      <archive>
-        <name>SFRS Archiver</name>
-        <url>pbraw://localhost:17665/retrieval</url>
-        <key>1</key>
-      </archive>
     </pv>
     <pv>
       <display_name>SFRS:FMF1:MUSIC1:FC1:PHV:V_SET</display_name>
@@ -239,11 +214,6 @@
       <period>0.0</period>
       <ring_size>5000</ring_size>
       <request>OPTIMIZED</request>
-      <archive>
-        <name>SFRS Archiver</name>
-        <url>pbraw://localhost:17665/retrieval</url>
-        <key>1</key>
-      </archive>
     </pv>
   </pvlist>
 </databrowser>
