@@ -1,0 +1,2598 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<display version="2.0.0">
+  <name>FPF2:SCIFI1 — Low voltage</name>
+  <width>1820</width>
+  <height>1306</height>
+  <grid_visible>false</grid_visible>
+  <background_color>
+    <color red="240" green="244" blue="248" />
+  </background_color>
+  <widget type="label" version="2.0.0">
+    <name>Title</name>
+    <x>24</x>
+    <y>18</y>
+    <width>1100</width>
+    <height>36</height>
+    <text>FPF2:SCIFI1  /  LOW VOLTAGE</text>
+    <font>
+      <font family="Liberation Sans" size="26.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>0</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Prefix</name>
+    <x>24</x>
+    <y>58</y>
+    <width>1000</width>
+    <height>24</height>
+    <text>SFRS:FPF2:SCIFI1:LV:</text>
+    <font>
+      <font family="Liberation Sans" size="14.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>0</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Channels</name>
+    <x>1500</x>
+    <y>24</y>
+    <width>296</width>
+    <height>24</height>
+    <text>16 BOARD READBACKS</text>
+    <font>
+      <font family="Liberation Sans" size="14.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="picture" version="2.0.0">
+    <name>Detector layout</name>
+    <x>357</x>
+    <y>351</y>
+    <width>1105</width>
+    <height>523</height>
+    <file>../../CSS_examples/New Concept/SCIFI/det_scifi.svg</file>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CH00 card</name>
+    <x>275</x>
+    <y>91</y>
+    <width>200</width>
+    <height>164</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH00 heading</name>
+    <x>283</x>
+    <y>99</y>
+    <width>184</width>
+    <height>26</height>
+    <text>BOARD 1</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH00 Voltage label</name>
+    <x>287</x>
+    <y>131</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Voltage</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH00 V_RBV</name>
+    <x>287</x>
+    <y>155</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:V_RBV:CH:00</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH00 Current label</name>
+    <x>287</x>
+    <y>195</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Current</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH00 I_RBV</name>
+    <x>287</x>
+    <y>219</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:I_RBV:CH:00</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CH01 card</name>
+    <x>490</x>
+    <y>91</y>
+    <width>200</width>
+    <height>164</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH01 heading</name>
+    <x>498</x>
+    <y>99</y>
+    <width>184</width>
+    <height>26</height>
+    <text>BOARD 2</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH01 Voltage label</name>
+    <x>502</x>
+    <y>131</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Voltage</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH01 V_RBV</name>
+    <x>502</x>
+    <y>155</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:V_RBV:CH:01</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH01 Current label</name>
+    <x>502</x>
+    <y>195</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Current</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH01 I_RBV</name>
+    <x>502</x>
+    <y>219</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:I_RBV:CH:01</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CH02 card</name>
+    <x>705</x>
+    <y>91</y>
+    <width>200</width>
+    <height>164</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH02 heading</name>
+    <x>713</x>
+    <y>99</y>
+    <width>184</width>
+    <height>26</height>
+    <text>BOARD 3</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH02 Voltage label</name>
+    <x>717</x>
+    <y>131</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Voltage</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH02 V_RBV</name>
+    <x>717</x>
+    <y>155</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:V_RBV:CH:02</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH02 Current label</name>
+    <x>717</x>
+    <y>195</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Current</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH02 I_RBV</name>
+    <x>717</x>
+    <y>219</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:I_RBV:CH:02</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CH03 card</name>
+    <x>920</x>
+    <y>91</y>
+    <width>200</width>
+    <height>164</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH03 heading</name>
+    <x>928</x>
+    <y>99</y>
+    <width>184</width>
+    <height>26</height>
+    <text>BOARD 4</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH03 Voltage label</name>
+    <x>932</x>
+    <y>131</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Voltage</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH03 V_RBV</name>
+    <x>932</x>
+    <y>155</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:V_RBV:CH:03</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH03 Current label</name>
+    <x>932</x>
+    <y>195</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Current</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH03 I_RBV</name>
+    <x>932</x>
+    <y>219</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:I_RBV:CH:03</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CH04 card</name>
+    <x>1135</x>
+    <y>91</y>
+    <width>200</width>
+    <height>164</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH04 heading</name>
+    <x>1143</x>
+    <y>99</y>
+    <width>184</width>
+    <height>26</height>
+    <text>BOARD 5</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH04 Voltage label</name>
+    <x>1147</x>
+    <y>131</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Voltage</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH04 V_RBV</name>
+    <x>1147</x>
+    <y>155</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:V_RBV:CH:04</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH04 Current label</name>
+    <x>1147</x>
+    <y>195</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Current</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH04 I_RBV</name>
+    <x>1147</x>
+    <y>219</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:I_RBV:CH:04</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CH05 card</name>
+    <x>1350</x>
+    <y>91</y>
+    <width>200</width>
+    <height>164</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH05 heading</name>
+    <x>1358</x>
+    <y>99</y>
+    <width>184</width>
+    <height>26</height>
+    <text>BOARD 6</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH05 Voltage label</name>
+    <x>1362</x>
+    <y>131</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Voltage</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH05 V_RBV</name>
+    <x>1362</x>
+    <y>155</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:V_RBV:CH:05</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH05 Current label</name>
+    <x>1362</x>
+    <y>195</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Current</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH05 I_RBV</name>
+    <x>1362</x>
+    <y>219</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:I_RBV:CH:05</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CH06 card</name>
+    <x>147</x>
+    <y>624</y>
+    <width>200</width>
+    <height>164</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH06 heading</name>
+    <x>155</x>
+    <y>632</y>
+    <width>184</width>
+    <height>26</height>
+    <text>BOARD 7</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH06 Voltage label</name>
+    <x>159</x>
+    <y>664</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Voltage</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH06 V_RBV</name>
+    <x>159</x>
+    <y>688</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:V_RBV:CH:06</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH06 Current label</name>
+    <x>159</x>
+    <y>728</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Current</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH06 I_RBV</name>
+    <x>159</x>
+    <y>752</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:I_RBV:CH:06</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CH07 card</name>
+    <x>147</x>
+    <y>351</y>
+    <width>200</width>
+    <height>164</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH07 heading</name>
+    <x>155</x>
+    <y>359</y>
+    <width>184</width>
+    <height>26</height>
+    <text>BOARD 8</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH07 Voltage label</name>
+    <x>159</x>
+    <y>391</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Voltage</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH07 V_RBV</name>
+    <x>159</x>
+    <y>415</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:V_RBV:CH:07</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH07 Current label</name>
+    <x>159</x>
+    <y>455</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Current</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH07 I_RBV</name>
+    <x>159</x>
+    <y>479</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:I_RBV:CH:07</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CH08 card</name>
+    <x>1350</x>
+    <y>884</y>
+    <width>200</width>
+    <height>164</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH08 heading</name>
+    <x>1358</x>
+    <y>892</y>
+    <width>184</width>
+    <height>26</height>
+    <text>BOARD 9</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH08 Voltage label</name>
+    <x>1362</x>
+    <y>924</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Voltage</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH08 V_RBV</name>
+    <x>1362</x>
+    <y>948</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:V_RBV:CH:08</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH08 Current label</name>
+    <x>1362</x>
+    <y>988</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Current</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH08 I_RBV</name>
+    <x>1362</x>
+    <y>1012</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:I_RBV:CH:08</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CH09 card</name>
+    <x>1135</x>
+    <y>884</y>
+    <width>200</width>
+    <height>164</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH09 heading</name>
+    <x>1143</x>
+    <y>892</y>
+    <width>184</width>
+    <height>26</height>
+    <text>BOARD 10</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH09 Voltage label</name>
+    <x>1147</x>
+    <y>924</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Voltage</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH09 V_RBV</name>
+    <x>1147</x>
+    <y>948</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:V_RBV:CH:09</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH09 Current label</name>
+    <x>1147</x>
+    <y>988</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Current</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH09 I_RBV</name>
+    <x>1147</x>
+    <y>1012</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:I_RBV:CH:09</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CH10 card</name>
+    <x>920</x>
+    <y>884</y>
+    <width>200</width>
+    <height>164</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH10 heading</name>
+    <x>928</x>
+    <y>892</y>
+    <width>184</width>
+    <height>26</height>
+    <text>BOARD 11</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH10 Voltage label</name>
+    <x>932</x>
+    <y>924</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Voltage</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH10 V_RBV</name>
+    <x>932</x>
+    <y>948</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:V_RBV:CH:10</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH10 Current label</name>
+    <x>932</x>
+    <y>988</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Current</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH10 I_RBV</name>
+    <x>932</x>
+    <y>1012</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:I_RBV:CH:10</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CH11 card</name>
+    <x>705</x>
+    <y>884</y>
+    <width>200</width>
+    <height>164</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH11 heading</name>
+    <x>713</x>
+    <y>892</y>
+    <width>184</width>
+    <height>26</height>
+    <text>BOARD 12</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH11 Voltage label</name>
+    <x>717</x>
+    <y>924</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Voltage</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH11 V_RBV</name>
+    <x>717</x>
+    <y>948</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:V_RBV:CH:11</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH11 Current label</name>
+    <x>717</x>
+    <y>988</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Current</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH11 I_RBV</name>
+    <x>717</x>
+    <y>1012</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:I_RBV:CH:11</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CH12 card</name>
+    <x>490</x>
+    <y>884</y>
+    <width>200</width>
+    <height>164</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH12 heading</name>
+    <x>498</x>
+    <y>892</y>
+    <width>184</width>
+    <height>26</height>
+    <text>BOARD 13</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH12 Voltage label</name>
+    <x>502</x>
+    <y>924</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Voltage</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH12 V_RBV</name>
+    <x>502</x>
+    <y>948</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:V_RBV:CH:12</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH12 Current label</name>
+    <x>502</x>
+    <y>988</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Current</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH12 I_RBV</name>
+    <x>502</x>
+    <y>1012</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:I_RBV:CH:12</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CH13 card</name>
+    <x>275</x>
+    <y>884</y>
+    <width>200</width>
+    <height>164</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH13 heading</name>
+    <x>283</x>
+    <y>892</y>
+    <width>184</width>
+    <height>26</height>
+    <text>BOARD 14</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH13 Voltage label</name>
+    <x>287</x>
+    <y>924</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Voltage</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH13 V_RBV</name>
+    <x>287</x>
+    <y>948</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:V_RBV:CH:13</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH13 Current label</name>
+    <x>287</x>
+    <y>988</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Current</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH13 I_RBV</name>
+    <x>287</x>
+    <y>1012</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:I_RBV:CH:13</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CH14 card</name>
+    <x>1472</x>
+    <y>351</y>
+    <width>200</width>
+    <height>164</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH14 heading</name>
+    <x>1480</x>
+    <y>359</y>
+    <width>184</width>
+    <height>26</height>
+    <text>BOARD 15</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH14 Voltage label</name>
+    <x>1484</x>
+    <y>391</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Voltage</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH14 V_RBV</name>
+    <x>1484</x>
+    <y>415</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:V_RBV:CH:14</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH14 Current label</name>
+    <x>1484</x>
+    <y>455</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Current</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH14 I_RBV</name>
+    <x>1484</x>
+    <y>479</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:I_RBV:CH:14</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>CH15 card</name>
+    <x>1472</x>
+    <y>624</y>
+    <width>200</width>
+    <height>164</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH15 heading</name>
+    <x>1480</x>
+    <y>632</y>
+    <width>184</width>
+    <height>26</height>
+    <text>BOARD 16</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH15 Voltage label</name>
+    <x>1484</x>
+    <y>664</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Voltage</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH15 V_RBV</name>
+    <x>1484</x>
+    <y>688</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:V_RBV:CH:15</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>CH15 Current label</name>
+    <x>1484</x>
+    <y>728</y>
+    <width>176</width>
+    <height>24</height>
+    <text>Current</text>
+    <font>
+      <font family="Liberation Sans" size="12.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>CH15 I_RBV</name>
+    <x>1484</x>
+    <y>752</y>
+    <width>176</width>
+    <height>32</height>
+    <pv_name>SFRS:FPF2:SCIFI1:LV:I_RBV:CH:15</pv_name>
+    <format>1</format>
+    <precision>3</precision>
+    <show_units>true</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <font>
+      <font family="Liberation Sans" size="18.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <background_color>
+      <color red="240" green="244" blue="248" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>PowerPi</name>
+    <x>147</x>
+    <y>1056</y>
+    <width>973</width>
+    <height>24</height>
+    <text>POWERPI01  /  CHANNEL CONTROLS</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>0</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Thermal shutdown background</name>
+    <x>147</x>
+    <y>1084</y>
+    <width>973</width>
+    <height>68</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="211" green="221" blue="231" />
+    </line_color>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Thermal shutdown status</name>
+    <x>161</x>
+    <y>1092</y>
+    <width>945</width>
+    <height>27</height>
+    <text>Thermal trip status unavailable - ON commands blocked</text>
+    <font>
+      <font family="Liberation Sans" size="16.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="31" green="49" blue="67" />
+    </foreground_color>
+    <horizontal_alignment>0</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <transparent>false</transparent>
+    <background_color>
+      <color red="255" green="237" blue="174" />
+    </background_color>
+    <scripts>
+      <script file="EmbeddedPy" check_connections="false">
+        <text>from org.csstudio.display.builder.runtime.script import ValueUtil
+from org.epics.vtype import Alarm, VNumber
+from org.phoebus.pv import PV
+
+def verified(value):
+    return not PV.isDisconnected(value) and Alarm.alarmOf(value).getSeverity().ordinal() &lt; 3
+
+def trip_mask(value):
+    return ValueUtil.getLong(value) if isinstance(value, VNumber) and verified(value) else None
+
+
+import math
+from org.csstudio.display.builder.runtime.script import ScriptUtil
+from org.epics.vtype import VNumberArray
+from org.phoebus.ui.color import WidgetColor
+
+def finite(number):
+    return not math.isnan(number) and not math.isinf(number)
+
+def limits_vector(value, count):
+    if PV.isDisconnected(value) or not isinstance(value, VNumberArray):
+        return None
+    data = value.getData()
+    if data.size() != count:
+        return None
+    limits = [data.getDouble(i) for i in range(count)]
+    return limits if all(finite(item) for item in limits) else None
+
+def temperature_color(value, limit, tripped):
+    if tripped:
+        return WidgetColor(255, 199, 204)
+    if limit is None or not isinstance(value, VNumber) or not verified(value):
+        return WidgetColor(240, 244, 248)
+    temperature = ValueUtil.getDouble(value)
+    if not finite(temperature):
+        return WidgetColor(240, 244, 248)
+    if temperature &gt;= limit:
+        return WidgetColor(255, 199, 204)
+    if temperature &gt;= limit * 0.8:
+        return WidgetColor(255, 237, 174)
+    return WidgetColor(225, 245, 231)
+
+def update_thermal(widget, pvs, sensor_names, displayed_sensors, buttons):
+    mask = trip_mask(pvs[0].read())
+    if mask is None:
+        status = 'Thermal trip status unavailable - ON commands blocked'
+        banner = WidgetColor(255, 237, 174)
+    elif mask:
+        tripped = [name for i, name in enumerate(sensor_names) if mask &amp; (1 &lt;&lt; i)]
+        if mask &amp; ~((1 &lt;&lt; len(sensor_names)) - 1):
+            tripped.append('other trip bits')
+        status = 'Thermal shutdown - ' + ', '.join(tripped)
+        banner = WidgetColor(255, 199, 204)
+    else:
+        status = 'No active thermal trips'
+        banner = WidgetColor(225, 245, 231)
+    widget.propText().setValue(status)
+    widget.propBackgroundColor().setValue(banner)
+
+    limits_value = pvs[1].read()
+    limits = limits_vector(limits_value, len(sensor_names))
+    confirmed = limits is not None and verified(limits_value)
+    limits_status = ScriptUtil.findWidgetByName(widget, 'Thermal limits status')
+    limits_status.propText().setValue('' if confirmed else
+                                    'Thermal limits unavailable' if limits is None else 'Thermal limits unverified')
+    for (index, readback_name), pv in zip(displayed_sensors, pvs[2:]):
+        sensor = ScriptUtil.findWidgetByName(widget, readback_name)
+        limit_label = ScriptUtil.findWidgetByName(widget, sensor_names[index] + ' limit')
+        if limits is None:
+            limit_label.propText().setValue('Limit unavailable')
+        else:
+            limit_label.propText().setValue(u'Limit %.1f \u00b0C%s' %
+                                            (limits[index], '' if confirmed else ' ?'))
+        tripped = mask is not None and (mask &amp; (1 &lt;&lt; index)) != 0
+        limit = limits[index] if confirmed else None
+        sensor.propBackgroundColor().setValue(temperature_color(pv.read(), limit, tripped))
+
+    for name, pv in zip(buttons, pvs[len(displayed_sensors) + 2:]):
+        value = pv.read()
+        on = not PV.isDisconnected(value) and ValueUtil.getInt(value) == 1
+        ScriptUtil.findWidgetByName(widget, name).propEnabled().setValue(mask == 0 or on)
+
+update_thermal(widget, pvs, ('PT1000 ROW0', 'PT1000 ROW1', 'PT1000 ROW2', 'PT1000 ROW3', 'BME280'), ((0, 'PT1000 ROW0 temperature'),), ('CH00 toggle', 'CH01 toggle', 'CH02 toggle', 'CH03 toggle'))
+</text>
+        <pv_name>jackie://SFRS:FPF2:POWERPI01:TEMPERATURE:TRIPS</pv_name>
+        <pv_name>jackie://SFRS:FPF2:POWERPI01:TEMPERATURE:LIMITS</pv_name>
+        <pv_name>jackie://SFRS:FPF2:POWERPI01:PT1000:ROW0:TEMPERATURE</pv_name>
+        <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE:CH00</pv_name>
+        <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE:CH01</pv_name>
+        <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE:CH02</pv_name>
+        <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE:CH03</pv_name>
+      </script>
+    </scripts>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Thermal recovery</name>
+    <x>161</x>
+    <y>1121</y>
+    <width>650</width>
+    <height>24</height>
+    <text>After cooling and clearance, re-enable outputs manually.</text>
+    <font>
+      <font family="Liberation Sans" size="14.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>0</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Thermal limits status</name>
+    <x>821</x>
+    <y>1121</y>
+    <width>285</width>
+    <height>24</height>
+    <text>Thermal limits unavailable</text>
+    <font>
+      <font family="Liberation Sans" size="14.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>0</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>SCIFI1  ·  CH00–CH03</name>
+    <x>147</x>
+    <y>1164</y>
+    <width>973</width>
+    <height>128</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>Row background</name>
+      <x>0</x>
+      <y>0</y>
+      <width>973</width>
+      <height>128</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="211" green="221" blue="231" />
+      </line_color>
+      <background_color>
+        <color red="255" green="255" blue="255" />
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Row title</name>
+      <x>16</x>
+      <y>8</y>
+      <width>941</width>
+      <height>24</height>
+      <text>SCIFI1  ·  CH00–CH03</text>
+      <font>
+        <font family="Liberation Sans" size="16.0" style="BOLD" />
+      </font>
+      <foreground_color>
+        <color red="31" green="49" blue="67" />
+      </foreground_color>
+      <horizontal_alignment>0</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Row CH00–CH03 toggle</name>
+      <x>16</x>
+      <y>58</y>
+      <width>153</width>
+      <height>57</height>
+      <text>UNAVAILABLE</text>
+      <font>
+        <font family="Liberation Sans" size="20.0" style="BOLD" />
+      </font>
+      <foreground_color>
+        <color red="255" green="255" blue="255" />
+      </foreground_color>
+      <background_color>
+        <color red="31" green="49" blue="67" />
+      </background_color>
+      <enabled>false</enabled>
+      <tooltip>Toggle CH00–CH03. Turns all off when all are on, otherwise turns all on. Only OFF commands are available during a thermal trip or while trip status is unavailable.</tooltip>
+      <scripts>
+        <script file="EmbeddedPy" check_connections="false">
+          <text>from org.csstudio.display.builder.runtime.script import ValueUtil
+from org.epics.vtype import Alarm, VNumber
+from org.phoebus.pv import PV
+
+def verified(value):
+    return not PV.isDisconnected(value) and Alarm.alarmOf(value).getSeverity().ordinal() &lt; 3
+
+def trip_mask(value):
+    return ValueUtil.getLong(value) if isinstance(value, VNumber) and verified(value) else None
+
+def channel_pvs(pvs):
+    return [pv for pv in pvs if pv.getName().startswith('jackie://SFRS:FPF2:POWERPI01:ENABLE:CH')]
+
+def thermal_clear(pvs):
+    trips = next((pv for pv in pvs if pv.getName() == '=highestSeverity(`jackie://SFRS:FPF2:POWERPI01:TEMPERATURE:TRIPS`) &gt;= 3 ? -1 : `jackie://SFRS:FPF2:POWERPI01:TEMPERATURE:TRIPS`'), None)
+    return trips is not None and trip_mask(trips.read()) == 0
+
+def writable_channels(channels):
+    return [pv for pv in channels if not PV.isDisconnected(pv.read()) and not pv.isReadonly()]
+
+def row_action(inputs):
+    channels = channel_pvs(inputs)
+    writable = writable_channels(channels)
+    if not thermal_clear(inputs):
+        return writable, 0
+    if len(writable) != 4:
+        return [], 0
+    target = 0 if all(ValueUtil.getInt(pv.read()) == 1 for pv in channels) else 1
+    return channels, target
+
+channels, target = row_action(pvs)
+widget.propText().setValue(('ALL ON' if target else 'ALL OFF') if channels else 'UNAVAILABLE')
+widget.propEnabled().setValue(bool(channels))
+</text>
+          <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE:CH00</pv_name>
+          <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE:CH01</pv_name>
+          <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE:CH02</pv_name>
+          <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE:CH03</pv_name>
+          <pv_name>=highestSeverity(`jackie://SFRS:FPF2:POWERPI01:TEMPERATURE:TRIPS`) &gt;= 3 ? -1 : `jackie://SFRS:FPF2:POWERPI01:TEMPERATURE:TRIPS`</pv_name>
+          <pv_name>sys://time</pv_name>
+        </script>
+      </scripts>
+      <actions>
+        <action type="execute">
+          <description>Toggle CH00–CH03</description>
+          <script file="EmbeddedPy">
+            <text>from org.csstudio.display.builder.runtime.script import ValueUtil
+from org.epics.vtype import Alarm, VNumber
+from org.phoebus.pv import PV
+
+def verified(value):
+    return not PV.isDisconnected(value) and Alarm.alarmOf(value).getSeverity().ordinal() &lt; 3
+
+def trip_mask(value):
+    return ValueUtil.getLong(value) if isinstance(value, VNumber) and verified(value) else None
+
+def channel_pvs(pvs):
+    return [pv for pv in pvs if pv.getName().startswith('jackie://SFRS:FPF2:POWERPI01:ENABLE:CH')]
+
+def thermal_clear(pvs):
+    trips = next((pv for pv in pvs if pv.getName() == '=highestSeverity(`jackie://SFRS:FPF2:POWERPI01:TEMPERATURE:TRIPS`) &gt;= 3 ? -1 : `jackie://SFRS:FPF2:POWERPI01:TEMPERATURE:TRIPS`'), None)
+    return trips is not None and trip_mask(trips.read()) == 0
+
+def writable_channels(channels):
+    return [pv for pv in channels if not PV.isDisconnected(pv.read()) and not pv.isReadonly()]
+
+def row_action(inputs):
+    channels = channel_pvs(inputs)
+    writable = writable_channels(channels)
+    if not thermal_clear(inputs):
+        return writable, 0
+    if len(writable) != 4:
+        return [], 0
+    target = 0 if all(ValueUtil.getInt(pv.read()) == 1 for pv in channels) else 1
+    return channels, target
+from java.lang import Exception as JavaException
+from org.csstudio.display.builder.runtime.script import ScriptUtil
+
+channels, target = row_action(ScriptUtil.getPVs(widget))
+if channels:
+    failed = []
+    for pv in channels:
+        try:
+            pv.write(target)
+        except JavaException:
+            failed.append(pv.getName())
+    if failed:
+        ScriptUtil.showErrorDialog(widget, 'Could not write: ' + ', '.join(failed))
+else:
+    ScriptUtil.showErrorDialog(widget, 'Row controls are unavailable. Check the channel PV connections.')
+</text>
+          </script>
+        </action>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>CH00 output status</name>
+      <x>181</x>
+      <y>36</y>
+      <width>16</width>
+      <height>16</height>
+      <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE_RBV:CH00</pv_name>
+      <border_alarm_sensitive>true</border_alarm_sensitive>
+      <square>true</square>
+      <tooltip>12 V rail readback
+$(pv_name)
+$(pv_value)</tooltip>
+      <on_color>
+        <color red="225" green="47" blue="60" />
+      </on_color>
+      <off_color>
+        <color red="94" green="105" blue="116" />
+      </off_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>CH00 current label</name>
+      <x>203</x>
+      <y>33</y>
+      <width>34</width>
+      <height>22</height>
+      <text>I (A)</text>
+      <font>
+        <font family="Liberation Sans" size="13.0" style="BOLD" />
+      </font>
+      <foreground_color>
+        <color red="91" green="108" blue="125" />
+      </foreground_color>
+      <horizontal_alignment>0</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>CH00 current in amperes</name>
+      <x>239</x>
+      <y>33</y>
+      <width>95</width>
+      <height>22</height>
+      <pv_name>=highestSeverity(`jackie://SFRS:FPF2:POWERPI01:CURRENT:CH00`) &gt;= 3 || (`jackie://SFRS:FPF2:POWERPI01:CURRENT:CH00` != `jackie://SFRS:FPF2:POWERPI01:CURRENT:CH00`) ? "non" : `jackie://SFRS:FPF2:POWERPI01:CURRENT:CH00`</pv_name>
+      <format>0</format>
+      <precision>3</precision>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <font>
+        <font family="Liberation Sans" size="13.0" style="BOLD" />
+      </font>
+      <foreground_color>
+        <color red="31" green="49" blue="67" />
+      </foreground_color>
+      <background_color>
+        <color red="240" green="244" blue="248" />
+      </background_color>
+      <tooltip>IOC current readback in amperes
+jackie://SFRS:FPF2:POWERPI01:CURRENT:CH00
+$(pv_value)</tooltip>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>CH00 toggle</name>
+      <x>181</x>
+      <y>58</y>
+      <width>153</width>
+      <height>57</height>
+      <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE:CH00</pv_name>
+      <enabled>false</enabled>
+      <tooltip>Boards 1–6
+$(pv_name)
+$(pv_value)</tooltip>
+      <bit>0</bit>
+      <mode>0</mode>
+      <labels_from_pv>false</labels_from_pv>
+      <show_led>false</show_led>
+      <off_label>OFF CH 0</off_label>
+      <on_label>ON CH 0</on_label>
+      <off_color>
+        <color red="179" green="58" blue="69" />
+      </off_color>
+      <on_color>
+        <color red="245" green="204" blue="80" />
+      </on_color>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <font>
+        <font family="Liberation Sans" size="20.0" style="BOLD" />
+      </font>
+      <scripts>
+        <script file="EmbeddedPy" check_connections="false">
+          <text>from org.csstudio.display.builder.runtime.script import ValueUtil
+from org.epics.vtype import Alarm, AlarmSeverity, VNumber
+from org.phoebus.pv import PV
+from org.phoebus.ui.color import WidgetColor
+
+readback = pvs[0].read()
+confirmed = (not PV.isDisconnected(readback) and isinstance(readback, VNumber)
+             and Alarm.alarmOf(readback).getSeverity() == AlarmSeverity.NONE
+             and ValueUtil.getDouble(readback) == 1.0)
+rgb = (133, 222, 151) if confirmed else (245, 204, 80)
+widget.propOnColor().setValue(WidgetColor(*rgb))
+</text>
+          <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE_RBV:CH00</pv_name>
+        </script>
+      </scripts>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>CH01 output status</name>
+      <x>346</x>
+      <y>36</y>
+      <width>16</width>
+      <height>16</height>
+      <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE_RBV:CH01</pv_name>
+      <border_alarm_sensitive>true</border_alarm_sensitive>
+      <square>true</square>
+      <tooltip>12 V rail readback
+$(pv_name)
+$(pv_value)</tooltip>
+      <on_color>
+        <color red="225" green="47" blue="60" />
+      </on_color>
+      <off_color>
+        <color red="94" green="105" blue="116" />
+      </off_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>CH01 current label</name>
+      <x>368</x>
+      <y>33</y>
+      <width>34</width>
+      <height>22</height>
+      <text>I (A)</text>
+      <font>
+        <font family="Liberation Sans" size="13.0" style="BOLD" />
+      </font>
+      <foreground_color>
+        <color red="91" green="108" blue="125" />
+      </foreground_color>
+      <horizontal_alignment>0</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>CH01 current in amperes</name>
+      <x>404</x>
+      <y>33</y>
+      <width>95</width>
+      <height>22</height>
+      <pv_name>=highestSeverity(`jackie://SFRS:FPF2:POWERPI01:CURRENT:CH01`) &gt;= 3 || (`jackie://SFRS:FPF2:POWERPI01:CURRENT:CH01` != `jackie://SFRS:FPF2:POWERPI01:CURRENT:CH01`) ? "non" : `jackie://SFRS:FPF2:POWERPI01:CURRENT:CH01`</pv_name>
+      <format>0</format>
+      <precision>3</precision>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <font>
+        <font family="Liberation Sans" size="13.0" style="BOLD" />
+      </font>
+      <foreground_color>
+        <color red="31" green="49" blue="67" />
+      </foreground_color>
+      <background_color>
+        <color red="240" green="244" blue="248" />
+      </background_color>
+      <tooltip>IOC current readback in amperes
+jackie://SFRS:FPF2:POWERPI01:CURRENT:CH01
+$(pv_value)</tooltip>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>CH01 toggle</name>
+      <x>346</x>
+      <y>58</y>
+      <width>153</width>
+      <height>57</height>
+      <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE:CH01</pv_name>
+      <enabled>false</enabled>
+      <tooltip>Boards 7–8
+$(pv_name)
+$(pv_value)</tooltip>
+      <bit>0</bit>
+      <mode>0</mode>
+      <labels_from_pv>false</labels_from_pv>
+      <show_led>false</show_led>
+      <off_label>OFF CH 1</off_label>
+      <on_label>ON CH 1</on_label>
+      <off_color>
+        <color red="179" green="58" blue="69" />
+      </off_color>
+      <on_color>
+        <color red="245" green="204" blue="80" />
+      </on_color>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <font>
+        <font family="Liberation Sans" size="20.0" style="BOLD" />
+      </font>
+      <scripts>
+        <script file="EmbeddedPy" check_connections="false">
+          <text>from org.csstudio.display.builder.runtime.script import ValueUtil
+from org.epics.vtype import Alarm, AlarmSeverity, VNumber
+from org.phoebus.pv import PV
+from org.phoebus.ui.color import WidgetColor
+
+readback = pvs[0].read()
+confirmed = (not PV.isDisconnected(readback) and isinstance(readback, VNumber)
+             and Alarm.alarmOf(readback).getSeverity() == AlarmSeverity.NONE
+             and ValueUtil.getDouble(readback) == 1.0)
+rgb = (133, 222, 151) if confirmed else (245, 204, 80)
+widget.propOnColor().setValue(WidgetColor(*rgb))
+</text>
+          <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE_RBV:CH01</pv_name>
+        </script>
+      </scripts>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>PT1000 ROW0 temperature</name>
+      <x>511</x>
+      <y>58</y>
+      <width>116</width>
+      <height>37</height>
+      <pv_name>jackie://SFRS:FPF2:POWERPI01:PT1000:ROW0:TEMPERATURE</pv_name>
+      <format>1</format>
+      <precision>1</precision>
+      <show_units>true</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <font>
+        <font family="Liberation Sans" size="19.0" style="BOLD" />
+      </font>
+      <foreground_color>
+        <color red="31" green="49" blue="67" />
+      </foreground_color>
+      <background_color>
+        <color red="240" green="244" blue="248" />
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>PT1000 ROW0 limit</name>
+      <x>511</x>
+      <y>95</y>
+      <width>116</width>
+      <height>20</height>
+      <text>Limit unavailable</text>
+      <font>
+        <font family="Liberation Sans" size="12.0" style="REGULAR" />
+      </font>
+      <foreground_color>
+        <color red="91" green="108" blue="125" />
+      </foreground_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>CH02 output status</name>
+      <x>639</x>
+      <y>36</y>
+      <width>16</width>
+      <height>16</height>
+      <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE_RBV:CH02</pv_name>
+      <border_alarm_sensitive>true</border_alarm_sensitive>
+      <square>true</square>
+      <tooltip>12 V rail readback
+$(pv_name)
+$(pv_value)</tooltip>
+      <on_color>
+        <color red="225" green="47" blue="60" />
+      </on_color>
+      <off_color>
+        <color red="94" green="105" blue="116" />
+      </off_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>CH02 current label</name>
+      <x>661</x>
+      <y>33</y>
+      <width>34</width>
+      <height>22</height>
+      <text>I (A)</text>
+      <font>
+        <font family="Liberation Sans" size="13.0" style="BOLD" />
+      </font>
+      <foreground_color>
+        <color red="91" green="108" blue="125" />
+      </foreground_color>
+      <horizontal_alignment>0</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>CH02 current in amperes</name>
+      <x>697</x>
+      <y>33</y>
+      <width>95</width>
+      <height>22</height>
+      <pv_name>=highestSeverity(`jackie://SFRS:FPF2:POWERPI01:CURRENT:CH02`) &gt;= 3 || (`jackie://SFRS:FPF2:POWERPI01:CURRENT:CH02` != `jackie://SFRS:FPF2:POWERPI01:CURRENT:CH02`) ? "non" : `jackie://SFRS:FPF2:POWERPI01:CURRENT:CH02`</pv_name>
+      <format>0</format>
+      <precision>3</precision>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <font>
+        <font family="Liberation Sans" size="13.0" style="BOLD" />
+      </font>
+      <foreground_color>
+        <color red="31" green="49" blue="67" />
+      </foreground_color>
+      <background_color>
+        <color red="240" green="244" blue="248" />
+      </background_color>
+      <tooltip>IOC current readback in amperes
+jackie://SFRS:FPF2:POWERPI01:CURRENT:CH02
+$(pv_value)</tooltip>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>CH02 toggle</name>
+      <x>639</x>
+      <y>58</y>
+      <width>153</width>
+      <height>57</height>
+      <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE:CH02</pv_name>
+      <enabled>false</enabled>
+      <tooltip>Boards 9–14
+$(pv_name)
+$(pv_value)</tooltip>
+      <bit>0</bit>
+      <mode>0</mode>
+      <labels_from_pv>false</labels_from_pv>
+      <show_led>false</show_led>
+      <off_label>OFF CH 2</off_label>
+      <on_label>ON CH 2</on_label>
+      <off_color>
+        <color red="179" green="58" blue="69" />
+      </off_color>
+      <on_color>
+        <color red="245" green="204" blue="80" />
+      </on_color>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <font>
+        <font family="Liberation Sans" size="20.0" style="BOLD" />
+      </font>
+      <scripts>
+        <script file="EmbeddedPy" check_connections="false">
+          <text>from org.csstudio.display.builder.runtime.script import ValueUtil
+from org.epics.vtype import Alarm, AlarmSeverity, VNumber
+from org.phoebus.pv import PV
+from org.phoebus.ui.color import WidgetColor
+
+readback = pvs[0].read()
+confirmed = (not PV.isDisconnected(readback) and isinstance(readback, VNumber)
+             and Alarm.alarmOf(readback).getSeverity() == AlarmSeverity.NONE
+             and ValueUtil.getDouble(readback) == 1.0)
+rgb = (133, 222, 151) if confirmed else (245, 204, 80)
+widget.propOnColor().setValue(WidgetColor(*rgb))
+</text>
+          <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE_RBV:CH02</pv_name>
+        </script>
+      </scripts>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>CH03 output status</name>
+      <x>804</x>
+      <y>36</y>
+      <width>16</width>
+      <height>16</height>
+      <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE_RBV:CH03</pv_name>
+      <border_alarm_sensitive>true</border_alarm_sensitive>
+      <square>true</square>
+      <tooltip>12 V rail readback
+$(pv_name)
+$(pv_value)</tooltip>
+      <on_color>
+        <color red="225" green="47" blue="60" />
+      </on_color>
+      <off_color>
+        <color red="94" green="105" blue="116" />
+      </off_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>CH03 current label</name>
+      <x>826</x>
+      <y>33</y>
+      <width>34</width>
+      <height>22</height>
+      <text>I (A)</text>
+      <font>
+        <font family="Liberation Sans" size="13.0" style="BOLD" />
+      </font>
+      <foreground_color>
+        <color red="91" green="108" blue="125" />
+      </foreground_color>
+      <horizontal_alignment>0</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>CH03 current in amperes</name>
+      <x>862</x>
+      <y>33</y>
+      <width>95</width>
+      <height>22</height>
+      <pv_name>=highestSeverity(`jackie://SFRS:FPF2:POWERPI01:CURRENT:CH03`) &gt;= 3 || (`jackie://SFRS:FPF2:POWERPI01:CURRENT:CH03` != `jackie://SFRS:FPF2:POWERPI01:CURRENT:CH03`) ? "non" : `jackie://SFRS:FPF2:POWERPI01:CURRENT:CH03`</pv_name>
+      <format>0</format>
+      <precision>3</precision>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <font>
+        <font family="Liberation Sans" size="13.0" style="BOLD" />
+      </font>
+      <foreground_color>
+        <color red="31" green="49" blue="67" />
+      </foreground_color>
+      <background_color>
+        <color red="240" green="244" blue="248" />
+      </background_color>
+      <tooltip>IOC current readback in amperes
+jackie://SFRS:FPF2:POWERPI01:CURRENT:CH03
+$(pv_value)</tooltip>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>CH03 toggle</name>
+      <x>804</x>
+      <y>58</y>
+      <width>153</width>
+      <height>57</height>
+      <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE:CH03</pv_name>
+      <enabled>false</enabled>
+      <tooltip>Boards 15–16
+$(pv_name)
+$(pv_value)</tooltip>
+      <bit>0</bit>
+      <mode>0</mode>
+      <labels_from_pv>false</labels_from_pv>
+      <show_led>false</show_led>
+      <off_label>OFF CH 3</off_label>
+      <on_label>ON CH 3</on_label>
+      <off_color>
+        <color red="179" green="58" blue="69" />
+      </off_color>
+      <on_color>
+        <color red="245" green="204" blue="80" />
+      </on_color>
+      <foreground_color>
+        <color red="0" green="0" blue="0" />
+      </foreground_color>
+      <font>
+        <font family="Liberation Sans" size="20.0" style="BOLD" />
+      </font>
+      <scripts>
+        <script file="EmbeddedPy" check_connections="false">
+          <text>from org.csstudio.display.builder.runtime.script import ValueUtil
+from org.epics.vtype import Alarm, AlarmSeverity, VNumber
+from org.phoebus.pv import PV
+from org.phoebus.ui.color import WidgetColor
+
+readback = pvs[0].read()
+confirmed = (not PV.isDisconnected(readback) and isinstance(readback, VNumber)
+             and Alarm.alarmOf(readback).getSeverity() == AlarmSeverity.NONE
+             and ValueUtil.getDouble(readback) == 1.0)
+rgb = (133, 222, 151) if confirmed else (245, 204, 80)
+widget.propOnColor().setValue(WidgetColor(*rgb))
+</text>
+          <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE_RBV:CH03</pv_name>
+        </script>
+      </scripts>
+    </widget>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>PT1000 label</name>
+    <x>658</x>
+    <y>1199</y>
+    <width>116</width>
+    <height>20</height>
+    <text>PT1000</text>
+    <font>
+      <font family="Liberation Sans" size="13.0" style="REGULAR" />
+    </font>
+    <foreground_color>
+      <color red="91" green="108" blue="125" />
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Open POWERPI01</name>
+    <x>1153</x>
+    <y>1234</y>
+    <width>260</width>
+    <height>32</height>
+    <text>VIEW ALL 16 CHANNELS</text>
+    <font>
+      <font family="Liberation Sans" size="13.0" style="BOLD" />
+    </font>
+    <foreground_color>
+      <color red="255" green="255" blue="255" />
+    </foreground_color>
+    <background_color>
+      <color red="31" green="49" blue="67" />
+    </background_color>
+    <actions>
+      <action type="open_display">
+        <file>FPF2_POWERPI01.bob</file>
+        <target>window</target>
+      </action>
+    </actions>
+  </widget>
+</display>
