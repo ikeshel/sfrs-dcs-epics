@@ -46,6 +46,8 @@ POWERPI_TEMP_WIDTH = 116
 POWERPI_COLUMN_GAP = 12
 POWERPI_ROW_WIDTH = 32 + 5 * (POWERPI_TOGGLE_WIDTH + POWERPI_COLUMN_GAP) + POWERPI_TEMP_WIDTH
 POWERPI_ROW_REFRESH_PV = "sys://time"
+# A shared local PV alternates between 0 and 1 every 500 ms.
+POWERPI_BUTTON_FLASH_PV = "sim://ramp(0,1,0.5)"
 POWERPI_TRIPS_PV = f"{FPF2_POWERPI_CA}TEMPERATURE:TRIPS"
 POWERPI_LIMITS_PV = f"{FPF2_POWERPI_CA}TEMPERATURE:LIMITS"
 POWERPI_THERMAL_HEIGHT = 68
@@ -79,8 +81,11 @@ readback = pvs[0].read()
 confirmed = (not PV.isDisconnected(readback) and isinstance(readback, VNumber)
              and Alarm.alarmOf(readback).getSeverity() == AlarmSeverity.NONE
              and ValueUtil.getDouble(readback) == 1.0)
-rgb = {POWERPI_ON!r} if confirmed else {POWERPI_PENDING!r}
-widget.propOnColor().setValue(WidgetColor(*rgb))
+flash_rgb = {BACKGROUND!r} if ValueUtil.getDouble(pvs[1].read()) == 1.0 else {POWERPI_PENDING!r}
+flash = WidgetColor(*flash_rgb)
+# The button selects the current fill from its writable ENABLE PV.
+widget.propOnColor().setValue(WidgetColor(*{POWERPI_ON!r}) if confirmed else flash)
+widget.propOffColor().setValue(flash if confirmed else WidgetColor(*{POWERPI_OFF!r}))
 """
 
 # Recheck the latest channel values once per second as well as on every monitor update.
@@ -371,7 +376,8 @@ def powerpi_channel(root, channel, caption, x, y):
     color(node, "on_color", POWERPI_PENDING)
     color(node, "foreground_color", (0, 0, 0))
     font(node, 20, True)
-    monitor_pvs(node, POWERPI_BUTTON_COLOR, (f"{FPF2_POWERPI_CA}ENABLE_RBV:{ch}",))
+    monitor_pvs(node, POWERPI_BUTTON_COLOR,
+                (f"{FPF2_POWERPI_CA}ENABLE_RBV:{ch}", POWERPI_BUTTON_FLASH_PV))
 
 
 def powerpi_row_toggle(root, channels, x, y):

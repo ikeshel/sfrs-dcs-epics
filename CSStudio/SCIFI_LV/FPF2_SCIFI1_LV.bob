@@ -2189,10 +2189,14 @@ readback = pvs[0].read()
 confirmed = (not PV.isDisconnected(readback) and isinstance(readback, VNumber)
              and Alarm.alarmOf(readback).getSeverity() == AlarmSeverity.NONE
              and ValueUtil.getDouble(readback) == 1.0)
-rgb = (133, 222, 151) if confirmed else (245, 204, 80)
-widget.propOnColor().setValue(WidgetColor(*rgb))
+flash_rgb = (240, 244, 248) if ValueUtil.getDouble(pvs[1].read()) == 1.0 else (245, 204, 80)
+flash = WidgetColor(*flash_rgb)
+# The button selects the current fill from its writable ENABLE PV.
+widget.propOnColor().setValue(WidgetColor(*(133, 222, 151)) if confirmed else flash)
+widget.propOffColor().setValue(flash if confirmed else WidgetColor(*(179, 58, 69)))
 </text>
           <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE_RBV:CH00</pv_name>
+          <pv_name>sim://ramp(0,1,0.5)</pv_name>
         </script>
       </scripts>
     </widget>
@@ -2296,10 +2300,14 @@ readback = pvs[0].read()
 confirmed = (not PV.isDisconnected(readback) and isinstance(readback, VNumber)
              and Alarm.alarmOf(readback).getSeverity() == AlarmSeverity.NONE
              and ValueUtil.getDouble(readback) == 1.0)
-rgb = (133, 222, 151) if confirmed else (245, 204, 80)
-widget.propOnColor().setValue(WidgetColor(*rgb))
+flash_rgb = (240, 244, 248) if ValueUtil.getDouble(pvs[1].read()) == 1.0 else (245, 204, 80)
+flash = WidgetColor(*flash_rgb)
+# The button selects the current fill from its writable ENABLE PV.
+widget.propOnColor().setValue(WidgetColor(*(133, 222, 151)) if confirmed else flash)
+widget.propOffColor().setValue(flash if confirmed else WidgetColor(*(179, 58, 69)))
 </text>
           <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE_RBV:CH01</pv_name>
+          <pv_name>sim://ramp(0,1,0.5)</pv_name>
         </script>
       </scripts>
     </widget>
@@ -2441,10 +2449,14 @@ readback = pvs[0].read()
 confirmed = (not PV.isDisconnected(readback) and isinstance(readback, VNumber)
              and Alarm.alarmOf(readback).getSeverity() == AlarmSeverity.NONE
              and ValueUtil.getDouble(readback) == 1.0)
-rgb = (133, 222, 151) if confirmed else (245, 204, 80)
-widget.propOnColor().setValue(WidgetColor(*rgb))
+flash_rgb = (240, 244, 248) if ValueUtil.getDouble(pvs[1].read()) == 1.0 else (245, 204, 80)
+flash = WidgetColor(*flash_rgb)
+# The button selects the current fill from its writable ENABLE PV.
+widget.propOnColor().setValue(WidgetColor(*(133, 222, 151)) if confirmed else flash)
+widget.propOffColor().setValue(flash if confirmed else WidgetColor(*(179, 58, 69)))
 </text>
           <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE_RBV:CH02</pv_name>
+          <pv_name>sim://ramp(0,1,0.5)</pv_name>
         </script>
       </scripts>
     </widget>
@@ -2548,10 +2560,14 @@ readback = pvs[0].read()
 confirmed = (not PV.isDisconnected(readback) and isinstance(readback, VNumber)
              and Alarm.alarmOf(readback).getSeverity() == AlarmSeverity.NONE
              and ValueUtil.getDouble(readback) == 1.0)
-rgb = (133, 222, 151) if confirmed else (245, 204, 80)
-widget.propOnColor().setValue(WidgetColor(*rgb))
+flash_rgb = (240, 244, 248) if ValueUtil.getDouble(pvs[1].read()) == 1.0 else (245, 204, 80)
+flash = WidgetColor(*flash_rgb)
+# The button selects the current fill from its writable ENABLE PV.
+widget.propOnColor().setValue(WidgetColor(*(133, 222, 151)) if confirmed else flash)
+widget.propOffColor().setValue(flash if confirmed else WidgetColor(*(179, 58, 69)))
 </text>
           <pv_name>jackie://SFRS:FPF2:POWERPI01:ENABLE_RBV:CH03</pv_name>
+          <pv_name>sim://ramp(0,1,0.5)</pv_name>
         </script>
       </scripts>
     </widget>
